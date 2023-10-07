@@ -1,12 +1,21 @@
 ---
-layout: default
+layout: base
 ---
 
-<ul>
-  {% for recipe in site.recipes %}
-  <li>
-    <h2><a href="{{ recipe.url }}">{{ recipe.title }}</a></h2>
-    {{ recipe.excerpt }}
-  </li>
-  {% endfor %}
-</ul>
+<div class="container overflow-hidden">
+    <div class="row g-4">
+        {% for recipe in site.recipes %}
+            <div class="col-sm-4">
+                <div class="card">
+                    <a href="{{ recipe.url }}" class="stretched-link">
+                        <img src="{{ recipe.img }}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ recipe.title }}</h5>
+                        <p class="card-text">{{ recipe.excerpt }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

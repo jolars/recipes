@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: "Heläggsmajonnäs"
+title: "Boulabaisse"
 date: 2023-10-04 21:23:05 +0200
 categories: jekyll update
 excerpt: Majonnäs på hela ägg. American style!

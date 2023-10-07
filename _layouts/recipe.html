@@ -1,45 +1,28 @@
 ---
-layout: default
+layout: base
 ---
 
-<link rel="stylesheet" media="screen" href="{{ site.baseurl }}/assets/css/styles.css">
-
+<link rel="stylesheet"
+      media="screen"
+      href="{{ site.baseurl }}/assets/css/styles.css" />
 <h1>{{ page.title }}</h1>
 <p>{{ page.description }}</p>
-
 {% if page.image %}<img src="{{ recipe.image | absolute_url }}" role="presentation" />{% endif %}
-
-{{content}}
-
-<div class="recipe-container">
-  <div class="ingredients">
-    <h2>Ingredienser</h2>
-    <ul>
-      {% for ingredient in page.ingredients %}
-      <li>
-        <!-- <label> -->
-        <!--   <input type="checkbox" /> -->
-        {{ ingredient }}
-        <!-- </label> -->
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="directions">
-    <h2>Instruktioner</h2>
-    <ol>
-      {% for direction in page.directions %}
-      <li>
-        <!-- <label> -->
-        <!--   <input type="checkbox" /> -->
-        {{ direction }}
-        <!-- </label> -->
-      </li>
-      {% endfor %}
-    </ol>
-  </div>
+{{ content }}
+<div class="recipe row">
+    <div class="ingredients col-sm-4">
+        {% for part in page.ingredients %}
+            {% if part.part %}<h4>{{ part.part }}</h4>{% endif %}
+            <ul>
+                {% for ingredient in part.ingredients %}<li>{{ ingredient }}</li>{% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+    <div class="directions col-sm-8">
+        <ol>
+            {% for direction in page.directions %}<li>{{ direction }}</li>{% endfor %}
+        </ol>
+    </div>
 </div>
-
-
 <!-- <button onclick="print()">Print</button> -->
 <!-- </article> -->

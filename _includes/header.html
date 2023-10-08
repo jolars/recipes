@@ -1,9 +1,9 @@
-<header class="site-header">
+<header class="site-header d-print-none">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
         {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
             <button class="navbar-toggler"
                     type="button"
@@ -16,40 +16,28 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    {%- for path in page_paths -%}
-                        {%- assign my_page = site.pages | where: "path", path | first -%}
-                        {%- if my_page.title -%}
-                            <li class="nav-item">
-                                <a class="nav-link active"
-                                   aria-current="page"
-                                   href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-                            </li>
-                        {%- endif -%}
-                    {%- endfor -%}
+                    <!--     {% for item in site.data.navigation %} -->
+                    <!--         <li class="nav-item"> -->
+                    <!--             <a class="nav-link active" -->
+                    <!--                aria-current="page" -->
+                    <!--                href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a> -->
+                    <!--         </li> -->
+                    <!--     {% endfor %} -->
                 </ul>
-                <!-- <form class="d-flex" role="search"> -->
-                <!--     <input class="form-control me-2" -->
-                <!--            type="search" -->
-                <!--            placeholder="Search" -->
-                <!--            aria-label="Search"> -->
-                <!--     <button class="btn btn-outline-success" type="submit">Search</button> -->
-                <!-- </form> -->
                 <script>
                 function site_search() {
                     var query = document.getElementById("site-search").value;
                     window.open("{{ '/search.html' | relative_url }}?q=" + encodeURIComponent(query), "_self" );
                     }
                 </script>
-                <form class="d-flex" onsubmit="site_search(); return false;">
+                <form class="d-flex" role="search" onsubmit="site_search(); return false;">
                     <div class="input-group">
                         <input id="site-search"
                                class="form-control"
                                type="search"
                                placeholder="Search"
                                aria-label="Search">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-primary" type="submit"></button>
-                        </div>
+                        <button class="btn btn-outline-success" type="submit">Search</button>
                     </div>
                 </form>
             </div>

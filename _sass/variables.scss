@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* For xs screens */
+.container {
+  max-width: 100%; /* Change this to your desired width */
+}
+/* For sm screens */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; /* Change this to your desired width */
+  }
+}
+/* For md screens */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; /* Change this to your desired width */
+  }
+}
+/* For lg screens */
+@media (min-width: 992px) {
+  .container {
+    max-width: 720px; /* Change this to your desired width */
+  }
+}
+/* For xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 720px; /* Change this to your desired width */
+  }
+}
+/* For xxl screens */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 960px; /* Change this to your desired width */
+  }
+}

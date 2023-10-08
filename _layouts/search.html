@@ -1,11 +1,112 @@
 ---
-layout: base
+layout: page 
 ---
 
 {{ content }}
+<div class="ml-3 mt-3">
+    <form class=""
+          role="search"
+          id="lunrSearch"
+          onsubmit="lunr_search(); return false;">
+        <div class="input-group input-group-lg">
+            <input id="lunrSearchBox"
+                   class="form-control "
+                   type="text"
+                   placeholder="Enter your search term...">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </form>
+    <div class="row" id="lunrResults" class="table table-responsive"></div>
+</div>
+<script src="{{ '/assets/js/lunr.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/lunr-store.js' | relative_url }}"></script>
+<script>
+/* initialize lunr */
+var idx = lunr(function () {
+  this.ref('id')
+  this.field('title')
+  this.field('excerpt')
 
-<form onsubmit="return false;">
-  <input type="input" id="search" class="search-input" placeholder="{{ site.data.text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" autofocus>
-</form>
+  //this.pipeline.remove(lunr.trimmer)
 
-<div id="results"></div>
+  for (var item in store) {
+    this.add({
+      title: store[item].title,
+      text: store[item].text,
+      id: item
+    })
+  }
+});
+
+/* search function */
+function lunr_search () {
+  var query = searchbox.value;//.toLowerCase();
+  /* basic search that supports operators */
+  // var result = idx.search(query);
+  /* more fuzzy search, but doesn't support operators: */
+  var result =
+    idx.query(function (q) {
+      query.split(lunr.tokenizer.separator).forEach(function (term) {
+        q.term(term, { boost: 100 })
+        if(query.lastIndexOf(" ") != query.length-1){
+          q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+        }
+        if (term != ""){
+          q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+        }
+      })
+    });
+  var resultslist = "<tr><td><p>" + result.length + " Results(s) found</p></td></tr>";
+  for (var item in result) {
+    var ref = result[item].ref;
+    // var searchitem =
+    //   '<tr>'+
+    //       '<td class="">' +
+    //         '<p class="h4"><a href="' + store[ref].url + '">' + store[ref].title+ '</a></p>' +
+    //         '<p class="ms-3">' +
+    //         store[ref].text.split(" ").splice(0,20).join(" ") + '...<br>' +
+    //         '</p></td>' +
+    //   '</tr>';
+
+    var searchitem =
+      '<div class="col-sm-4">'+
+          '<div class="card">' +
+            '<a href="' + store[ref].url + '" class="stretched-link">' +
+              '<img src="' + store[ref].img + '" class="card-img-top" alt="...">' +
+            '</a>' +
+            '<div class="card-body">' +
+              '<h5 class="card-title">' + store[ref].title + '</h5>' +
+              '<p class="card-text">' + store[ref].text + '</p>' +
+            '</div>' +
+      '</div>';
+
+            // <div class="col-sm-4">
+            //     <div class="card">
+            //         <a href="{{ recipe.url }}" class="stretched-link">
+            //             <img src="{{ recipe.img }}" class="card-img-top" alt="...">
+            //         </a>
+            //         <div class="card-body">
+            //             <h5 class="card-title">{{ recipe.title }}</h5>
+            //             <p class="card-text">{{ recipe.excerpt }}</p>
+            //         </div>
+            //     </div>
+            // </div>
+
+
+    resultslist += searchitem;
+  }
+  resultsdiv.innerHTML = resultslist;
+}
+/* set elements */
+var resultsdiv = document.getElementById('lunrResults');
+var searchbox = document.getElementById('lunrSearchBox');
+/* get query string */
+document.addEventListener('DOMContentLoaded', function(event) {
+  if (window.location.search) {
+    var queryString = decodeURIComponent(window.location.search.substring(1).split("=")[1]);
+    searchbox.value = queryString;
+    lunr_search ();
+  }
+});
+
+</script>

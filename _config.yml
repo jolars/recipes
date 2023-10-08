@@ -62,3 +62,8 @@ defaults:
       type: "recipes"
     values:
       layout: "recipe"
+  - scope:
+      path: "pages"
+    values:
+      layout: base
+      permalink: /:basename:output_ext

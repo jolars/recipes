@@ -2,7 +2,7 @@
 layout: recipe
 title: "Chorizo och kyckling-gryta"
 date: 2023-10-04 21:23:05 +0200
-categories: kyckling kött
+categories: kyckling
 tags: gryta
 excerpt: Majonnäs på hela ägg. American style!
 img: assets/img/helaggsmajo.jpg

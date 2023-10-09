@@ -1,30 +1,23 @@
 ---
 layout: recipe
-title: "Hollandaise"
-date: 2023-10-04 21:23:05 +0200
-categories: jekyll update
-excerpt: Majonnäs på hela ägg. American style!
+title: "Krabbelurer"
+categories: bakverk
+tags: utemat
+excerpt: Bästa utematsbaket!
 img: assets/img/helaggsmajo.jpg
 ingredients:
   - ingredients:
-    - 15 g vitvinsvinäger
-    - 12 g dijonsenap
-    - 1 ägg
-    - 250 g neutral olja
-    - 2 krm salt
-    - 1 krm vitpeppar
-  - part: Annat
-    ingredients:
-      - Fler grejer som inte ryms på en rad utan förmodligen måste radbrytas för att det ska få plats.
-      - 150 g smör
+    - 1,5 dl strösocker
+    - 4,5 dl (270 g) vetemjöl
+    - 2 tsk (12 g) bakpulver
+    - 1 tsk (4 g) vaniljsocker
+    - 2 ägg
 directions:
-  - Knäck ägget i en kanna.
-  - Tilsätt vinäger och senap.
-  - Häll i oljan.
-  - Mixa med stavmixer.
-  - Smaka av med salt och peppar.
-  - En väldigt lång instruktion som inte är färdig än. Ska det vara såhär? Kanske bättre aatt ha en lista? Jag är inte färdig än, måste skriva lite mer.
+  - Blanda alla torra ingredienser.
+  - Vispa ner mjölken.
+  - Rör ner äggen.
+  - Stek krabbelurerna i smör.
+  - Servera med sylt och grädde eller doppa i socker.
 ---
 
-En väldigt trevlig heläggsmajonnäs!
 

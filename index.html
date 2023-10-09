@@ -2,20 +2,29 @@
 layout: base
 ---
 
-<div class="container overflow-hidden">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
-        {% for recipe in site.recipes %}
-            <div class="col">
-                <div class="card">
-                    <a href="{{ recipe.url }}" class="stretched-link">
-                        <img src="{{ recipe.img }}" class="card-img-top" alt="...">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ recipe.title }}</h5>
-                        <p class="card-text">{{ recipe.excerpt }}</p>
+<div class="row g-4">
+    <div class="col-sm-3">
+        {% for category in site.categories %}
+            <a class="btn btn-light mb-1"
+               href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
+               role="button">{{ category | first }}</a>
+        {% endfor %}
+    </div>
+    <div class="col-sm-9">
+        <div class="row g-4">
+            {% for recipe in site.recipes %}
+                <div class="col col-md-4">
+                    <div class="card">
+                        <a href="{{ recipe.url | relative_url }}" class="stretched-link">
+                            <img src="{{ recipe.img }}" class="card-img-top" alt="{{ recipe.title }}">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ recipe.title }}</h5>
+                            <p class="card-text">{{ recipe.excerpt }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 </div>

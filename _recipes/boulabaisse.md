@@ -2,7 +2,7 @@
 layout: recipe
 title: "Boulabaisse"
 date: 2023-10-04 21:23:05 +0200
-categories: jekyll update
+categories: fisk
 excerpt: Majonnäs på hela ägg. American style!
 img: assets/img/helaggsmajo.jpg
 ingredients:

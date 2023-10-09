@@ -10,7 +10,7 @@ layout: base
     <!-- col col-md-12 d-flex justify-content-center justify-content-md-start -->
     <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
         {% if page.img %}
-            <img src="{{ page.img | absolute_url }}"
+            <img src="{{ page.img | relative_url }}"
                  class="img-fluid rounded float-end"
                  alt="{{ page.title }}" />
         {% endif %}

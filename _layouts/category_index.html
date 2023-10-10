@@ -2,86 +2,38 @@
 layout: base
 ---
 
-{% if page.paginator %}
-    <!-- Pagination is active -->
-    {% assign paginator = page.paginator %}
-    <!-- {% if paginator.previous_page != nil or paginator.next_page != nil %} -->
-    <!--     <!-- Show page number if we have multiple pages --> -->
-    <!--     <h1>Category index page {{ paginator.page }} / {{ paginator.total_pages }} for &ldquo;{{ page.title }}&rdquo;</h1> -->
-    <!-- {% else %} -->
-    <!--     <!-- No page number if we only have a single page --> -->
-    <!--     <h1>Category index for &ldquo;{{ page.title }}&rdquo;</h1> -->
-    <!-- {% endif %} -->
-    <section>
-        <!-- Show post excerpts for the current page -->
-        <div class="row g-4">
-            <div class="col-sm-3">
-                {% for category in site.categories %}
-                    <a class="btn btn-light mb-1"
-                       href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
-                       role="button">{{ category | first }}</a>
-                {% endfor %}
-            </div>
-            <div class="col-sm-9">
-                <div class="row g-4">
-                    {% for recipe in paginator.posts limit:paginator.per_page %}
-                        <div class="col col-md-4">
-                            <div class="card">
-                                <a href="{{ recipe.url | relative_url }}" class="stretched-link">
-                                    <img src="{{ recipe.img }}" class="card-img-top" alt="{{ recipe.title }}">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ recipe.title }}</h5>
-                                    <p class="card-text">{{ recipe.excerpt }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
+<div class="row g-4">
+    <div class="col-sm-3">
+        <div class="gap-1">
+            {% for category in site.categories %}
+                {%- assign slug = category | first -%}
+                <a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
+                   {%- if page.title == slug -%}
+                   class="btn btn-light active mb-1"
+                   {%- else -%}
+                   class="btn btn-light mb-1"
+                   {%- endif -%}
+                   role="button">{{ category | first }}</a>
+            {% endfor %}
         </div>
-    </section>
-    <!-- Show navigation next/previous page links if applicable -->
-    <nav>
-        <p>
-            {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Newer</a>
-            {% endif %}
-            {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path }}">Older <span aria-hidden="true">&rarr;</span></a>
-            {% endif %}
-        </p>
-    </nav>
-{% else %}
-    <section>
-        <!-- Show post excerpts for the current page -->
+    </div>
+    <div class="col-sm-9">
         <div class="row g-4">
-            <div class="col-sm-3">
-                {% for category in site.categories %}
-                    <a class="btn btn-light mb-1"
-                       href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
-                       role="button">{{ category | first }}</a>
-                {% endfor %}
-            </div>
-            <div class="col-sm-9">
-                <div class="row g-4">
-                    {% for recipe in page.posts %}
-                        <div class="col col-md-4">
-                            <div class="card">
-                                <a href="{{ recipe.url | relative_url }}" class="stretched-link">
-                                    <img src="{{ recipe.img | relative_url }}"
-                                         class="card-img-top"
-                                         alt="{{ recipe.title }}">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ recipe.title }}</h5>
-                                    <p class="card-text">{{ recipe.excerpt }}</p>
-                                </div>
-                            </div>
+            {% for recipe in page.posts %}
+                <div class="col col-md-4">
+                    <div class="card">
+                        <a href="{{ recipe.url | relative_url }}" class="stretched-link">
+                            <img src="{{ recipe.img | relative_url }}"
+                                 class="card-img-top"
+                                 alt="{{ recipe.title }}">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ recipe.title }}</h5>
+                            <p class="card-text">{{ recipe.excerpt }}</p>
                         </div>
-                    {% endfor %}
+                    </div>
                 </div>
-            </div>
+            {% endfor %}
         </div>
-    </section>
-{% endif %}
+    </div>
+</div>

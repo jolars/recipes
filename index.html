@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<div class="row g-4">
+<div class="row g-3">
     <div class="col-sm-3">
         {% for category in site.categories %}
             <a class="btn btn-light mb-1"
@@ -13,7 +13,7 @@ layout: base
     <div class="col-sm-9">
         <div class="row g-3">
             {% for recipe in site.recipes %}
-                <div class="col col-md-4">
+                <div class="col col-sm-6 col-md-4">
                     <div class="card">
                         <a href="{{ recipe.url | relative_url }}" class="stretched-link">
                             <img src="{{ recipe.img }}" class="card-img-top" alt="{{ recipe.title }}">

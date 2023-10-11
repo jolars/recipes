@@ -2,25 +2,25 @@
 layout: base
 ---
 
-<div class="row g-4">
+<div class="row g-3">
     <div class="col-sm-3">
-        <div class="gap-1">
-            {% for category in site.categories %}
-                {%- assign slug = category | first -%}
-                <a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
-                   {%- if page.title == slug -%}
-                   class="btn btn-light active mb-1"
-                   {%- else -%}
-                   class="btn btn-light mb-1"
-                   {%- endif -%}
+        {% for category in site.categories %}
+            {%- assign slug = category | first -%}
+            {%- if page.title == slug -%}
+                <a href="{{ '/' | relative_url }}"
+                   class="btn btn-light active me-1 mb-1"
                    role="button">{{ category | first }}</a>
-            {% endfor %}
-        </div>
+            {%- else -%}
+                <a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
+                   class="btn btn-light me-1 mb-1"
+                   role="button">{{ category | first }}</a>
+            {%- endif -%}
+        {% endfor %}
     </div>
     <div class="col-sm-9">
-        <div class="row g-4">
+        <div class="row g-3">
             {% for recipe in page.posts %}
-                <div class="col col-md-4">
+                <div class="col col-sm-6 col-md-4">
                     <div class="card">
                         <a href="{{ recipe.url | relative_url }}" class="stretched-link">
                             <img src="{{ recipe.img | relative_url }}"

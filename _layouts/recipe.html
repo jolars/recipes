@@ -20,7 +20,7 @@ layout: base
     <div class="ingredients col-sm-4">
         <h4>Ingredienser</h4>
         {% for component in page.components %}
-            {% if component.name %}<h5>{{ component.part }}</h5>{% endif %}
+            {% if component.name %}<h5>{{ component.name }}</h5>{% endif %}
             <ul class="list-unstyled">
                 {% for ingredient in component.ingredients %}<li>{{ ingredient }}</li>{% endfor %}
             </ul>

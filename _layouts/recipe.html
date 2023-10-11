@@ -28,8 +28,16 @@ layout: base
     </div>
     <div class="directions col-sm-8">
         <h4>Instruktioner</h4>
-        <ol>
-            {% for direction in page.directions %}<li>{{ direction }}</li>{% endfor %}
-        </ol>
+        <!-- <ol> -->
+        {% for direction in page.directions %}<p>{{ direction }}</p>{% endfor %}
+        <!-- </ol> -->
+        <!-- <ul class="list-group"> -->
+        <!--     {% for direction in page.directions %}<li class="list-group-item">{{ direction }}</li>{% endfor %} -->
+        <!-- <li class="list-group-item">An item</li> -->
+        <!-- <li class="list-group-item">A second item</li> -->
+        <!-- <li class="list-group-item">A third item</li> -->
+        <!-- <li class="list-group-item">A fourth item</li> -->
+        <!-- <li class="list-group-item">And a fifth one</li> -->
+        <!-- </ul> -->
     </div>
 </div>

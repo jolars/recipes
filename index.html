@@ -4,11 +4,13 @@ layout: base
 
 <div class="row g-3">
     <div class="col-sm-3">
-        {% for category in site.categories %}
-            <a class="btn btn-light mb-1"
-               href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
-               role="button">{{ category | first }}</a>
-        {% endfor %}
+        <p class="d-inline-flex gap-1">
+            {% for category in site.categories %}
+                <a class="btn btn-light"
+                   href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
+                   role="button">{{ category | first }}</a>
+            {% endfor %}
+        </p>
     </div>
     <div class="col-sm-9">
         <div class="row g-3">

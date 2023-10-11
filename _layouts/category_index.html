@@ -4,18 +4,21 @@ layout: base
 
 <div class="row g-3">
     <div class="col-sm-3">
-        {% for category in site.categories %}
-            {%- assign slug = category | first -%}
-            {%- if page.title == slug -%}
-                <a href="{{ '/' | relative_url }}"
-                   class="btn btn-light active me-1 mb-1"
-                   role="button">{{ category | first }}</a>
-            {%- else -%}
-                <a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
-                   class="btn btn-light me-1 mb-1"
-                   role="button">{{ category | first }}</a>
-            {%- endif -%}
-        {% endfor %}
+        <p class="d-inline-flex gap-1">
+            {% for category in site.categories %}
+                {%- assign slug = category | first -%}
+                {%- if page.title == slug -%}
+                    <a href="{{ '/' | relative_url }}"
+                       class="btn btn-light active"
+                       aria-pressed="true"
+                       role="button">{{ category | first }}</a>
+                {%- else -%}
+                    <a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
+                       class="btn btn-light"
+                       role="button">{{ category | first }}</a>
+                {%- endif -%}
+            {% endfor %}
+        </p>
     </div>
     <div class="col-sm-9">
         <div class="row g-3">

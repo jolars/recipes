@@ -10,13 +10,13 @@ layout: page
           onsubmit="lunr_search(); return false;">
         <div class="input-group input-group-lg">
             <input id="lunrSearchBox"
-                   class="form-control "
+                   class="form-control"
                    type="text"
                    placeholder="Enter your search term...">
-            <button class="btn btn-primary" type="submit">Search</button>
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
         </div>
     </form>
-    <div class="row" id="lunrResults" class="table table-responsive"></div>
+    <div class="row" id="lunrResults"></div>
 </div>
 <script src="{{ '/assets/js/lunr.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/lunr-store.js' | relative_url }}"></script>
@@ -56,7 +56,7 @@ function lunr_search () {
         }
       })
     });
-  var resultslist = "<tr><td><p>" + result.length + " Results(s) found</p></td></tr>";
+  var resultslist = "<p class = 'mt-1'>" + result.length + " results(s) found</p>";
   for (var item in result) {
     var ref = result[item].ref;
     // var searchitem =
@@ -79,19 +79,6 @@ function lunr_search () {
               '<p class="card-text">' + store[ref].text + '</p>' +
             '</div>' +
       '</div>';
-
-            // <div class="col-sm-4">
-            //     <div class="card">
-            //         <a href="{{ recipe.url }}" class="stretched-link">
-            //             <img src="{{ recipe.img }}" class="card-img-top" alt="...">
-            //         </a>
-            //         <div class="card-body">
-            //             <h5 class="card-title">{{ recipe.title }}</h5>
-            //             <p class="card-text">{{ recipe.excerpt }}</p>
-            //         </div>
-            //     </div>
-            // </div>
-
 
     resultslist += searchitem;
   }

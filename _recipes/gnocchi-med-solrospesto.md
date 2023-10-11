@@ -3,14 +3,14 @@ layout: recipe
 title: "Gnocchi med solrospesto"
 categories: vegetariskt
 img: assets/img/gnocchi-med-solrospesto.jpg
-ingredients:
+components:
   - ingredients:
     - 800 g gnocchi
     - 1 knippe späda grönkålsblad (alternativt spenat eller ruccola)
     - 1 citron
     - salt
     - peppar
-  - part: Pesto
+  - name: Pesto
     ingredients:
     - 3 vitlöksklyftor
     - 1 kruka basilika

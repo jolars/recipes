@@ -19,10 +19,10 @@ layout: base
 <div class="recipe row">
     <div class="ingredients col-sm-4">
         <h4>Ingredienser</h4>
-        {% for part in page.ingredients %}
-            {% if part.part %}<h5>{{ part.part }}</h5>{% endif %}
+        {% for component in page.components %}
+            {% if component.name %}<h5>{{ component.part }}</h5>{% endif %}
             <ul class="list-unstyled">
-                {% for ingredient in part.ingredients %}<li>{{ ingredient }}</li>{% endfor %}
+                {% for ingredient in component.ingredients %}<li>{{ ingredient }}</li>{% endfor %}
             </ul>
         {% endfor %}
     </div>

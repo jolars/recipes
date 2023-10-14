@@ -17,7 +17,9 @@ layout: base
                 <div class="col col-sm-6 col-lg-4">
                     <div class="card">
                         <a href="{{ recipe.url | relative_url }}" class="stretched-link">
-                            <img src="{{ recipe.img }}" class="card-img-top" alt="{{ recipe.title }}">
+                            {%- if recipe.img -%}
+                                <img src="{{ recipe.img }}" class="card-img-top" alt="{{ recipe.title }}">
+                            {%- endif -%}
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">{{ recipe.title }}</h5>

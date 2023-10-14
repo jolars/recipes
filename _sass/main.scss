@@ -8,6 +8,17 @@
     }
   }
   .directions {
+    ol {
+      list-style-position: inside;
+      padding-left: 0;
+      li {
+        margin-bottom: 1ex;
+      }
+
+      li::marker {
+        font-weight: bold;
+      }
+    }
     // ol {
     //   padding-left: 1.2em;
     //   margin-left: 0;

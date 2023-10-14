@@ -8,17 +8,25 @@ img: assets/img/helaggsmajo.jpg
 amount: 300 g
 components:
   - ingredients:
-    - 15 g vitvinsvinäger
-    - 12 g dijonsenap
-    - 1 ägg
-    - 250 g neutral olja
-    - 2 krm salt
-    - 1 krm vitpeppar
-directions:
-  - Knäck ägget i en kanna.
-  - Tilsätt vinäger och senap och häll sen i oljan.
-  - Mixa med stavmixer och smaka av med salt och peppar.
+      - ingredient: vitvinsvinäger
+        amount: 15
+        unit: g
+      - ingredient: dijonsenap
+        amount: 12
+        unit: g
+      - ingredient: ägg
+        amount: 1
+      - ingredient: neutral olja
+        amount: 250
+        unit: g
+      - ingredient: salt
+        amount: 2
+        unit: krm
+      - ingredient: vitpeppar
+        amount: 1
+        unit: krm
 ---
 
-En väldigt trevlig heläggsmajonnäs!
-
+1. Knäck ägget i en kanna.
+2. Tilsätt vinäger och senap och häll sen i oljan.
+3. Mixa med stavmixer och smaka av med salt och peppar.

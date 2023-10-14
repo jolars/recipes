@@ -20,12 +20,14 @@ layout: base
     <div class="col-sm-9 col-lg-10">
         <div class="row g-3">
             {% for recipe in page.posts %}
-                <div class="col col-sm-6 col-md-4">
+                <div class="col col-sm-6 col-lg-4">
                     <div class="card">
                         <a href="{{ recipe.url | relative_url }}" class="stretched-link">
-                            <img src="{{ recipe.img | relative_url }}"
-                                 class="card-img-top"
-                                 alt="{{ recipe.title }}">
+                            {%- if recipe.img -%}
+                                <img src="{{ recipe.img | relative_url }}"
+                                     class="card-img-top"
+                                     alt="{{ recipe.title }}">
+                            {%- endif -%}
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">{{ recipe.title }}</h5>

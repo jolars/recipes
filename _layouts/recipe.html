@@ -3,41 +3,61 @@ layout: base
 ---
 
 <div class="row pb-4">
-    <div class="col-md-6">
+    <div class="col-md-6 col-xl-4 offset-xl-2">
         <h1>{{ page.title }}</h1>
         {{ content }}
     </div>
-    <!-- col col-md-12 d-flex justify-content-center justify-content-md-start -->
-    <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
+    <div class="col-md-6 col-xl-4 d-flex justify-content-center justify-content-md-end">
         {% if page.img %}
             <img src="{{ page.img | relative_url }}"
                  class="img-fluid rounded float-end"
                  alt="{{ page.title }}" />
         {% endif %}
     </div>
-</div>
-<div class="recipe row">
-    <div class="ingredients col-sm-4">
-        <h4>Ingredienser</h4>
-        {% for component in page.components %}
-            {% if component.name %}<h5>{{ component.name }}</h5>{% endif %}
-            <ul class="list-unstyled">
-                {% for ingredient in component.ingredients %}<li>{{ ingredient }}</li>{% endfor %}
-            </ul>
-        {% endfor %}
-    </div>
-    <div class="directions col-sm-8">
-        <h4>Instruktioner</h4>
-        <!-- <ol> -->
-        {% for direction in page.directions %}<p>{{ direction }}</p>{% endfor %}
-        <!-- </ol> -->
-        <!-- <ul class="list-group"> -->
-        <!--     {% for direction in page.directions %}<li class="list-group-item">{{ direction }}</li>{% endfor %} -->
-        <!-- <li class="list-group-item">An item</li> -->
-        <!-- <li class="list-group-item">A second item</li> -->
-        <!-- <li class="list-group-item">A third item</li> -->
-        <!-- <li class="list-group-item">A fourth item</li> -->
-        <!-- <li class="list-group-item">And a fifth one</li> -->
-        <!-- </ul> -->
+    <div class="recipe row">
+        <div class="ingredients col-sm-4 col-xl-3 offset-xl-2">
+            <!-- <form> -->
+            <!--     Servings -->
+            <!--     <br> -->
+            <!--     <input id="num1" type="text" name="num1" value="{{ page.servings }}"> -->
+            <!--     <input type="button" value="Do Maths" onclick="doMath();" /> -->
+            <!-- </form> -->
+            <!-- {%- if page.servings -%} -->
+            <!--     <p> -->
+            <!--         Servings: <span id="servings">{{ page.servings }}</span> -->
+            <!--         <input type="button" -->
+            <!--                value="Do Maths" -->
+            <!--                class="btn btn-primary" -->
+            <!--                onclick="doMath();" /> -->
+            <!--     </p> -->
+            <!-- {%- endif -%} -->
+            <h4>Ingredienser</h4>
+            {% for component in page.components %}
+                {%- if component.name -%}
+                    <h5>{{ component.name }}</h5>
+                {%- endif -%}
+                <ul class="list-unstyled">
+                    {% for ingredient in component.ingredients %}
+                        <li>
+                            <span class="amount">{{ ingredient.amount }}</span> {{ ingredient.unit }} {{ ingredient.ingredient }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+        <div class="directions col-sm-8 col-xl-5">
+            <h4>Instruktioner</h4>
+            <!-- <ol> -->
+            {% for direction in page.directions %}<p>{{ direction }}</p>{% endfor %}
+            <!-- </ol> -->
+            <!-- <ul class="list-group"> -->
+            <!--     {% for direction in page.directions %}<li class="list-group-item">{{ direction }}</li>{% endfor %} -->
+            <!-- <li class="list-group-item">An item</li> -->
+            <!-- <li class="list-group-item">A second item</li> -->
+            <!-- <li class="list-group-item">A third item</li> -->
+            <!-- <li class="list-group-item">A fourth item</li> -->
+            <!-- <li class="list-group-item">And a fifth one</li> -->
+            <!-- </ul> -->
+        </div>
     </div>
 </div>

@@ -17,22 +17,22 @@ layout: base
 </div>
 <div class="recipe row">
     <div class="ingredients col-sm-4 col-xl-3 offset-xl-2">
-        <!-- <form> -->
-        <!--     Servings -->
-        <!--     <br> -->
-        <!--     <input id="num1" type="text" name="num1" value="{{ page.servings }}"> -->
-        <!--     <input type="button" value="Do Maths" onclick="doMath();" /> -->
-        <!-- </form> -->
-        <!-- {%- if page.servings -%} -->
-        <!--     <p> -->
-        <!--         Servings: <span id="servings">{{ page.servings }}</span> -->
-        <!--         <input type="button" -->
-        <!--                value="Do Maths" -->
-        <!--                class="btn btn-primary" -->
-        <!--                onclick="doMath();" /> -->
-        <!--     </p> -->
-        <!-- {%- endif -%} -->
         <h4>Ingredienser</h4>
+        {%- if page.servings -%}
+            <p>
+                <em><span id="servings" data-servings="{{ page.servings }}">{{ page.servings }}</span> portioner</em>
+                <a class="icon-link link-dark ps-3 me-1"
+                   href="javascript:void(0)"
+                   onclick="modifyServings('down');">
+                    <i class="bi bi-dash-circle-fill"></i>
+                </a>
+                <a class="icon-link link-dark"
+                   href="javascript:void(0)"
+                   onclick="modifyServings('up');">
+                    <i class="bi bi-plus-circle-fill"></i>
+                </a>
+            </p>
+        {%- endif -%}
         {% for component in page.components %}
             {%- if component.name -%}
                 <h5>{{ component.name }}</h5>
@@ -40,7 +40,7 @@ layout: base
             <ul class="list-unstyled">
                 {% for ingredient in component.ingredients %}
                     <li>
-                        <span class="amount">{{ ingredient.amount }}</span> {{ ingredient.unit }} {{ ingredient.ingredient }}
+                        <span class="amount" data-amount="{{ ingredient.amount }}">{{ ingredient.amount }}</span> {{ ingredient.unit }} {{ ingredient.ingredient }}
                     </li>
                 {% endfor %}
             </ul>

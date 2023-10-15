@@ -5,7 +5,7 @@ categories: basprodukter
 tags: ägg
 excerpt: Majonnäs på hela ägg. American style!
 img: assets/img/helaggsmajo.jpg
-amount: 300 g
+servings: 1
 components:
   - ingredients:
       - ingredient: vitvinsvinäger

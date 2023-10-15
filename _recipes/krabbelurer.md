@@ -5,6 +5,7 @@ categories: bakverk
 tags: utemat
 excerpt: Bästa utematsbaket!
 img: assets/img/krabbelurer.jpg
+servings: 4
 components:
   - ingredients:
       - ingredient: mjölk

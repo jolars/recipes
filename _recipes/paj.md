@@ -1,8 +1,8 @@
 ---
 title: "Paj"
 categories: bak
-servings: 1
 excerpt: En enkel pajdeg
+servings: 1
 components:
   - ingredients:
       - ingredient: vetemjöl

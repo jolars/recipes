@@ -3,7 +3,7 @@ layout: base
 ---
 
 <div class="row g-3">
-    <div class="col-sm-3 col-lg-2">
+    <div class="col-md-3 col-lg-2">
         <ul class = "list-group">
             {% for category in site.categories %}
                 <a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
@@ -11,10 +11,10 @@ layout: base
             {% endfor %}
         </ul>
     </div>
-    <div class="col-sm-9 col-lg-10">
+    <div class="col-md-9 col-lg-10">
         <div class="row g-3">
             {% for recipe in site.recipes %}
-                <div class="col col-sm-6 col-lg-4">
+                <div class="col col-md-6 col-lg-4">
                     <div class="card">
                         <a href="{{ recipe.url | relative_url }}" class="stretched-link">
                             {%- if recipe.img -%}

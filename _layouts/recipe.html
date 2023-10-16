@@ -21,13 +21,13 @@ layout: base
         <h4>Ingredienser</h4>
         {%- if page.servings -%}
             <p>
-                <em><span id="servings" data-servings="{{ page.servings }}">{{ page.servings }}</span> portioner</em>
-                <a class="icon-link link-dark ps-3 me-1"
+                <a class="icon-link link-dark pe-2"
                    href="javascript:void(0)"
                    onclick="modifyServings('down');">
                     <i class="bi bi-dash-circle-fill"></i>
                 </a>
-                <a class="icon-link link-dark"
+                <em><span id="servings" data-servings="{{ page.servings }}">{{ page.servings }}</span> portioner</em>
+                <a class="icon-link link-dark ps-2"
                    href="javascript:void(0)"
                    onclick="modifyServings('up');">
                     <i class="bi bi-plus-circle-fill"></i>

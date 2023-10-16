@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: "Heläggsmajonnäs"
-categories: basprodukter
+categories: basrecept
 tags: ägg
 excerpt: Majonnäs på hela ägg. American style!
 img: assets/img/helaggsmajo.jpg

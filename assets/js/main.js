@@ -1,7 +1,5 @@
-// let round = (n, p = 2) => (e => Math.round(n * e) / e)(Math.pow(10, p))
 function round(value, places) {
   var multiplier = Math.pow(10, places);
-
   return (Math.round(value * multiplier) / multiplier);
 }
 

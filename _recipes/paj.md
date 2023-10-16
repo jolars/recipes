@@ -1,7 +1,8 @@
 ---
 title: "Paj"
-categories: bak
-excerpt: En enkel pajdeg
+categories: vegetariskt
+excerpt: Recept på paj med pajdeg av smör.
+img: assets/img/quiche.jpg
 servings: 1
 components:
   - ingredients:

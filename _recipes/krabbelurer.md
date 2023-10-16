@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: "Krabbelurer"
-categories: bakverk
+categories: bak
 tags: utemat
 excerpt: Bästa utematsbaket!
 img: assets/img/krabbelurer.jpg

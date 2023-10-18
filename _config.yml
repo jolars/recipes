@@ -6,8 +6,19 @@ github_username: jolars
 
 plugins:
   - jekyll-tagories
-  - jekyll-paginate
   - jekyll-category-pages
+  - jekyll-responsive-image
+  - jekyll-paginate
+
+responsive_image:
+  template: _includes/responsive-image.html
+  save_to_source: false
+  strip: true
+  base_path: assets/img/resized/%{filename}-%{width}x%{height}.%{extension}
+  sizes:
+    - width: 320
+    - width: 480
+    - width: 800
 
 permalink: /:title:output_ext
 

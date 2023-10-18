@@ -5,16 +5,18 @@ layout: base
 <div class="row pb-3">
     <div class="col-sm-6 col-xl-4 offset-xl-2">
         <h1>{{ page.title }}</h1>
-        <p>{{ page.excerpt }}</p>
+        <p class = "lead">{{ page.excerpt }}</p>
     </div>
     <!-- <div class="col-sm-6 col-xl-4 d-flex justify-content-center justify-content-md-end"> -->
     <div class="col-sm-6 col-xl-4 d-flex text-end">
         {% if page.img %}
-            <img src="{{ page.img | relative_url }}"
-                 class="img-fluid rounded float-end"
-                 alt="{{ page.title }}" />
-        {% endif %}
-    </div>
+            {% responsive_image_block %}
+            path: {{ page.img }}
+            alt: {{ page.title }}
+            class: img-fluid rounded float-end
+        {% endresponsive_image_block %}
+    {% endif %}
+</div>
 </div>
 <div class="recipe row">
     <div class="ingredients col-sm-4 col-xl-3 offset-xl-2">

@@ -24,24 +24,24 @@
                     <!--         </li> -->
                     <!--     {% endfor %} -->
                 </ul>
-                <script>
-                function site_search() {
-                    var query = document.getElementById("site-search").value;
-                    window.open("{{ '/search.html' | relative_url }}?q=" + encodeURIComponent(query), "_self" );
-                    }
-                </script>
-                <form class="d-flex" role="search" onsubmit="site_search(); return false;">
-                    <div class="input-group">
-                        <input id="site-search"
-                               class="form-control"
-                               type="search"
-                               placeholder="Search"
-                               aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </form>
+                <!-- <script> -->
+                <!-- function site_search() { -->
+                <!--     var query = document.getElementById("site-search").value; -->
+                <!--     window.open("{{ '/search.html' | relative_url }}?q=" + encodeURIComponent(query), "_self" ); -->
+                <!--     } -->
+                <!-- </script> -->
+                <!-- <form class="d-flex" role="search" onsubmit="site_search(); return false;"> -->
+                <!--     <div class="input-group"> -->
+                <!--         <input id="site-search" -->
+                <!--                class="form-control" -->
+                <!--                type="search" -->
+                <!--                placeholder="Search" -->
+                <!--                aria-label="Search"> -->
+                <!--         <button class="btn btn-outline-success" type="submit"> -->
+                <!--             <i class="bi bi-search"></i> -->
+                <!--         </button> -->
+                <!--     </div> -->
+                <!-- </form> -->
             </div>
         </div>
     </nav>

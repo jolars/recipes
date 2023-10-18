@@ -1,12 +1,10 @@
 title: Recept
 email: johanlarsson@outlook.com
-baseurl: ""
 url: "https://recept.cx"
 github_username: jolars
 
 plugins:
   - jekyll-tagories
-  - jekyll-category-pages
   - jekyll-responsive-image
   - jekyll-paginate
 
@@ -20,8 +18,6 @@ responsive_image:
     - width: 320
     - width: 480
     - width: 800
-
-permalink: /:title:output_ext
 
 exclude:
   - .sass-cache/

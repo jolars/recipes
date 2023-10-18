@@ -5,16 +5,30 @@ layout: base
 <div class="row g-3">
     <div class="col-md-3 col-lg-2">
         <ul class = "list-group">
+            <button type="button"
+                    onclick="filterSelection('allt')"
+                    class="list-group-item list-group-item-action">allt</button>
             {% for category in site.categories %}
-                <a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html"
-                   class="list-group-item list-group-item-action">{{ category | first }}</a>
+                <button type="button"
+                        onclick="filterSelection('{{ category | first | slugify }}')"
+                        class="list-group-item list-group-item-action">{{ category | first }}</button>
             {% endfor %}
         </ul>
     </div>
     <div class="col-md-9 col-lg-10">
+        <form class="d-flex pb-3" role="search" oninput="search(); return false;">
+            <div class="input-group">
+                <input id="searchbox"
+                       class="form-control"
+                       type="search"
+                       placeholder="Filter recipes"
+                       aria-label="Filter">
+            </div>
+        </form>
         <div class="row g-3">
             {% for recipe in site.recipes %}
-                <div class="col col-md-6 col-lg-4">
+                <div class="col col-md-6 col-lg-4 recipe-card"
+                     data-category="{{ recipe.categories }}">
                     <div class="card">
                         <a href="{{ recipe.url | relative_url }}" class="stretched-link">
                             {%- if recipe.img -%}

@@ -3,10 +3,8 @@ source "https://rubygems.org"
 gem "jekyll", ">= 4.3.0"
 
 group :jekyll_plugins do
-  gem "jekyll-tagories", ">= 0.1.0"
-  # gem "jekyll-archives", ">= 2.2.0"
+  gem "jekyll-tagories"
   gem "jekyll-paginate"
-  gem "jekyll-category-pages"
   gem "jekyll-responsive-image"
 end
 

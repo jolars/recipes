@@ -41,6 +41,8 @@ components:
 ---
 
 1. Skala och koka potatisen i lättsaltat vatten.
-2. Salta torsken och stek i 2 msk smör i en stekpanna på medelvärme 2-3 minuter på varje sida.
-3. Koka ärtorna i lättsaltat vatten. Häv av vattnet och mixa ärtorna med citronsaft, smör och salt.
+2. Salta torsken och stek i 2 msk smör i en stekpanna på medelvärme 2-3 minuter
+   på varje sida.
+3. Koka ärtorna i lättsaltat vatten. Häll av vattnet och mixa ärtorna med
+   citronsaft, smör och salt.
 4. Servera med skirat eller brynt smör, dill och mynta.

@@ -31,7 +31,7 @@ components:
         unit: g
 ---
 
-## Pajskal
+#### Pajskal
 
 1. Lägg två tredjedelar av mjölet allt socker i en matberedare. Pulsera två
    gånger för att blanda. Dela smöret i skivor eller kuber och lägg i
@@ -52,7 +52,7 @@ components:
 6. Tryck in sidorna på pajdegen med tumme och pekfinger.
 7. Förbaka pajdegen i 180 grader i ca 30 minuter.
 
-## Äggstanning
+#### Äggstanning
 
 1. Vispa ihop ägg och mjölk. Fördela osten i pajskalet och häll över
    äggstanningen.

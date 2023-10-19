@@ -2,21 +2,25 @@
 layout: base
 ---
 
-<div class="row g-3">
-    <div class="col-md-3 col-lg-2">
-        <ul class = "list-group">
-            <button type="button"
-                    onclick="filterSelection('allt')"
-                    class="list-group-item list-group-item-action">allt</button>
-            {% for category in site.categories %}
-                <button type="button"
-                        onclick="filterSelection('{{ category | first | slugify }}')"
-                        class="list-group-item list-group-item-action">{{ category | first }}</button>
-            {% endfor %}
-        </ul>
+<div class="row g-3 pb-3">
+    <div class="col-md-4">
+        <div class="dropdown d-grid">
+            <button class="btn btn-secondary dropdown-toggle text-start"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">Kategori</button>
+            <ul class="dropdown-menu">
+                <button type="button" onclick="filterSelection('allt')" class="dropdown-item">allt</button>
+                {% for category in site.categories %}
+                    <button type="button"
+                            onclick="filterSelection('{{ category | first | slugify }}')"
+                            class="dropdown-item">{{ category | first }}</button>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-    <div class="col-md-9 col-lg-10">
-        <form class="d-flex pb-3" role="search" oninput="search(); return false;">
+    <div class="col-md-8">
+        <form class="d-flex" role="search" oninput="search(); return false;">
             <div class="input-group">
                 <input id="searchbox"
                        class="form-control"
@@ -25,27 +29,27 @@ layout: base
                        aria-label="Filtrera">
             </div>
         </form>
-        <div class="row g-3">
-            {% for recipe in site.recipes %}
-                <div class="col col-md-6 col-lg-4 recipe-card"
-                     data-category="{{ recipe.categories }}">
-                    <div class="card">
-                        <a href="{{ recipe.url | relative_url }}" class="stretched-link">
-                            {%- if recipe.img -%}
-                                {% responsive_image_block %}
-                                path: {{ recipe.img }}
-                                alt: {{ recipe.title }}
-                                class: card-img-top
-                            {% endresponsive_image_block %}
-                        {%- endif -%}
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ recipe.title }}</h5>
-                        <p class="card-text">{{ recipe.excerpt }}</p>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
     </div>
 </div>
+<div class="row g-3">
+    {% for recipe in site.recipes %}
+        <div class="col col-md-6 col-lg-4 recipe-card"
+             data-category="{{ recipe.categories }}">
+            <div class="card">
+                <a href="{{ recipe.url | relative_url }}" class="stretched-link">
+                    {%- if recipe.img -%}
+                        {% responsive_image_block %}
+                        path: {{ recipe.img }}
+                        alt: {{ recipe.title }}
+                        class: card-img-top
+                    {% endresponsive_image_block %}
+                {%- endif -%}
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{ recipe.title }}</h5>
+                <p class="card-text">{{ recipe.excerpt }}</p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
 </div>

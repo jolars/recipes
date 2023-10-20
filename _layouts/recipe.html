@@ -2,21 +2,22 @@
 layout: base
 ---
 
-<div class="row pb-3">
-    <div class="col-sm-6 col-xl-4 offset-xl-2">
-        <h1>{{ page.title }}</h1>
-        <p class = "lead">{{ page.excerpt }}</p>
+<div itemscope itemtype="http://schema.org/Recipe">
+    <div class="row pb-3">
+        <div class="col-sm-6 col-xl-4 offset-xl-2">
+            <h1 itemprop="name">{{ page.title }}</h1>
+            <p class="lead" itemprop="tagline">{{ page.excerpt }}</p>
+        </div>
+        <div class="col-sm-6 col-xl-4 d-flex text-end">
+            {% if page.img %}
+                {% responsive_image_block %}
+                path: {{ page.img }}
+                alt: {{ page.title }}
+                class: img-fluid rounded float-end
+                itemprop: "image"
+            {% endresponsive_image_block %}
+        {% endif %}
     </div>
-    <!-- <div class="col-sm-6 col-xl-4 d-flex justify-content-center justify-content-md-end"> -->
-    <div class="col-sm-6 col-xl-4 d-flex text-end">
-        {% if page.img %}
-            {% responsive_image_block %}
-            path: {{ page.img }}
-            alt: {{ page.title }}
-            class: img-fluid rounded float-end
-        {% endresponsive_image_block %}
-    {% endif %}
-</div>
 </div>
 <div class="recipe row">
     <div class="ingredients col-sm-4 col-xl-3 offset-xl-2">
@@ -28,7 +29,7 @@ layout: base
                    onclick="modifyServings('down');">
                     <i class="bi bi-dash-circle-fill"></i>
                 </a>
-                <em><span id="servings" data-servings="{{ page.servings }}">{{ page.servings }}</span> portioner</em>
+                <em><span id="servings" data-servings="{{ page.servings }}" itemprop="yield">{{ page.servings }}</span> portioner</em>
                 <a class="icon-link link-dark ps-2"
                    href="javascript:void(0)"
                    onclick="modifyServings('up');">
@@ -42,7 +43,7 @@ layout: base
             {%- endif -%}
             <ul class="list-unstyled">
                 {% for ingredient in component.ingredients %}
-                    <li>
+                    <li itemprop="ingredient">
                         <span class="amount" data-amount="{{ ingredient.amount }}">{{ ingredient.amount }}</span> {{ ingredient.unit }} {{ ingredient.ingredient }}
                     </li>
                 {% endfor %}
@@ -53,4 +54,5 @@ layout: base
         <h3>Instruktioner</h3>
         {{ content }}
     </div>
+</div>
 </div>

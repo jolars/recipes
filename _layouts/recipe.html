@@ -2,7 +2,8 @@
 layout: base
 ---
 
-<div itemscope itemtype="http://schema.org/Recipe">
+<div itemtype="http://schema.org/Recipe">
+    <div itemprop="recipeCategory">{{ page.categories | first }}</div>
     <div class="row pb-3">
         <div class="col-sm-6 col-xl-4 offset-xl-2">
             <h1 itemprop="name">{{ page.title }}</h1>
@@ -56,3 +57,10 @@ layout: base
     </div>
 </div>
 </div>
+<ul>
+    {% for component in page.components %}
+        {% for ingredient in component.ingredients %}
+            <li itemprop="ingredient">{{ ingredient.amount }} {{ ingredient.unit }} {{ ingredient.ingredient }}</li>
+        {% endfor %}
+    {% endfor %}
+</ul>

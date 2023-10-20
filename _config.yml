@@ -41,6 +41,7 @@ defaults:
       type: "recipes"
     values:
       layout: "recipe"
+      author: "Johan Larsson"
   - scope:
       path: "pages"
     values:

@@ -2,33 +2,34 @@
 layout: base
 ---
 
-<div itemtype="http://schema.org/Recipe">
-    <h1 itemprop="name">Food</h1>
-    <div itemprop="tagline">Delicious food!</div>
-    <div>
-        <span>By</span><span itemprop="author">Johan</span>
-    </div>
-    <img src="/assets/img/chiliolja.jpg" itemprop="image">
-</img>
-<p>
-    <div>
-        <span>Category:</span>
-        <span itemprop="recipeCategory">Basic</span>
-    </div>
-    <div>
-        <span>serves:</span><span itemprop="yield">4</span>
-    </div>
-    <div>
-        <span>Cooking time:</span><span itemprop="prepTime">30 minutes</span>
-    </div>
-    <div itemprop="nutrition"
-         itemtype="https://schema.org/NutritionInformation">
-        <span>provides:</span>
-        <span itemprop="calories">300</span>
-    </div>
-</p>
-<ul>
-    <li itemprop="ingredients">Juice</li>
-    <li itemprop="ingredients">Poppies</li>
-</ul>
-</div>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Recipe",
+      "author": "John Smith",
+      "cookTime": "PT1H",
+      "datePublished": "2009-05-08",
+      "description": "This classic banana bread recipe comes from my mom -- the walnuts add a nice texture and flavor to the banana bread.",
+      "image": "bananabread.jpg",
+      "recipeIngredient": [
+        "3 or 4 ripe bananas, smashed",
+        "1 egg",
+        "3/4 cup of sugar"
+      ],
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/Comment",
+        "userInteractionCount": "140"
+      },
+      "name": "Mom's World Famous Banana Bread",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "240 calories",
+        "fatContent": "9 grams fat"
+      },
+      "prepTime": "PT15M",
+      "recipeInstructions": "Preheat the oven to 350 degrees. Mix in the ingredients in a bowl. Add the flour last. Pour the mixture into a loaf pan and bake for one hour.",
+      "recipeYield": "1 loaf",
+      "suitableForDiet": "https://schema.org/LowFatDiet"
+    }
+</script>

@@ -7,11 +7,12 @@ tags: glass
 img: assets/img/glass.jpg
 servings: 1
 ingredients:
-  - 475 g grädde (36% fett)
-  - 25 g mjölk (3% fett)
-  - 50 g mjölkpulver
-  - 125 g socker
-  - 65 g äggula
+  main:
+    - 475 g grädde (36% fett)
+    - 25 g mjölk (3% fett)
+    - 50 g mjölkpulver
+    - 125 g socker
+    - 65 g äggula
 ---
 
 1. Blanda mjölkpulver, socker samt eventuella torra smaksättningar i en bunke.

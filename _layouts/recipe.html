@@ -13,7 +13,7 @@ layout: base
         "recipeIngredient": [
             {%- for part in page.ingredients -%}
                 {% for ingredient in part[1] %}
-                    "{{ ingredient }}"{% unless forloop.last %},{% endunless %}
+                    "{{ ingredient }}"{% unless forloop.last and forloop.parentloop.last %},{% endunless %}
                 {%- endfor %}
             {%- endfor %}
         ],

@@ -21,16 +21,10 @@ layout: base
         "prepTime": "PT15M",
         "recipeInstructions": "{{ content | strip_html | strip_newlines | strip | escape | replace: '"', '\"' }}
         "recipeYield": "{{page.servings}} portioner"
+        "suitableForDiet": "https://schema.org/LowFatDiet"
     }
 </script>
 <script async="async" src="//platform.getbring.com/widgets/import.js"></script>
-<div data-bring-import
-     data-bring-language="en"
-     data-bring-theme="light"
-     data-bring-base-quantity="{{ page.servings }}"
-     style="display:none">
-    <a href="https://www.getbring.com">Bring! Einkaufsliste App f&uuml;r iPhone und Android</a>
-</div>
 <div class="row pb-3">
     <div class="col-sm-6 col-xl-4 offset-xl-2">
         <h1>{{ page.title }}</h1>
@@ -77,6 +71,13 @@ layout: base
                 {% endfor %}
             </ul>
         {% endfor %}
+        <div data-bring-import
+             data-bring-language="en"
+             data-bring-theme="light"
+             data-bring-base-quantity="{{ page.servings }}"
+             style="display:none">
+            <a href="https://www.getbring.com">Bring! Einkaufsliste App f&uuml;r iPhone und Android</a>
+        </div>
     </div>
     <div class="directions col-sm-8 col-xl-5">
         <h3>Instruktioner</h3>

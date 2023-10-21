@@ -3,6 +3,23 @@ function round(value, places) {
   return (Math.round(value * multiplier) / multiplier);
 }
 
+function updateIngredientAmount(ingredient, multiplier) {
+  // Extract the numbers in the string
+  const amounts = ingredient.match(/(\d+(\.\d+)?)/g);
+  if (!amounts) {
+    return ingredient; // If no amount is found, return the original string
+  }
+
+  // Multiply each amount by the multiplier and replace in the original string
+  let updatedIngredient = ingredient;
+  for (const amount of amounts) {
+    const updatedAmount = parseFloat(amount) * multiplier;
+    updatedIngredient = updatedIngredient.replace(amount, round(updatedAmount, 2));
+  }
+
+  return updatedIngredient;
+}
+
 window.addEventListener('load', (event) => {
   console.log("Page loaded.");
 });
@@ -11,7 +28,7 @@ window.addEventListener('load', (event) => {
 function modifyServings(direction) {
   var original_servings = parseInt(document.getElementById('servings').getAttribute('data-servings'));
   var servings = parseInt(document.getElementById('servings').innerHTML);
-  var amounts = document.getElementsByClassName('amount');
+  var ingredients = document.getElementsByClassName('ingredient');
 
   if (servings > 1 || direction == "up") {
     var new_servings = direction == 'down' ? servings - 1 : servings + 1;
@@ -19,11 +36,11 @@ function modifyServings(direction) {
     var mod = parseFloat(new_servings) / parseFloat(original_servings);
     document.getElementById('servings').innerHTML = new_servings;
 
-    for (var i = 0; i <= amounts.length; ++i) {
-      var original_amount = parseFloat(amounts[i].getAttribute('data-amount'));
-      if (isFinite(original_amount)) {
-        amounts[i].innerHTML = round(original_amount * mod, 2);
-      }
+    for (var i = 0; i <= ingredients.length; ++i) {
+      // var original_amount = parseFloat(amounts[i].getAttribute('data-amount'));
+      var original_amount = ingredients[i].getAttribute('data-ingredient');
+      ingredients[i].innerHTML = updateIngredientAmount(original_amount, mod);
+      // ingredients[i].innerHTML = "3";
     };
   }
 }

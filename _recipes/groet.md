@@ -11,7 +11,7 @@ ingredients:
     - 70 g klippt havre
     - 150 g mjölk
     - 150 g vatten
-  äppelkompott:
+  Äppelkompott:
     - 1 äpple(n)
     - 2 krm salt
     - 7.5 g socker

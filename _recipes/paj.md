@@ -10,7 +10,7 @@ ingredients:
     - 10 g socker
     - 140 g smör
     - 40 ml vatten
-  äggstanning:
+  Äggstanning:
     - 5 ägg
     - 500 ml mjölk
     - 150 g ost

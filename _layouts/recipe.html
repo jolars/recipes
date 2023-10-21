@@ -4,22 +4,23 @@ layout: base
 
 <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Recipe",
-      "author": "{{page.author}}",
-      "cookTime": "PT1H",
-      "description": "This classic banana bread recipe comes from my mom -- the walnuts add a nice texture and flavor to the banana bread.",
-      "image": "{{page.img}}",
-      "recipeIngredient": [
-        "3 or 4 ripe bananas, smashed",
-        "1 egg",
-        "3/4 cup of sugar"
-      ],
-      "name": "{{ page.title }}",
-      "prepTime": "PT15M",
-      "recipeInstructions": "Preheat the oven to 350 degrees. Mix in the ingredients in a bowl. Add the flour last. Pour the mixture into a loaf pan and bake for one hour.",
-      "recipeYield": "1 loaf",
-      "suitableForDiet": "https://schema.org/LowFatDiet"
+        "@context": "https://schema.org",
+        "@type": "Recipe",
+        "author": "{{page.author}}",
+        "cookTime": "PT1H",
+        "description": "{{page.excerpt}}",
+        "image": "{{page.img | absolute_url }}",
+        "recipeIngredient": [
+            {%- for part in page.ingredients -%}
+                {% for ingredient in part[1] %}
+                    "{{ ingredient }}"{% unless forloop.last %},{% endunless %}
+                {%- endfor %}
+            {%- endfor %}
+        ],
+        "name": "{{ page.title }}",
+        "prepTime": "PT15M",
+        "recipeInstructions": "{{ content | strip_html | strip_newlines | strip | escape | replace: '"', '\"' }}
+        "recipeYield": "{{page.servings}} portioner"
     }
 </script>
 <script async="async" src="//platform.getbring.com/widgets/import.js"></script>
@@ -71,7 +72,7 @@ layout: base
             <ul class="list-unstyled">
                 {% for ingredient in part[1] %}
                     <li>
-                        <span class="ingredient">{{ ingredient }}</span>
+                        <span class="ingredient" data-ingredient="{{ ingredient }}">{{ ingredient }}</span>
                     </li>
                 {% endfor %}
             </ul>

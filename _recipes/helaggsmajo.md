@@ -6,25 +6,14 @@ tags: ägg
 excerpt: Majonnäs på hela ägg. American style!
 img: assets/img/helaggsmajo.jpg
 servings: 1
-components:
-  - ingredients:
-      - ingredient: vitvinsvinäger
-        amount: 15
-        unit: g
-      - ingredient: dijonsenap
-        amount: 12
-        unit: g
-      - ingredient: ägg
-        amount: 1
-      - ingredient: neutral olja
-        amount: 250
-        unit: g
-      - ingredient: salt
-        amount: 2
-        unit: krm
-      - ingredient: vitpeppar
-        amount: 1
-        unit: krm
+ingredients:
+  main:
+    - 15 g vitvinsvinäger
+    - 12 g dijonsenap
+    - 1 ägg
+    - 250 g neutral olja
+    - 2 krm salt
+    - 1 krm vitpeppar
 ---
 
 1. Knäck ägget i en kanna.

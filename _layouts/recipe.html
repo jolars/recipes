@@ -64,14 +64,14 @@ layout: base
                 </a>
             </p>
         {%- endif -%}
-        {% for component in page.components %}
-            {%- if component.name -%}
-                <h5>{{ component.name }}</h5>
+        {% for part in page.ingredients %}
+            {%- if part[0] != "main" -%}
+                <h5>{{ part[0] }}</h5>
             {%- endif -%}
             <ul class="list-unstyled">
-                {% for ingredient in component.ingredients %}
+                {% for ingredient in part[1] %}
                     <li>
-                        <span class="amount" data-amount="{{ ingredient.amount }}">{{ ingredient.amount }}</span> {{ ingredient.unit }} {{ ingredient.ingredient }}
+                        <span class="ingredient">{{ ingredient }}</span>
                     </li>
                 {% endfor %}
             </ul>

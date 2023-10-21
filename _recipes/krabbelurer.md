@@ -6,25 +6,14 @@ tags: utemat
 excerpt: Bästa utematsbaket!
 img: assets/img/krabbelurer.jpg
 servings: 4
-components:
-  - ingredients:
-      - ingredient: mjölk
-        amount: 2.5
-        unit: dl
-      - ingredient: strösocker
-        amount: 1.5
-        unit: dl
-      - ingredient: vetemjöl
-        amount: 270 g
-        unit: g
-      - ingredient: bakpulver
-        amount: 12
-        unit: g
-      - ingredient: vaniljsocker
-        amount: 1
-        unit: tsk
-      - ingredient: ägg
-        amount: 2
+ingredients:
+  main:
+    - 2.5 dl mjölk
+    - 1.5 dl strösocker
+    - 270 g vetemjöl
+    - 12 g bakpulver
+    - 1 tsk vaniljsocker
+    - 2 ägg
 ---
 
 1. Blanda alla torra ingredienser.

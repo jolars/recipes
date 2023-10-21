@@ -6,23 +6,12 @@ categories: sött
 tags: glass
 img: assets/img/glass.jpg
 servings: 1
-components:
-  - ingredients:
-      - ingredient: grädde (36% fett)
-        amount: 475
-        unit: g
-      - ingredient: mjölk (3% fett)
-        amount: 25
-        unit: g
-      - ingredient: mjölkpulver
-        amount: 50
-        unit: g
-      - ingredient: socker
-        amount: 125
-        unit: g
-      - ingredient: äggula
-        amount: 65
-        unit: g
+ingredients:
+  - 475 g grädde (36% fett)
+  - 25 g mjölk (3% fett)
+  - 50 g mjölkpulver
+  - 125 g socker
+  - 65 g äggula
 ---
 
 1. Blanda mjölkpulver, socker samt eventuella torra smaksättningar i en bunke.

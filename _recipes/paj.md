@@ -4,31 +4,16 @@ categories: vegetariskt
 excerpt: Recept på paj med pajdeg av smör.
 img: assets/img/quiche.jpg
 servings: 1
-components:
-  - name: Pajskal
-    ingredients:
-      - ingredient: vetemjöl
-        amount: 175
-        unit: g
-      - ingredient: socker
-        amount: 10
-        unit: g
-      - ingredient: smör
-        amount: 140
-        unit: g
-      - ingredient: vatten
-        amount: 40
-        unit: ml
-  - name: "Äggstanning"
-    ingredients:
-      - ingredient: ägg
-        amount: 5
-      - ingredient: mjölk
-        amount: 500
-        unit: ml
-      - ingredient: ost
-        amount: 150
-        unit: g
+ingredients:
+  main:
+    - 175 g vetemjöl
+    - 10 g socker
+    - 140 g smör
+    - 40 ml vatten
+  äggstanning:
+    - 5 ägg
+    - 500 ml mjölk
+    - 150 g ost
 ---
 
 #### Pajskal

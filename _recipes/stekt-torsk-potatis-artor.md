@@ -6,38 +6,18 @@ categories: fisk
 tags: potatis, lättlagat
 img: assets/img/torsk.jpg
 servings: 4
-
-components:
-  - ingredients:
-      - ingredient: fast potatis
-        amount: 800
-        unit: g
-      - ingredient: torsk eller annan vit fisk
-        amount: 600
-        unit: g
-      - amount: 2
-        unit: msk
-        ingredient: smör
-      - amount: 1
-        unit: knippe
-        ingredient: dill
-      - amount: 1
-        unit: knippe
-        ingredient: mynta
-  - name: Ärtmos
-    ingredients:
-      - amount: 2
-        unit: dl
-        ingredient: frysta ärtor
-      - amount: 1
-        unit: msk
-        ingredient: citronsaft
-      - amount: 1
-        unit: msk
-        ingredient: smör
-      - amount: 1
-        unit: krm
-        ingredient: salt
+ingredients:
+  main:
+    - 800 g fast potatis
+    - 600 g torsk eller annan vit fisk
+    - 2 msk smör
+    - 1 knippe dill
+    - 1 knippe mynta
+  Ärtmos:
+    - 2 dl frysta ärtor
+    - 1 msk citronsaft
+    - 1 msk smör
+    - 1 krm salt
 ---
 
 1. Skala och koka potatisen i lättsaltat vatten.

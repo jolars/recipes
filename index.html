@@ -2,14 +2,25 @@
 layout: base
 ---
 
-<div class="row g-3 pb-3">
-    <div class="col-md-4">
-        <div class="dropdown d-grid">
-            <button class="btn btn-secondary dropdown-toggle text-start"
+<div class="row pb-3">
+    <div class="col">
+        <form class="d-flex" role="search" oninput="search(); return false;">
+            <div class="input-group">
+                <input id="searchbox"
+                       class="form-control"
+                       type="search"
+                       placeholder="Sök"
+                       aria-label="Filtrera">
+            </div>
+        </form>
+    </div>
+    <div class="col-auto">
+        <div class="dropdown d-grid dropstart">
+            <button class="btn btn-secondary dropdown-toggle text-end"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false">Kategori</button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-end">
                 <button type="button" onclick="filterSelection('allt')" class="dropdown-item">allt</button>
                 {% for category in site.categories %}
                     <button type="button"
@@ -18,17 +29,6 @@ layout: base
                 {% endfor %}
             </ul>
         </div>
-    </div>
-    <div class="col-md-8">
-        <form class="d-flex" role="search" oninput="search(); return false;">
-            <div class="input-group">
-                <input id="searchbox"
-                       class="form-control"
-                       type="search"
-                       placeholder="Filtrera"
-                       aria-label="Filtrera">
-            </div>
-        </form>
     </div>
 </div>
 <div class="row g-3">

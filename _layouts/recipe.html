@@ -24,7 +24,6 @@ layout: base
         "suitableForDiet": "https://schema.org/LowFatDiet"
     }
 </script>
-<script async="async" src="//platform.getbring.com/widgets/import.js"></script>
 <div class="row pb-3">
     <div class="col-sm-6 col-xl-4 offset-xl-2">
         <h1>{{ page.title }}</h1>
@@ -41,9 +40,16 @@ layout: base
     {% endif %}
 </div>
 </div>
-<div class="recipe row">
-    <div class="ingredients col-sm-4 col-xl-3 offset-xl-2">
-        <h3>Ingredienser</h3>
+<div class="row pb-4">
+    <div class="col-md-6">
+        <div data-bring-import
+             data-bring-language="en"
+             data-bring-theme="dark"
+             data-bring-base-quantity="{{ page.servings }}"
+             class="d-flex text-center"
+             style="display:none"></div>
+    </div>
+    <div class="col-md-6">
         {%- if page.servings -%}
             <p>
                 <a class="icon-link link-dark pe-2"
@@ -59,6 +65,11 @@ layout: base
                 </a>
             </p>
         {%- endif -%}
+    </div>
+</div>
+<div class="recipe row">
+    <div class="ingredients col-sm-4 col-xl-3 offset-xl-2">
+        <h3>Ingredienser</h3>
         {% for part in page.ingredients %}
             {%- if part[0] != "main" -%}
                 <h5>{{ part[0] }}</h5>
@@ -71,16 +82,10 @@ layout: base
                 {% endfor %}
             </ul>
         {% endfor %}
-        <div data-bring-import
-             data-bring-language="en"
-             data-bring-theme="light"
-             data-bring-base-quantity="{{ page.servings }}"
-             style="display:none">
-            <a href="https://www.getbring.com">Bring! Einkaufsliste App f&uuml;r iPhone und Android</a>
-        </div>
     </div>
     <div class="directions col-sm-8 col-xl-5">
         <h3>Instruktioner</h3>
         {{ content }}
     </div>
 </div>
+<script async="async" src="//platform.getbring.com/widgets/import.js"></script>

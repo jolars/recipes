@@ -21,8 +21,7 @@ ingredients:
     - 2 dl gräddfil
     - 1 blomkålshuvud
     - 2 gul lök
-    - 2 vitlök
-    - 2 vitlök
+    - 2 klyftor vitlök
     - 3 dl vitt vin
     - 4 dl grädde
     - 4 dl kycklingbuljong

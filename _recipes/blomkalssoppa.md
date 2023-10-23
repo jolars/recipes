@@ -18,7 +18,7 @@ ingredients:
     - 2 lagerblad
     - 1 tsk timjan
   Soppa:
-    - 2 dl gräddfil
+    - 3 dl gräddfil
     - 1 blomkålshuvud
     - 2 gul lök
     - 2 klyftor vitlök
@@ -32,7 +32,8 @@ ingredients:
 
 #### Buljong
 
-1. Sjud alla ingredienser i 1,5 timme. Skumma av Sila buljongen.
+1. Sjud alla ingredienser i 1,5 timme. Skumma av några gånger under tiden.
+2. Sila buljongen.
 
 #### Soppa
 

@@ -7,9 +7,9 @@ layout: base
         "@context": "https://schema.org",
         "@type": "Recipe",
         "author": "{{page.author}}",
-        "cookTime": "PT1H",
+        "cookTime": "{{ page.cook_time }}",
         "description": "{{page.excerpt}}",
-        "image": "{{page.img | absolute_url }}",
+        "image": "{{ page.img | absolute_url }}",
         "recipeIngredient": [
             {%- for part in page.ingredients -%}
                 {% for ingredient in part[1] %}
@@ -18,9 +18,9 @@ layout: base
             {%- endfor %}
         ],
         "name": "{{ page.title }}",
-        "prepTime": "PT15M",
+"prepTime": "{{ page.prep_time }}",
         "recipeInstructions": "{{ content | strip_html | strip_newlines | strip | escape | replace: '"', '\"' }}",
-        "recipeYield": "{{page.servings}} portioner",
+        "recipeYield": "{{ page.servings }} portioner",
         "suitableForDiet": "https://schema.org/LowFatDiet"
     }
 </script>

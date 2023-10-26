@@ -5,7 +5,7 @@ categories: bak
 tags: utemat
 excerpt: Bästa utematsbaket!
 img: assets/img/krabbelurer.jpg
-servings: 4
+servings: 10 st
 ingredients:
   main:
     - 2.5 dl mjölk

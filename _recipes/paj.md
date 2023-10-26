@@ -3,7 +3,7 @@ title: "Paj"
 categories: vegetariskt
 excerpt: Recept på paj med pajdeg av smör.
 img: assets/img/quiche.jpg
-servings: 1
+servings: 1 paj
 ingredients:
   main:
     - 175 g vetemjöl

@@ -2,6 +2,7 @@
 layout: base
 ---
 
+{%- assign servings_size = page.servings | split: ' ' | first -%}
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -20,7 +21,7 @@ layout: base
         "name": "{{ page.title }}",
 "prepTime": "{{ page.prep_time }}",
         "recipeInstructions": "{{ content | strip_html | strip_newlines | strip | escape | replace: '"', '\"' }}",
-        "recipeYield": "{{ page.servings }} portioner",
+        "recipeYield": "{{ page.servings }}",
         "suitableForDiet": "https://schema.org/LowFatDiet"
     }
 </script>
@@ -49,7 +50,7 @@ layout: base
             {%- if page.servings -%}
                 <div class="col">
                     <div class="mb-2 text-end text-sm-start">
-                        <em class="text-body-secondary"><span id="servings" data-servings="{{ page.servings }}">{{ page.servings }}</span> portioner</em>
+                        <em class="text-body-secondary"><span id="servings" data-servings="{{ servings_size }}">{{ page.servings }}</span></em>
                         <a class="icon-link link-dark ps-2 me-1"
                            href="javascript:void(0)"
                            onclick="modifyServings('down');">
@@ -85,7 +86,7 @@ layout: base
         <!-- <a href="https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ page.servings }}&requestedQuantity=4"> -->
         <div class="d-grid d-sm-block">
             <a class="btn btn-secondary mb-3"
-               href="https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ page.servings }}">
+               href="https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ servings_size }}">
                 Lägg till i Bring!
             </a>
         </div>

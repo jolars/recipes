@@ -5,7 +5,7 @@ categories: basrecept
 tags: ägg
 excerpt: Majonnäs på hela ägg. American style!
 img: assets/img/helaggsmajo.jpg
-servings: 1
+servings: 1 sats
 ingredients:
   main:
     - 15 g vitvinsvinäger

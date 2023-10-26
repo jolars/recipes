@@ -5,7 +5,7 @@ excerpt: "Standardrecept på traditionell glass med grädde och ägg."
 categories: sött
 tags: glass
 img: assets/img/glass.jpg
-servings: 1
+servings: 1 sats
 ingredients:
   main:
     - 475 g grädde (36% fett)

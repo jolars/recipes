@@ -6,7 +6,7 @@ excerpt:
 categories: vegetariskt
 tags: soppa
 img: assets/img/blomkalssoppa.jpg
-servings: 4
+servings: 4 portioner
 prep_time: 2 timmar
 cook_time: 1 timme
 ingredients:

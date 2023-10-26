@@ -5,7 +5,7 @@ excerpt: "Kinesisk-koreansk chiliolja"
 categories: basrecept
 tags: chili, olja, kinesiskt
 img: assets/img/chiliolja.jpg
-servings: 1
+servings: 1 sats
 ingredients:
   main:
     - 2 tsk sichuanpeppar

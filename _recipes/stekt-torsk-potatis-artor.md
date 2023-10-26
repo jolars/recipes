@@ -5,7 +5,7 @@ excerpt: "Enkelt och gott!"
 categories: fisk
 tags: potatis, lättlagat
 img: assets/img/torsk.jpg
-servings: 4
+servings: 4 portioner
 ingredients:
   main:
     - 800 g fast potatis

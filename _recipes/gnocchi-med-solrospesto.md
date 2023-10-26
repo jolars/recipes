@@ -4,7 +4,7 @@ title: "Gnocchi med solrospesto"
 excerpt: Ett enkelt recept på gnocchi med pesto på solrosfrön.
 categories: vegetariskt
 img: assets/img/gnocchi-med-solrospesto.jpg
-servings: 4
+servings: 4 portioner
 ingredients:
   main:
     - 800 g gnocchi

@@ -5,12 +5,12 @@ excerpt: "Standardrecept på gröt."
 categories: vegetariskt
 tags: frukost
 img: assets/img/groet.jpg
-servings: 1
+servings: 1 portion
 ingredients:
   main:
-    - 70 g klippt havre
-    - 150 g mjölk
-    - 150 g vatten
+    - 50 g klippt havre
+    - 125 g mjölk
+    - 125 g vatten
   Äppelkompott:
     - 1 äpple(n)
     - 2 krm salt

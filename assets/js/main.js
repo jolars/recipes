@@ -3,6 +3,16 @@ function round(value, places) {
   return (Math.round(value * multiplier) / multiplier);
 }
 
+function extractServingsSize(str) {
+  const match = str.match(/\d+/);
+  return match ? parseFloat(match[0]) : null;
+}
+
+function extractServingsType(str) {
+  const match = str.match(/\d+\s*(.*)/);
+  return match ? match[1].trim() : null;
+}
+
 function updateIngredientAmount(ingredient, multiplier) {
   // Extract the numbers in the string
   const amounts = ingredient.match(/(\d+(\.\d+)?)/g);
@@ -27,20 +37,20 @@ window.addEventListener('load', (event) => {
 
 function modifyServings(direction) {
   var original_servings = parseInt(document.getElementById('servings').getAttribute('data-servings'));
-  var servings = parseInt(document.getElementById('servings').innerHTML);
+  var servings_raw = document.getElementById('servings').innerHTML;
+  var servings_type = extractServingsType(servings_raw);
+  var servings_size = extractServingsSize(servings_raw);
   var ingredients = document.getElementsByClassName('ingredient');
 
-  if (servings > 1 || direction == "up") {
-    var new_servings = direction == 'down' ? servings - 1 : servings + 1;
+  if (servings_size > 1 || direction == "up") {
+    var new_servings = direction == 'down' ? servings_size - 1 : servings_size + 1;
 
     var mod = parseFloat(new_servings) / parseFloat(original_servings);
-    document.getElementById('servings').innerHTML = new_servings;
+    document.getElementById('servings').innerHTML = new_servings + " " + servings_type;
 
     for (var i = 0; i <= ingredients.length; ++i) {
-      // var original_amount = parseFloat(amounts[i].getAttribute('data-amount'));
       var original_amount = ingredients[i].getAttribute('data-ingredient');
       ingredients[i].innerHTML = updateIngredientAmount(original_amount, mod);
-      // ingredients[i].innerHTML = "3";
     };
   }
 }

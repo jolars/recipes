@@ -29,12 +29,12 @@ layout: base
         <h1>{{ page.title }}</h1>
         <p class="lead">{{ page.excerpt }}</p>
     </div>
-    <div class="col-sm-6 col-xl-5 d-flex text-end">
+    <div class="col-sm-6 col-xl-5 text-end">
         {% if page.img %}
             {% responsive_image_block %}
             path: {{ page.img }}
             alt: {{ page.title }}
-            class: img-fluid rounded float-end
+            class: img-fluid rounded
             itemprop: "image"
         {% endresponsive_image_block %}
     {% endif %}

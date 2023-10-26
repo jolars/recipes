@@ -37,6 +37,7 @@ layout: base
              data-category="{{ recipe.categories }}">
             <div class="card">
                 <a href="{{ recipe.url | relative_url }}" class="stretched-link">
+                    <!-- TODO: Make images smaller for this view -->
                     {%- if recipe.img -%}
                         {% responsive_image_block %}
                         path: {{ recipe.img }}

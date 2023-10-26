@@ -25,9 +25,9 @@ layout: base
         "suitableForDiet": "https://schema.org/LowFatDiet"
     }
 </script>
+<h1>{{ page.title }}</h1>
 <div class="row pb-3">
     <div class="col-sm-6 col-xl-5 offset-xl-1">
-        <h1>{{ page.title }}</h1>
         <p class="lead">{{ page.excerpt }}</p>
     </div>
     <div class="col-sm-6 col-xl-5 text-end">
@@ -78,6 +78,7 @@ layout: base
             </ul>
         {% endfor %}
         <div class="d-grid d-sm-block">
+            <!-- TODO: Add requestedQuantity and update using javascript -->
             <a class="btn btn-secondary mb-3"
                href="https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ servings_size }}">
                 Lägg till i Bring!

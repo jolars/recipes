@@ -77,13 +77,6 @@ layout: base
                 {% endfor %}
             </ul>
         {% endfor %}
-        <!-- <div data-bring-import -->
-        <!--      data-bring-language="en" -->
-        <!--      data-bring-theme="dark" -->
-        <!--      data-bring-base-quantity="{{ page.servings }}" -->
-        <!--      class="d-flex text-center" -->
-        <!--      style="display:none"></div> -->
-        <!-- <a href="https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ page.servings }}&requestedQuantity=4"> -->
         <div class="d-grid d-sm-block">
             <a class="btn btn-secondary mb-3"
                href="https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ servings_size }}">
@@ -96,4 +89,3 @@ layout: base
         {{ content }}
     </div>
 </div>
-<script async="async" src="//platform.getbring.com/widgets/import.js"></script>

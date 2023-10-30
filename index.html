@@ -31,10 +31,9 @@ layout: base
         </div>
     </div>
 </div>
-<div class="row g-3">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
     {% for recipe in site.recipes %}
-        <div class="col col-md-6 col-lg-3 recipe-card"
-             data-category="{{ recipe.categories }}">
+        <div class="col recipe-card" data-category="{{ recipe.categories }}">
             <div class="card">
                 <a href="{{ recipe.url | relative_url }}" class="stretched-link">
                     <!-- TODO: Make images smaller for this view -->
@@ -48,6 +47,14 @@ layout: base
             </a>
             <div class="card-body">
                 <h5 class="card-title">{{ recipe.title }}</h5>
+                <p class="card-text">{{ recipe.excerpt }}</p>
+                <div class="row justify-content-between">
+                    {%- if recipe.cook_time -%}
+                        <div class="col text-center">
+                            <i class="bi bi-clock"></i> {{ recipe.cook_time }}
+                        </div>
+                    {%- endif -%}
+                </div>
             </div>
         </div>
     </div>

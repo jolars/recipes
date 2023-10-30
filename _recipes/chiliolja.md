@@ -6,6 +6,7 @@ categories: basrecept
 tags: chili, olja, kinesiskt
 img: assets/img/chiliolja.jpg
 servings: 1 sats
+cook_time: 10 minuter
 ingredients:
   main:
     - 2 tsk sichuanpeppar

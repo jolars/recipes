@@ -48,13 +48,11 @@ layout: base
             <div class="card-body">
                 <h5 class="card-title">{{ recipe.title }}</h5>
                 <p class="card-text">{{ recipe.excerpt }}</p>
-                <div class="row justify-content-between">
-                    {%- if recipe.cook_time -%}
-                        <div class="col text-center">
-                            <i class="bi bi-clock"></i> {{ recipe.cook_time }}
-                        </div>
-                    {%- endif -%}
-                </div>
+                {%- if recipe.cook_time -%}
+                    <div class="text-begin text-body-secondary">
+                        <i class="bi bi-clock"></i> <small>{{ recipe.cook_time }}</small>
+                    </div>
+                {%- endif -%}
             </div>
         </div>
     </div>

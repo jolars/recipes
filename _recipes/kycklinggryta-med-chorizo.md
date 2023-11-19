@@ -24,8 +24,8 @@ ingredients:
 
 1. Dela kyckling och chorizo i bitar, och bryn ett par minuter i matolja i en
    gryta.
-2. Skiva vitlöken och hacka löken grovt. Skär chilin i strimlor. Lägg ner allt i
-   grytan och fortsätt fräsa i ett par minuter.
-3. Tillsätt bönor, tomat och paprikapulver. Låt koka upp och sjud i 10 minuter.
+2. Skiva vitlöken och chilin och hacka löken grovt. Lägg ner allt i grytan och
+   fortsätt fräsa i ett par minuter.
+3. Tillsätt bönor, tomat och paprikapulver. Låt koka upp och sjud i 15 minuter.
    Smaka av med salt.
 4. Servera med saltgurka, gräddfil och hackad persilja.

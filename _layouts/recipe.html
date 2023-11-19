@@ -8,7 +8,12 @@ layout: base
         "@context": "https://schema.org",
         "@type": "Recipe",
         "author": "{{page.author}}",
-        "cookTime": "{{ page.cook_time }}",
+        {%- if page.prep_time -%}
+            "prepTime": "{{ page.prep_time }}",
+        {%- endif -%}
+        {%- if page.cook_time -%}
+            "cookTime": "{{ page.cook_time }}",
+        {%- endif -%}
         "description": "{{page.excerpt}}",
         "image": "{{ page.img | absolute_url }}",
         "recipeIngredient": [

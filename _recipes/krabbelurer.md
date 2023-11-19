@@ -5,6 +5,8 @@ categories: bak
 tags: utemat
 excerpt: Bästa utematsbaket!
 img: assets/img/krabbelurer.jpg
+cook_time: 10 min
+prep_time: 5 min
 servings: 10 st
 ingredients:
   main:

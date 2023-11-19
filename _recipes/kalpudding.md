@@ -9,7 +9,6 @@ servings: 4 portioner
 cook_time: 30 minuter
 ingredients:
   main:
-    - 900 g potatis
     - 1 dl mjölk
     - 0.5 dl ströbröd
     - 1 krm salt
@@ -21,6 +20,8 @@ ingredients:
     - 0.5 vitkål
     - 2 msk sirap eller honung
     - 3 msk kalvfond
+  Tillbehör:
+    - 900 g potatis
     - rårörda lingon
     - pressgurka
 ---

@@ -11,8 +11,8 @@ ingredients:
   main:
     - 3 schalottenlökar
     - 2 vitlöksklyftor
-    - 1 blomkålshuvud
-    - 500 g kronärtskockshjärtan
+    - 1 st (ca 500 g) blomkålshuvud
+    - 240 g (1 burk) kronärtskockshjärtan
     - 1 tsk torkad dragon
     - 1 dl vitt vin
     - 3 dl grädde
@@ -31,4 +31,4 @@ ingredients:
    blomkålen är mjuk. Späd med vatten för önskad konsistens.
 3. Tillsätt kikärtor och låt allt bli varmt.
 4. Smaka av med citronjuice, salt och peppar. Hacka persiljan och strö över
-   grytan. Servera med bröd.
+   grytan. Servera med bröd och överbliven citron.

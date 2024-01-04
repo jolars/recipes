@@ -6,7 +6,7 @@ categories: kött
 tags: färs, husmanskost
 img: assets/img/kalpudding.jpg
 servings: 4 portioner
-cook_time: 30 minuter
+cook_time: PT30M
 ingredients:
   main:
     - 1 dl mjölk

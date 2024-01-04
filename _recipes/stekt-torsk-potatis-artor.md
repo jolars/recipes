@@ -6,7 +6,7 @@ categories: fisk
 tags: potatis, lättlagat
 img: assets/img/torsk.jpg
 servings: 4 portioner
-cook_time: 30 minuter
+cook_time: PT30M
 ingredients:
   main:
     - 800 g fast potatis

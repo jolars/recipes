@@ -50,7 +50,7 @@ layout: base
                 <p class="card-text">{{ recipe.excerpt }}</p>
                 {%- if recipe.cook_time -%}
                     <div class="text-begin text-body-secondary">
-                        <i class="bi bi-clock"></i> <small>{{ recipe.cook_time }}</small>
+                        <i class="bi bi-clock"></i> <small>{{ recipe.cook_time | convert_iso_to_swedish  }}</small>
                     </div>
                 {%- endif -%}
             </div>

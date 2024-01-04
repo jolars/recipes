@@ -3,6 +3,40 @@ function round(value, places) {
   return (Math.round(value * multiplier) / multiplier);
 }
 
+function convertIsoTimeToSwedish(isoDuration) {
+  const match = isoDuration.match(/P(?<years>\d+Y)?(?<months>\d+M)?(?<weeks>\d+W)?(?<days>\d+D)?T?(?<hours>\d+H)?(?<minutes>\d+M)?(?<seconds>\d+S)?/).groups;
+  let result = '';
+  if (match.years) {
+    const years = parseInt(match.years);
+    result += `${years} år `;
+  }
+  if (match.months) {
+    const months = parseInt(match.months);
+    result += `${months} månader `;
+  }
+  if (match.weeks) {
+    const weeks = parseInt(match.weeks);
+    result += `${weeks} veckor `;
+  }
+  if (match.days) {
+    const days = parseInt(match.days);
+    result += `${days} dagar `;
+  }
+  if (match.hours) {
+    const hours = parseInt(match.hours);
+    result += `${hours} timmar `;
+  }
+  if (match.minutes) {
+    const minutes = parseInt(match.minutes);
+    result += `${minutes} minuter `;
+  }
+  if (match.seconds) {
+    const seconds = parseInt(match.seconds);
+    result += `${seconds} sekunder `;
+  }
+  return result.trim();
+}
+
 function extractServingsSize(str) {
   const match = str.match(/\d+/);
   return match ? parseFloat(match[0]) : null;

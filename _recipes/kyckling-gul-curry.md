@@ -6,7 +6,7 @@ categories: kyckling
 tags: kyckling, ris, curry, lättlagat
 img: assets/img/chicken-yellow-curry.jpg
 servings: 4 portioner
-cook_time: 30 minuter
+cook_time: PT30M
 ingredients:
   main:
     - 4 dl jasminris

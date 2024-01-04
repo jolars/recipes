@@ -7,8 +7,8 @@ categories: vegetariskt
 tags: soppa
 img: assets/img/blomkalssoppa.jpg
 servings: 4 portioner
-prep_time: 2 timmar
-cook_time: 1 timme
+prep_time: PT2H
+cook_time: PT1H
 ingredients:
   Buljong:
     - 1 l vatten

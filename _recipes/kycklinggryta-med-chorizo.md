@@ -6,7 +6,7 @@ categories: kyckling
 tags: kyckling, chorizo, lättlagat
 img: assets/img/chorizo-chicken.jpg
 servings: 4 portioner
-cook_time: 30 minuter
+cook_time: PT30M
 ingredients:
   main:
     - 300 g kyclinglårfilé

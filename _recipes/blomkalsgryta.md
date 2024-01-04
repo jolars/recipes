@@ -6,7 +6,7 @@ categories: vegetariskt
 tags: gryta, vegetariskt
 img: assets/img/blomkalsgryta-med-dragon-och-citron.jpg
 servings: 4 portioner
-cook_time: 30 minuter
+cook_time: PT30M
 ingredients:
   main:
     - 3 schalottenlökar

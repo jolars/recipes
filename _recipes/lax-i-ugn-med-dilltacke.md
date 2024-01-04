@@ -4,16 +4,16 @@ excerpt: Ett enkelt recept för både fest och vardag
 categories: fisk
 tags: potatis, lax
 img: assets/img/lax-i-ugn-med-dilltacke.jpeg
-servings: 4 portioner
+servings: 6 portioner
 prep_time: PT3H
-cook_time: PT45
+cook_time: PT45M
 ingredients:
   main:
     - 1 kg lax
     - 1 tsk salt
     - 40 g (1 paket) fryst dill, eller 1 dl färsk
     - 1 dl majonnäs
-    - 800 g fast potatis
+    - 1 kg fast potatis
     - 400 g gröna ärtor
     - 1 citron
 ---

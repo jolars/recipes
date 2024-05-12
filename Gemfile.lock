@@ -1,10 +1,10 @@
 GIT
   remote: https://github.com/jolars/jekyll-responsive-image.git
-  revision: dda6d748c8b070b37900d9e0b528d11701808f76
+  revision: 624824b4668b79c82e3ea375156c7e58d25d2fbb
   specs:
     jekyll-responsive-image (1.6.0)
       jekyll (>= 2.0, < 5.0)
-      rmagick (>= 2.0, < 5.0)
+      rmagick (>= 5.3, < 6.0)
 
 GEM
   remote: https://rubygems.org/
@@ -56,15 +56,19 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    observer (0.1.2)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    pkg-config (1.5.6)
     public_suffix (5.0.5)
     rake (13.2.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.6)
-    rmagick (4.3.0)
+    rmagick (5.5.0)
+      observer (~> 0.1)
+      pkg-config (~> 1.4)
     rouge (4.2.1)
     safe_yaml (1.0.5)
     sass-embedded (1.77.1-x86_64-linux-gnu)

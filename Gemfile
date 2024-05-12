@@ -5,7 +5,7 @@ gem "jekyll", ">= 4.3.0"
 group :jekyll_plugins do
   gem "jekyll-tagories"
   gem "jekyll-paginate"
-  gem "jekyll-responsive-image"
+  gem "jekyll-responsive-image", github: "jolars/jekyll-responsive-image"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

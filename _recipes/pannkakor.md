@@ -3,7 +3,7 @@ layout: recipe
 title: "Pannkakor"
 categories: bak
 tags: utemat
-excerpt: Bästa utematsbaket!
+excerpt: Klassiska svenska pannkakor.
 img: assets/img/pannkakor.jpeg
 cook_time: PT10M
 prep_time: PT5M

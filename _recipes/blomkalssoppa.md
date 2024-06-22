@@ -40,8 +40,8 @@ ingredients:
 1. Låt gräddfilen rinna av i ett kaffefilter ett dygn i kylskåp.
 2. Skär blomkålen i bitar. Skala och hacka lök och vitlök. Fräs allt i olja utan
    att det tar färg.
-3. Tilsätt vin, grädde och buljong. Sjud tills blomkålen är mjuk. Mixa slätt med
-   stavmixer.
+3. Tillsätt vin, grädde och buljong. Sjud tills blomkålen är mjuk. Mixa slätt
+   med stavmixer.
 4. Smaka av med salt och vitpeppar. Red eventuellt av med majsstärkelse utrört i
    lite kallt vatten.
 5. Toppa med syrad grädde och krasse och servera med bröd.

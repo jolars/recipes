@@ -8,7 +8,7 @@ servings: 1 mellanstor skål
 cook_time: PT45M
 ingredients:
   main:
-    - 3 dl valnötter
+    - 150 g valnötter
     - 1 dl mild paprikapuré
     - 0.75 dl ströbröd
     - 1 st vitlöksklyfta

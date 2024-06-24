@@ -9,10 +9,10 @@ cook_time: PT25M
 ingredients:
   main:
     - '500 g kikärtor, kokta'
-    - '4 msk tahini, ljus'
+    - '60 g (4 msk) tahini, ljus'
     - 1 st vitlöksklyfta
-    - 1 citron
-    - 1 tsk salt
+    - 2 st citron (4 msk citronsaft)
+    - 1.5 tsk salt
     - 1 krm spiskummin
     - 0.5 dl vatten
 ---

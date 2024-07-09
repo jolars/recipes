@@ -2,7 +2,7 @@
 title: Tzatziki
 excerpt: Grekisk röra med vitlök och gurka
 categories: röra
-tags: 'röra, grekland'
+tags: "röra, grekland"
 img: assets/img/tzatziki.jpg
 servings: 4 portioner
 cook_time: PT25M
@@ -12,12 +12,11 @@ ingredients:
     - 0.5 tsk salt
     - 2 dl grekisk yoghurt
     - 1 st vitlöksklyfta
-    - 1 tsk torkad oregano
     - 1 msk olivolja
     - svartpeppar
 ---
+
 1. Skölj och riv gurkan grovt. Lägg i en sil och blanda i salt. Låt stå i 30
    minuter. Krama ur vattnet.
 2. Blanda gurkan med yoghurt, pressad vitlök, oregano och olivolja. Smaka av med
    peppar.
-

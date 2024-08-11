@@ -4,38 +4,38 @@ excerpt: Barnens favorit!
 categories: fågel
 tags: kyckling, ris
 img: assets/img/kyckling-med-jordnotssas.jpeg
-servings: 4 portioner
+servings: 6 portioner
 prep_time: PT3H
 cook_time: PT30M
 ingredients:
   main:
-    - 600 g kycklingfilé
-    - 0.5 dl hackade jordnötter
+    - 900 g kycklingfilé
+    - 1 dl hackade jordnötter
+    - 2 lime
+    - 600 g haricots verts
     - chiliflakes
     - kokosflakes
-    - 1 lime
-    - 400 g haricots verts
   Ris:
-    - 4 dl jasminris
-    - 4.8 dl vatten
+    - 6 dl jasminris
+    - 7.5 dl vatten
   Jordnötssås:
     - 1 gul lök
-    - 1 vitlöksklyfta
-    - 1 msk riven färsk ingefära
+    - 2 st vitlöksklyfta
+    - 1 msk färsk ingefära
     - 2 tsk sambal oelek
-    - 1 dl slätt jordnötssmör
-    - 250 ml kokosmjölk
-    - 1 tsk socker
-    - 1 msk japansk soja
+    - 150 g (1.5 dl) slätt jordnötssmör
+    - 400 ml kokosmjölk
+    - 2 msk (30 g) japansk soja
 ---
 
 1. Sätt ugnen på 175 °C.
-2. Skölj jasminriset ett par gånger och koka det sedan i riskokare.
-3. Salta kycklingen på bägge sidor och lägg i en smord ugnsform. Baka tills de
-   har en innertemperatur på 72 °C, cirka 15 minuter.
+2. Skölj jasminriset ett par gånger och tillaga det sedan, gärna i riskokare.
+3. Salta kycklingen på bägge sidor och lägg i en smord ugnsform. Ugnsbaka tills
+   de har en innertemperatur på 70 °C, cirka 15 minuter.
 4. Hacka löken fint och fräs den i olja i en kastrull ett par minuter utan att
-   det tar färg. Tillsätt vitlök, ingefära och sambal oelek och fräs i
-   ytterligare en minut. Tillsätt jordnötssmör, kokosmjölk, socker och soja och
-   låt sjuda i 3 minuter.
+   den tar färg. Riv ingefära och hacka vitlöken fint. Tillsätt sedan vitlök,
+   ingefära och sambal oelek och fräs i ytterligare en minut. Tillsätt därefter
+   jordnötssmör, kokosmjölk, och soja och låt sjuda i 5 minuter.
 5. Häll såsen över kycklingen och toppa med kokosflakes och hackade jordnötter.
-6. Servera kycklingen med limeklyftor, kokt ris och kokt haricots verts.
+6. Servera kycklingen med limeklyftor, kokt ris och kokt haricots verts (eller
+   någon annan grönsak).

@@ -35,26 +35,29 @@ layout: base
     {% for recipe in site.recipes %}
         <div class="col recipe-card" data-category="{{ recipe.categories }}">
             <div class="card">
-                <a href="{{ recipe.url | relative_url }}" class="stretched-link">
-                    <!-- TODO: Make images smaller for this view -->
-                    {%- if recipe.img -%}
-                        {% responsive_image_block %}
-                        path: {{ recipe.img }}
-                        alt: {{ recipe.title }}
-                        class: card-img-top
-                    {% endresponsive_image_block %}
+                <!-- <a href="{{ recipe.url | relative_url }}" class="stretched-link"> -->
+                <!-- TODO: Make images smaller for this view -->
+                {%- if recipe.img -%}
+                    {%
+                    picture
+                    "{{ recipe.img }}"
+                    1:1
+                    --alt "{{ recipe.title }}"
+                    --img class="card-img-top stretched-link"
+                    --link {{ recipe.url | relative_url }}
+                    %}
                 {%- endif -%}
-            </a>
-            <div class="card-body">
-                <h5 class="card-title">{{ recipe.title }}</h5>
-                <p class="card-text">{{ recipe.excerpt }}</p>
-                {%- if recipe.cook_time -%}
-                    <div class="text-begin text-body-secondary">
-                        <i class="bi bi-clock"></i> <small>{{ recipe.cook_time | convert_iso_to_swedish  }}</small>
-                    </div>
-                {%- endif -%}
+                <!-- </a> -->
+                <div class="card-body">
+                    <h5 class="card-title">{{ recipe.title }}</h5>
+                    <p class="card-text">{{ recipe.excerpt }}</p>
+                    {%- if recipe.cook_time -%}
+                        <div class="text-begin text-body-secondary">
+                            <i class="bi bi-clock"></i> <small>{{ recipe.cook_time | convert_iso_to_swedish }}</small>
+                        </div>
+                    {%- endif -%}
+                </div>
             </div>
         </div>
-    </div>
-{% endfor %}
+    {% endfor %}
 </div>

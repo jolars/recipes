@@ -19,8 +19,8 @@ ingredients:
   main:
     - 500 g pasta
     - 3 st (375 g) mozzarella
-    - 0.5 kruka basilika
     - 30 st oliver
+    - 0.5 kruka basilika
     - parmesan
 ---
 

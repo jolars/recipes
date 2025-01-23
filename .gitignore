@@ -13,3 +13,4 @@ result-*
 
 # Ignore direnv folder
 .direnv/
+.bundle/

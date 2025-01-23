@@ -3,7 +3,7 @@ title: "Levain"
 excerpt: Stort surdegsbröd med mycket smak
 categories: bakning
 tags: bröd, surdeg
-img: assets/levain.webp
+img: assets/img/levain.webp
 servings: 1 bröd
 prep_time: PT01H
 cook_time: PT45M

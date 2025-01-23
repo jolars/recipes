@@ -8,17 +8,17 @@ servings: 1 bröd
 prep_time: PT01H
 cook_time: PT45M
 ingredients:
-  surdeg:
+  Surdeg:
     - 20 g surdegsgrund
     - 110 g vatten
     - 110 g vetemjöl
-  deg:
+  Deg:
     - 400 g vatten
     - 600 g vetemjöl special
     - 16 g salt
 ---
 
-1. Blanda surdegsgrund och mjöl i en bunke. Täck med lock och låt stå i
+1. Blanda surdegsgrund, mjöl och vatten i en bunke. Täck med lock och låt stå i
    rumstemperatur i 8-12 timmar. Surdegen ska ha bubblat upp ordentligt.
 2. Blanda surdegen med vatten och mjöl i en degblandare. Kör på låg hastighet
    ett par minuter tills dess att alla mjölklumpar har löst sig. Låt degen vila

@@ -1,0 +1,31 @@
+presets:
+  default:
+    formats: [webp, original]
+    widths: [200, 400, 800, 1600]
+    link_source: true
+    sizes:
+      xs: 100vw
+      sm: 100vw
+      md: 100vw
+      lg: 100vw
+      xl: 90vw
+      xxl: 80vw
+
+  grid:
+    widths: [200, 400, 800, 1000]
+    link_source: true
+    sizes:
+      xs: 100vw
+      sm: 100vw
+      md: 50vw
+      lg: 25vw
+      xl: 20vw
+      xxl: 15vw
+
+media_queries:
+  xs: "max-width: 576px"
+  sm: "max-width: 768px"
+  md: "max-width: 992px"
+  lg: "max-width: 1200px"
+  xl: "max-width: 1400px"
+  xxl: "min-width: 1401px"

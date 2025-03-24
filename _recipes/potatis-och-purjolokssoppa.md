@@ -16,8 +16,8 @@ ingredients:
     - 10 dl grönsaksbuljong
     - 3 dl vispgrädde
     - 1 dl vitt vin
-    - 2 krm salt
     - 2 tsk vitvinäger
+    - 3 krm salt
     - peppar
     - 1-2 chorizo
     - 1 knippe persilja

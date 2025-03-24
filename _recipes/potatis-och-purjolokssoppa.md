@@ -5,7 +5,7 @@ excerpt:
   tillsammans med bröd.
 categories: kött
 tags: soppa, potatis
-img: assets/img/potatis-och-purjolokssoppa.jpeg
+img: assets/img/potatis-och-purjolokssoppa.webp
 servings: 4 portioner
 prep_time: PT0M
 cook_time: PT30M

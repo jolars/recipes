@@ -12,7 +12,7 @@ ingredients:
   main:
     - 2.5 dl mjölk
     - 135 g (1.5 dl) strösocker
-    - 270 g vetemjöl
+    - 260 g vetemjöl
     - 12 g (2 tsk) bakpulver
     - 3 g (1 tsk) vaniljsocker
     - 2 ägg

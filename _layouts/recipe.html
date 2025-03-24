@@ -44,6 +44,12 @@ layout: base
         </div>
         <h1>{{ page.title }}</h1>
         <p class="lead">{{ page.excerpt }}</p>
+        <p class="text-start">
+            <a href="https://github.com/{{ site.github_username }}/{{ site.repository_name }}/edit/{{ site.branch }}/{{ page.path }}"
+               class="btn btn-sm btn-outline-secondary">
+                <i class="bi bi-pencil"></i> Edit on GitHub
+            </a>
+        </p>
     </div>
 </div>
 <div class="recipe row">

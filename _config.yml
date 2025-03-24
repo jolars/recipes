@@ -2,6 +2,8 @@ title: Recept
 email: johanlarsson@outlook.com
 url: "https://recept.cx"
 github_username: jolars
+repository_name: recipes
+branch: main
 
 plugins:
   - jekyll-tagories

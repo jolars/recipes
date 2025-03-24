@@ -60,30 +60,16 @@ layout: base
             </div>
             {%- if page.servings -%}
                 <div class="col">
-                    <div class="mb-2 text-end text-sm-start">
+                    <div class="mb-2 text-start text-sm-start">
                         <em class="text-body-secondary me-2"><span id="servings" data-servings="{{ servings_size }}">{{ page.servings }}</span></em>
                         <div class="btn-group btn-group-sm"
                              role="group"
                              aria-label="Modify Servings Buttons">
-                            <a class="btn btn-outline-secondary" onclick="modifyServings('down');">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                     width="16"
-                                     height="16"
-                                     fill="currentColor"
-                                     class="bi bi-dash"
-                                     viewBox="0 0 16 16">
-                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
-                                </svg>
+                            <a class="btn btn-outline-danger" onclick="modifyServings('down');">
+                                <i class="bi bi-dash"></i>
                             </a>
-                            <a class="btn btn-outline-secondary" onclick="modifyServings('up');">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                     width="16"
-                                     height="16"
-                                     fill="currentColor"
-                                     class="bi bi-plus"
-                                     viewBox="0 0 16 16">
-                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                </svg>
+                            <a class="btn btn-outline-success" onclick="modifyServings('up');">
+                                <i class="bi bi-plus"></i>
                             </a>
                         </div>
                     </div>
@@ -104,8 +90,9 @@ layout: base
         {% endfor %}
         <div class="d-grid d-sm-block">
             <!-- TODO: Add requestedQuantity and update using javascript -->
-            <a class="btn btn-secondary mb-3"
+            <a class="btn btn-sm btn-outline-primary mb-3"
                href="https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ servings_size }}">
+                <i class="bi bi-cart4"></i>
                 Lägg till i Bring!
             </a>
         </div>

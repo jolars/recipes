@@ -7,7 +7,7 @@ description:
   picklad ingefära eller inlagd gurka.
 categories: kött
 tags: bulgogi, asiatisk, snabbt, vardag
-img: assets/img/bulgogi.webp
+img: assets/img/bulgogi.png
 servings: 4 portioner
 prep_time: PT20M
 cook_time: PT45M

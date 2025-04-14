@@ -12,7 +12,7 @@ servings: 4 portioner
 prep_time: PT20M
 cook_time: PT45M
 ingredients:
-  tillbehör:
+  Tillbehör:
     - 6 st salladslökar
     - 0.5 st romansallad
     - 0.5 st gurka
@@ -20,7 +20,7 @@ ingredients:
     - 2 msk rostade sesamfrön
     - 1 dl majonnäs
     - 1 tsk sriracha
-  bulgogi:
+  Bulgogi:
     - 500g nötfärs
     - 3 st vitlöksklyftor
     - 1 msk riven ingefära
@@ -28,7 +28,7 @@ ingredients:
     - 1 msk sesamolja
     - 2 msk strösocker
     - 2 krm svartpeppar
-  ris:
+  Ris:
     - 4 dl japanskt ris
     - 5 dl vatten
 ---

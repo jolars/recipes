@@ -5,7 +5,7 @@ excerpt: >-
   kycklingbuljong från tärning.
 categories: vegetariskt
 tags: soppa
-img: assets/img/blomkalssoppa.jpg
+img: assets/img/blomkalssoppa.png
 servings: 4 portioner
 prep_time: PT2H
 cook_time: PT1H
@@ -14,7 +14,7 @@ ingredients:
     - 1 l vatten
     - 1 gul lök
     - 1 morot
-    - '1 liten purjolök, endast det vita'
+    - "1 liten purjolök, endast det vita"
     - 2 lagerblad
     - 1 tsk timjan
   Soppa:
@@ -26,9 +26,10 @@ ingredients:
     - 4 dl grädde
     - 4 dl kycklingbuljong
     - salt
-    - 'vitpeppar, nymald'
+    - "vitpeppar, nymald"
     - 1-2 msk majsstärkelse
 ---
+
 #### Buljong
 
 1. Sjud alla ingredienser i 1,5 timme. Skumma av några gånger under tiden.
@@ -44,4 +45,3 @@ ingredients:
 4. Smaka av med salt och vitpeppar. Red eventuellt av med majsstärkelse utrört i
    lite kallt vatten.
 5. Toppa med syrad grädde och krasse och servera med bröd.
-

@@ -21,7 +21,7 @@ ingredients:
     - 0.5 tsk svartpeppar
     - 120 g vispgrädde
     - 500 g fettucine
-    - 2 dl gröna ärtor
+    - 3 dl gröna ärtor
     - 85 g prosciutto
     - 100 g ruccola
 ---

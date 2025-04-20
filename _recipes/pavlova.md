@@ -1,9 +1,10 @@
 ---
 title: Pavlova
 excerpt: >-
-  Marängtårta från Nya Zeeland med grädde och bär. Garnerningen kan varieras
-  efter säsong. Tårtbotten kan förberedas några dagar i förväg. Förvara den i så
-  fall i en lufttät behållare.
+  Marängtårta från Nya Zeeland med grädde och bär.
+description: >-
+  Garnerningen kan varieras efter säsong. Tårtbotten kan förberedas några dagar
+  i förväg. Förvara den i så fall i en lufttät behållare.
 categories: desserter
 tags: "maräng, bär, nyazeeland"
 img: assets/img/pavlova.png

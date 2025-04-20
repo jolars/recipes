@@ -4,7 +4,7 @@ title: "Glass"
 excerpt: "Standardrecept på traditionell glass med grädde och ägg."
 categories: sött
 tags: glass, efterrätt
-img: assets/img/glass.jpg
+img: assets/img/glass.png
 servings: 1 sats
 ingredients:
   main:

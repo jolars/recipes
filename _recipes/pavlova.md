@@ -5,8 +5,8 @@ excerpt: >-
   efter säsong. Tårtbotten kan förberedas några dagar i förväg. Förvara den i så
   fall i en lufttät behållare.
 categories: desserter
-tags: 'maräng, bär, nyazeeland'
-img: assets/img/pavlova.jpg
+tags: "maräng, bär, nyazeeland"
+img: assets/img/pavlova.png
 servings: 6 portioner
 cook_time: PT25M
 ingredients:

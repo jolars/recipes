@@ -23,6 +23,7 @@ ingredients:
     - 1 dl blåbär
     - mynta
 ---
+
 1. Sätt ugnen på 175°C.
 2. Vispa äggvitor och salt til ett mjukt skum. Tillsätt sockret lite i taget och
    vispa tills sockret har löst sig. Tillsätt vinäger och majsstärkelse och vänd
@@ -33,4 +34,3 @@ ingredients:
    marängen stå kvar tills ugnen svalnat.
 4. Vispa grädden och bred ut över marängen strax före servering. Garnera med bär
    och mynta.
-

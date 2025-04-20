@@ -1,7 +1,7 @@
 presets:
   default:
     formats: [webp, original]
-    widths: [200, 400, 800, 1600]
+    widths: [200, 400, 800, 1024]
     link_source: true
     sizes:
       xs: 100vw

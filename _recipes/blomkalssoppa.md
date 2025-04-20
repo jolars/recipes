@@ -1,8 +1,9 @@
 ---
 title: Blomkålssoppa med syrad grädde
 excerpt: >-
-  Blomkålssoppa som på Buljong i Lund. Buljongen kan ersättas med
-  kycklingbuljong från tärning.
+  Blomkålssoppa som på Buljong i Lund.
+description: >-
+  Buljongen kan ersättas med kycklingbuljong från tärning.
 categories: vegetariskt
 tags: soppa
 img: assets/img/blomkalssoppa.png

@@ -1,6 +1,6 @@
 presets:
   default:
-    formats: [webp, original]
+    formats: [webp]
     widths: [200, 400, 800, 1024]
     link_source: false
     sizes:
@@ -13,6 +13,7 @@ presets:
 
   grid:
     widths: [200, 400, 800, 1000]
+    formats: [webp]
     link_source: false
     attributes:
       img: "loading='lazy'"

@@ -4,7 +4,7 @@ title: "Gratinerad Pasta med Tomatsås"
 categories: vegetariskt
 tags: pasta, enkelt, tomatsås
 excerpt: Enkel vardagsrätt.
-img: assets/img/gratinerad-penne.webp
+img: assets/img/gratinerad-penne.png
 cook_time: PT30M
 prep_time: PT0M
 servings: 4 portioner
@@ -24,7 +24,12 @@ ingredients:
     - parmesan
 ---
 
-1. Koka pastan enligt anvisningarna på förpackningen. Skölj i kallt vatten och låt rinna av.
-2. Koka under tiden tomatsåsen. Skala och hacka vitlöken. Fräs den i olivoljan i en kastrull. Tillsätt krossade tomater, tomatpuré och salt. Låt koka i 10 minuter.
-3. Sätt ugnen på grilleffekt. Blanda pastan med tomatsåsen och oliverna och häll allt i en ugnsfast form. Bryt och blanda i mozzarellan. Gratinera allting i några minuter tills den fått färg, ca 5 minuter.
+1. Koka pastan enligt anvisningarna på förpackningen. Skölj i kallt vatten och
+   låt rinna av.
+2. Koka under tiden tomatsåsen. Skala och hacka vitlöken. Fräs den i olivoljan i
+   en kastrull. Tillsätt krossade tomater, tomatpuré och salt. Låt koka i 10
+   minuter.
+3. Sätt ugnen på grilleffekt. Blanda pastan med tomatsåsen och oliverna och häll
+   allt i en ugnsfast form. Bryt och blanda i mozzarellan. Gratinera allting i
+   några minuter tills den fått färg, ca 5 minuter.
 4. Servera med parmesan, svartpeppar, olivolja och färsk basilika.

@@ -3,7 +3,7 @@ title: "Kyckling med jordnötssås"
 excerpt: Barnens favorit!
 categories: fågel
 tags: kyckling, ris
-img: assets/img/kyckling-med-jordnotssas.jpeg
+img: assets/img/kyckling-med-jordnotssas.png
 servings: 6 portioner
 prep_time: PT3H
 cook_time: PT30M

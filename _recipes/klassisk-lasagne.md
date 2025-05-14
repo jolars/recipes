@@ -4,7 +4,7 @@ title: "Klassisk lasagne"
 excerpt: "Klassisk lasagne med köttfärssås och bechamelsås"
 categories: kött
 tags: färs, pasta, lasagne, italienskt
-img: assets/img/lasagne.jpeg
+img: assets/img/klassisk-lasagne.png
 servings: 6 portioner
 ingredients:
   main:

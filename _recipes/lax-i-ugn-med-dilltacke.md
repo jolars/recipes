@@ -1,9 +1,13 @@
 ---
 title: "Lax i ugn med dilltäcke"
 excerpt: Ett enkelt recept för både fest och vardag
+description: >-
+  Lax i ugn med dilltäcke är en enkel och god rätt som passar både till fest och
+  vardag. Servera med kokt potatis och ärtor. Dilltäcket ger laxen en härlig
+  smak och gör den saftig.
 categories: fisk
 tags: potatis, lax
-img: assets/img/lax-i-ugn-med-dilltacke.jpeg
+img: assets/img/lax-i-ugn-med-dilltacke.png
 servings: 6 portioner
 prep_time: PT3H
 cook_time: PT45M

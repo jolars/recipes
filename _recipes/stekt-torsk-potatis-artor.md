@@ -4,7 +4,7 @@ title: "Stekt torsk med potatis och ärtor"
 excerpt: "Enkelt och gott!"
 categories: fisk
 tags: potatis, lättlagat
-img: assets/img/torsk.jpg
+img: assets/img/stekt-torsk-potatis-artor.png
 servings: 4 portioner
 cook_time: PT30M
 ingredients:

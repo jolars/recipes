@@ -3,8 +3,10 @@ layout: recipe
 title: "Krabbelurer"
 categories: bak
 tags: utemat
-excerpt: Ungefär som en svensk utematsversion av amerikanska pannkakor.
-img: assets/img/krabbelurer.jpg
+excerpt: Den klassiska stormkökspannkakan!
+description: >
+  Ett vanligt recept på krabbelurer, som liknar de amerikanska pannkakorna.
+img: assets/img/krabbelurer.png
 cook_time: PT10M
 prep_time: PT5M
 servings: 10 st

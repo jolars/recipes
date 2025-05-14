@@ -3,7 +3,7 @@ title: Hummus
 excerpt: Sammetslen kikärtsröra från Mellanöstern
 categories: röra
 tags: "röra, mellanöstern"
-img: assets/img/hummus.jpg
+img: assets/img/hummus.png
 servings: 6 portioner
 cook_time: PT25M
 ingredients:

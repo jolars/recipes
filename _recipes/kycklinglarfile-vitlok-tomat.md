@@ -1,12 +1,12 @@
 ---
 layout: recipe
 title: "Kycklingårfilé med vitlök och soltorkad tomat"
-excerpt:
-  "Perfekt vardagsmat som är enkelt att förbereda och sedan sköter sig själv i
-  ugnen."
+excerpt: >-
+  Perfekt vardagsmat som är enkelt att förbereda och sedan sköter sig själv i
+  ugnen.
 categories: kyckling
 tags: kycklinglårfilé, ugnsmat, enkelt
-img: assets/img/kycklinglarfile-vitlok-tomat.webp
+img: assets/img/kycklinglarfile-vitlok-tomat.png
 servings: 4 portioner
 cook_time: PT50M
 ingredients:

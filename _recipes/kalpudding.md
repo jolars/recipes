@@ -2,9 +2,12 @@
 layout: recipe
 title: "Kålpudding"
 excerpt: "Klassisk svensk husmanskost"
+description: >
+  Kålpudding är en klassisk svensk rätt som är både enkel och god. Den
+  kombinerar köttfärs med vitkål och serveras ofta med potatis och lingon.
 categories: kött
 tags: färs, husmanskost
-img: assets/img/kalpudding.jpg
+img: assets/img/kalpudding.png
 servings: 4 portioner
 cook_time: PT30M
 ingredients:

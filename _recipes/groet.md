@@ -4,10 +4,10 @@ title: "Gröt"
 excerpt: "Standardrecept på gröt."
 categories: vegetariskt
 tags: frukost
-img: assets/img/groet.jpg
+img: assets/img/groet.png
 servings: 1 portion
 ingredients:
-  main:
+  Gröten:
     - 50 g klippt havre
     - 125 g mjölk
     - 125 g vatten
@@ -16,8 +16,15 @@ ingredients:
     - 2 krm salt
     - 7.5 g socker
     - 15 g vatten
-    - 1 krm mortlad kardemumma
+  Tillbehör:
+    - 1 näve rostade hasselnötter
+    - 1 dl kvarg
 ---
 
-1. Blanda allting i en kastrull och koka upp under omröring.
-2. Toppa med valfri topping!
+1. Tärna äpplet och blanda med övriga ingredienser i en kastrull. Koka upp under
+   omröring och låt sjuda i ca 10 minuter tills äpplet har mjuknat och kompotten
+   tjocknat.
+2. Blanda havre, mjölk och vatten i en kastrull och koka upp under omröring på
+   låg till medelhög värme.
+3. Sleva upp gröten och serverade med äppelkompott, kvarg och hackade
+   hasselnötter.

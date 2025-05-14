@@ -2,9 +2,14 @@
 layout: recipe
 title: "Kyckling i gul curry"
 excerpt: "Precis som när man var liten!"
+description: >-
+  Kyckling i gul curry är en klassisk rätt som är enkel att laga och full av
+  smak. Denna version är inspirerad av barndomen och är perfekt för en snabb
+  middag. Man kan variera kycklingen med andra styckdelar eller grönsaker.
+  Servera med jasminris, lime och färsk koriander.
 categories: kyckling
 tags: kyckling, ris, curry, lättlagat
-img: assets/img/chicken-yellow-curry.jpg
+img: assets/img/kyckling-gul-curry.png
 servings: 4 portioner
 cook_time: PT30M
 ingredients:

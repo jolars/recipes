@@ -4,7 +4,7 @@ title: "Gryta med kyckling, chorizo och bönor"
 excerpt: "Bra och rejäl vardagsmat"
 categories: kyckling
 tags: kyckling, chorizo, lättlagat
-img: assets/img/chorizo-chicken.jpg
+img: assets/img/kycklinggryta-med-chorizo.png
 servings: 4 portioner
 cook_time: PT30M
 ingredients:

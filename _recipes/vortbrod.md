@@ -2,9 +2,12 @@
 layout: recipe
 title: "Vörtbröd"
 excerpt: "Julens godaste bröd"
+description: >-
+  Det klurigaste med vörtbrödet är att få tag på vörtextrakt, men det brukar
+  finnas i välsorterade delis eller bagerier.
 categories: bakning
 tags: bröd, jul
-img: assets/img/vortbrod.jpg
+img: assets/img/vortbrod.png
 servings: 2 limpor
 cook_time: PT30M
 prep_time: PT45M

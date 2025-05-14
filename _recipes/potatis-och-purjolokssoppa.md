@@ -3,9 +3,13 @@ title: "Potatis och purjolökssoppa"
 excerpt:
   En enkel och god soppa som passar bra som förrätt eller som en lättare lunch
   tillsammans med bröd.
+description: >-
+  Jag vill gärna inte att soppan ska bli för tjock, så mängden potatis är ganska
+  liten här. Om det blir för vattnigt kan soppan med fördel  redas något på
+  slutet.
 categories: kött
 tags: soppa, potatis
-img: assets/img/potatis-och-purjolokssoppa.webp
+img: assets/img/potatis-och-purjolokssoppa.png
 servings: 4 portioner
 prep_time: PT0M
 cook_time: PT30M

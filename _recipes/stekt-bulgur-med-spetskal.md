@@ -31,7 +31,7 @@ ingredients:
 ---
 
 1. Hacka vitlök, riv moroten grovt och strimla spetskålen.
-2. Hetta up en wok med matolja. Tills\qtt kål och morot och woka i ett par
+2. Hetta up en wok med matolja. Tillsätt kål och morot och woka i ett par
    minuter. Tillsätt vitlöken mot slutet.
 3. Tillsätt bulgur och woka i ytterligare ett par minuter. Tillsätt eventuellt
    mer olja om det verkar torrt.

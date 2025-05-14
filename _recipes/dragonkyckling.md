@@ -3,7 +3,7 @@ title: "Dragonkyckling"
 excerpt: Enkel kycklingrätt med dragonsås, ris och brysselkål.
 categories: fågel
 tags: ris, dragon, brysselkål
-img: assets/img/dragonkyckling.jpeg
+img: assets/img/dragonkyckling.png
 servings: 4 portioner
 prep_time: PT0M
 cook_time: PT30M

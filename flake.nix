@@ -23,6 +23,10 @@
             vips
             rubyPackages.ruby-vips
             libwebp
+            (pkgs.python3.withPackages (ps: [
+              ps.requests
+              ps.openai
+            ]))
           ];
         };
       }

@@ -35,6 +35,17 @@ def main():
         prompt = f.read()
     print(f"📝 Loaded {len(prompt)} characters for prompt")
 
+    # Add a header to the prompt
+    header = """
+    Generate a modern-looking image of a dish based on the following
+    recipe description (in Swedish). You can pick a background that matches the
+    dish, but try not to overload it with details.
+    The image should have square or almost square format.
+
+    """
+
+    prompt = header + prompt
+
     # Initialize OpenAI client
     print("🔄 Initializing OpenAI client")
     client = OpenAI()

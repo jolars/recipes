@@ -2,8 +2,13 @@
 layout: recipe
 title: "Gnocchi med solrospesto"
 excerpt: Ett enkelt recept på gnocchi med pesto på solrosfrön.
+description: >-
+  Gnocchi med solrospesto är en enkel och god rätt som går snabbt att laga.
+  Peston görs på solrosfrön, basilika, vitlök och parmesanost. Servera med
+  grönkålsblad och citron. Själva peston kan varieras med andra nötter och
+  grönt, expempelvis valnötter, rostade hasselnötter, spenat, eller morotsblast.
 categories: vegetariskt
-img: assets/img/gnocchi-med-solrospesto.jpg
+img: assets/img/gnocchi-med-solrospesto.png
 servings: 4 portioner
 ingredients:
   main:
@@ -20,11 +25,9 @@ ingredients:
     - 2 msk olivolja
 ---
 
-1. Koka gnocchin. Häll av och spara lite av kokvattnet. Kyl ner gnocchin i
-   rinnande kallt vatten.
-2. Rosta solrosfrön i en torr stekpanna.
-3. Skala vitlök och mixa i en matberedare med basilika, solrosfrön, ost och
-   olivolja.
-4. Stek gnocchin i matolja tills de fått färg.
-5. Blanda peston med gnocchin och späd med lite av kokvattnet.
-6. Servera med grönkålsblad och citron.
+1. Rosta solrosfrön i en torr stekpanna.
+2. Skala vitlök och mixa i en matberedare (eller stavmixer) med basilika,
+   solrosfrön, ost och olivolja.
+3. Stek gnocchin i matolja tills de fått färg och blanda sedan peston med
+   gnocchin.
+4. Servera med grönkålsblad och citronklyftor.

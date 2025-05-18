@@ -18,6 +18,7 @@ ingredients:
     - 1 msk vitvinsvinäger
     - 1 kruka dill
     - 4 dl vispgrädde
+    - 1 msk majsstärkelse
     - 2 tsk salt
   Ris:
     - 4 dl jasminris
@@ -33,8 +34,8 @@ ingredients:
    vatten och salt och sätt på.
 3. Skölj purjolöken och strimla den. Dela broccolin i buketter. Lägg purjolöken
    i en botten av en ugnsform och torsken ovanpå. Fördela broccolibuketterna
-   runtomkring. Strö över salt och häll på vinägern, och klipp över dillen. Häll
-   till sist på grädden. Sätt in i ugnen i ca 25 minuter, tills fiskens
-   innertemperatur är 45-50 grader.
-4. Koka upp ärterna i lättsaltat vatten och häll av vattnet direkt.
-5. Servera fisken med riset, ärtorna och citronklyftor.
+   runtomkring. Strö över salt och häll på vinägern, och klipp över dillen.
+4. Blanda ut majsstärkelsen i grädden och häll den över fisk och broccoli. Sätt
+   in i ugnen i ca 25 minuter, tills fiskens innertemperatur är 45-50 grader.
+5. Koka upp ärterna i lättsaltat vatten och häll av vattnet direkt.
+6. Servera fisken med riset, ärtorna och citronklyftor.

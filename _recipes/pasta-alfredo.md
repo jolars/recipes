@@ -7,7 +7,7 @@ description:
   snabb middag. I denna version har vi lagt till gröna ärtor och prosciutto för
   extra smak och textur. Det här kan enkelt bytas ut mot en vegetarisk variant
   genom att utesluta prosciutton.
-categories: vegetariskt
+categories: kött
 tags: pasta, italienstk
 img: assets/img/pasta-alfredo.png
 servings: 4 portioner

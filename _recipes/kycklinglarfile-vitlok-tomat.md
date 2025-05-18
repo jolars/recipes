@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: "Kycklingårfilé med vitlök och soltorkad tomat"
+title: "Kycklinglårfilé med vitlök och soltorkad tomat"
 excerpt: >-
   Perfekt vardagsmat som är enkelt att förbereda och sedan sköter sig själv i
   ugnen.

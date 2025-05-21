@@ -37,10 +37,13 @@ def main():
 
     # Add a header to the prompt
     header = """
-    Generate a modern-looking image of a dish based on the following recipe
-    description (in Swedish). You can vary the choice of background, but try to
-    keep it neutral and put the dish in focus. The image should have square or
-    almost square format.
+    Generate a picture of a dish or food item based on
+    the following recipe description
+    (in Swedish), as if it was intended for a cookbook or 
+    recipe site. You can be imaginative with the choice of background, but try to
+    keep it neutral. The image should have square or
+    almost square format. The actual recipe text should not
+    be included in the image.
 
     """
 

@@ -13,17 +13,17 @@ prep_time: PT15
 cook_time: PT60
 ingredients:
   Fördeg:
-    - 90 g rågkross
-    - 180 g rögmjöl
+    - 100 g rågkross
+    - 180 g rågmjöl
     - 30 g surdeg
     - 14 g salt
     - 450 g vatten
     - 180 g rostade frön
   Rågkärnor:
-    - 150 g rågkärnor
+    - 100 g rågkärnor
     - 200 g vatten
   Deg:
-    - 700 g vatten
+    - 600 g vatten
     - 300 g rågmjöl
     - 400 g vetemjöl
     - 100 g råsirap

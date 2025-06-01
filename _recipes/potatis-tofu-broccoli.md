@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: "Potatis, tofu, och broccoli"
+title: "Potatis, tofu och broccoli"
 excerpt: "Kokt potatis med stekt tofu och broccoli i thaidressing"
 description: >-
   Tamari är en speciell typ av sojasås som är glutenfri. Den kan ersättas med

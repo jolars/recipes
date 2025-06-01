@@ -9,8 +9,8 @@ categories: bakning
 tags: bröd
 img: assets/img/ragbrod.png
 servings: 2 formbröd
-prep_time: PT15
-cook_time: PT60
+prep_time: PT15M
+cook_time: PT60M
 ingredients:
   Fördeg:
     - 100 g rågkross

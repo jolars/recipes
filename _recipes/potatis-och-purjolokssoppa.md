@@ -15,7 +15,7 @@ prep_time: PT0M
 cook_time: PT30M
 ingredients:
   main:
-    - 500 g mjölig potatis
+    - 600 g mjölig potatis
     - 200 g (1 st) purjolök, enbart det vita
     - 10 dl grönsaksbuljong
     - 3 dl vispgrädde
@@ -23,7 +23,7 @@ ingredients:
     - 2 tsk vitvinäger
     - 3 krm salt
     - peppar
-    - 1-2 chorizo
+    - 1 chorizo
     - 1 knippe persilja
 ---
 

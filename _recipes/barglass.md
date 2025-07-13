@@ -13,7 +13,7 @@ ingredients:
     - 45 g mjölkpulver
     - 100 g socker
     - 35 g glukospulver (DE 40)
-    - 2 st (35 g) äggulor
+    - 2 st (34 g) äggulor
     - 190 g jordgubbar (färska eller frysta, tinade)
 ---
 

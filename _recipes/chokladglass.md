@@ -13,7 +13,7 @@ ingredients:
     - 30 g mjölkpulver
     - 65 g socker
     - 25 g glukospulver (DE 40)
-    - 2 st (35 g) äggulor
+    - 2 st (34 g) äggulor
     - 55 g kakao (osötad)
     - 55 g mörk choklad (70%)
 ---

@@ -8,14 +8,14 @@ img: assets/img/chokladglass.png
 servings: 1 sats
 ingredients:
   main:
-    - 250 g grädde (36% fett)
-    - 300 g mjölk (3% fett)
+    - 230 g grädde (36% fett)
+    - 255 g mjölk (3% fett)
     - 30 g mjölkpulver
-    - 80 g socker
-    - 30 g glukospulver (DE 40)
-    - 2 st (40 g) äggulor
-    - 60 g kakao
-    - 60 g mörk choklad (70%)
+    - 65 g socker
+    - 25 g glukospulver (DE 40)
+    - 2 st (35 g) äggulor
+    - 55 g kakao (osötad)
+    - 55 g mörk choklad (70%)
 ---
 
 1. Blanda mjölkpulver, kakao, socker samt eventuella torra smaksättningar i en

@@ -2,14 +2,17 @@
 layout: recipe
 title: "Glass"
 excerpt: "Standardrecept på gräddglass."
+description:
+  Ett grundrecept som kan varierar med olika smaksättningar, till exempel vanilj
+  (lägg till en vanilljstång).
 categories: sött
 tags: glass, efterrätt
 img: assets/img/glass.png
 servings: 1 sats
 ingredients:
   main:
-    - 275 g grädde (36% fett)
-    - 275 g mjölk (3% fett)
+    - 250 g grädde (36% fett)
+    - 300 g mjölk (3% fett)
     - 40 g mjölkpulver
     - 90 g socker
     - 30 g glukospulver (DE 40)

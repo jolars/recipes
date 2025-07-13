@@ -1,18 +1,19 @@
 ---
 layout: recipe
 title: "Glass"
-excerpt: "Standardrecept på traditionell glass med grädde och ägg."
+excerpt: "Standardrecept på gräddglass."
 categories: sött
 tags: glass, efterrätt
 img: assets/img/glass.png
 servings: 1 sats
 ingredients:
   main:
-    - 400 g grädde (36% fett)
-    - 100 g mjölk (3% fett)
+    - 275 g grädde (36% fett)
+    - 275 g mjölk (3% fett)
     - 40 g mjölkpulver
-    - 125 g socker
-    - 4 st (65 g) äggulor
+    - 90 g socker
+    - 30 g glukospulver (DE 40)
+    - 2 st (34 g) äggulor
 ---
 
 1. Blanda mjölkpulver, socker samt eventuella torra smaksättningar i en bunke.

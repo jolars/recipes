@@ -18,5 +18,5 @@ ingredients:
 
 1. Skölj och riv gurkan grovt. Lägg i en sil och blanda i salt. Låt stå i 30
    minuter. Krama ur vattnet.
-2. Blanda gurkan med yoghurt, pressad vitlök, oregano och olivolja. Smaka av med
+2. Blanda gurkan med yoghurt, pressad eller riven vitlök, oregano och olivolja. Smaka av med
    peppar.

@@ -15,7 +15,7 @@ servings: 4 portioner
 cook_time: PT30M
 ingredients:
   main:
-    - 2 vitlöksklyftor
+    - 3 vitlöksklyftor
     - 2 morötter
     - 250 g spetskål
     - 2 msk matolja

@@ -8,7 +8,6 @@ img: assets/img/barglass.png
 servings: 1 sats
 ingredients:
   main:
-    - 1 sats [vaniljglass](/recipes/vaniljglass.html)
     - 300 g grädde (36% fett)
     - 200 g mjölk (3% fett)
     - 40 g mjölkpulver

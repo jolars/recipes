@@ -6,7 +6,7 @@ description: >-
   En klassisk rabarberpaj med en smuldeg som är enkel att göra. Perfekt till
   fikat eller som dessert. Potatismjöl går bra att byta ut mot majsstärkelse.
   Rabarbern kan alternativt också kryddas med kanel, kardemumma eller ingefära.
-categories: bakning, dessert
+categories: bakning
 tags: bak, smulpaj, rabarber
 img: assets/img/smulpaj-med-rabarber.png
 servings: 1 paj

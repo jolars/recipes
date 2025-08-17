@@ -31,7 +31,7 @@ layout: base
         </div>
     </div>
 </div>
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
     {% for recipe in site.recipes %}
         <div class="col recipe-card" data-category="{{ recipe.categories }}" data-ingredients="{% for part in recipe.ingredients %}{% for ingredient in part[1] %}{{ ingredient }}{% unless forloop.last and forloop.parentloop.last %}, {% endunless %}{% endfor %}{% endfor %}">
             <div class="card">
@@ -50,7 +50,7 @@ layout: base
                 {%- endif -%}
                 <!-- </a> -->
                 <div class="card-body">
-                    <h5 class="card-title">{{ recipe.title }}</h5>
+                    <h6 class="card-title fw-bold">{{ recipe.title }}</h5>
                     <p class="card-text">{{ recipe.excerpt }}</p>
                     {%- if recipe.cook_time -%}
                         <div class="text-begin text-body-secondary">

@@ -110,17 +110,18 @@ function filterSelection(category) {
 }
 
 let cards = Array.from(document.querySelectorAll(".recipe-card"));
-let cardTexts = cards.map((card) => card.innerText.toLowerCase());
+let cardData = cards.map((card) => ({
+  text: card.innerText.toLowerCase(),
+  ingredients: (card.getAttribute("data-ingredients") || "").toLowerCase(),
+  i: cards.indexOf(card),
+}));
 
 // Set up Fuse.js for fuzzy searching
-const fuse = new Fuse(
-  cardTexts.map((text, i) => ({ text, i })),
-  {
-    includeScore: true,
-    threshold: 0.4, // Adjust for more/less fuzziness
-    keys: ["text"],
-  },
-);
+const fuse = new Fuse(cardData, {
+  includeScore: true,
+  threshold: 0.4, // Adjust for more/less fuzziness
+  keys: ["text", "ingredients"],
+});
 
 function search() {
   let search_query = document.getElementById("searchbox").value.toLowerCase();

@@ -33,7 +33,7 @@ layout: base
 </div>
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
     {% for recipe in site.recipes %}
-        <div class="col recipe-card" data-category="{{ recipe.categories }}">
+        <div class="col recipe-card" data-category="{{ recipe.categories }}" data-ingredients="{% for part in recipe.ingredients %}{% for ingredient in part[1] %}{{ ingredient }}{% unless forloop.last and forloop.parentloop.last %}, {% endunless %}{% endfor %}{% endfor %}">
             <div class="card">
                 <!-- <a href="{{ recipe.url | relative_url }}" class="stretched-link"> -->
                 <!-- TODO: Make images smaller for this view -->
@@ -43,7 +43,7 @@ layout: base
                     grid
                     "{{ recipe.img }}"
                     1:1
-                    --alt "{{ recipe.title }}"
+                    --alt {{ recipe.title }}
                     --img class="card-img-top stretched-link"
                     --link {{ recipe.url | relative_url }}
                     %}

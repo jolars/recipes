@@ -1,6 +1,6 @@
 ---
 title: "Expressbulgogi"
-excerpt: En snabb och enkel bulgogi med smak av soja, vitlök och ingefära.
+excerpt: Snabbvariant av bulgogi med nötfärs
 description:
   En snabbversion av den populära bulgogin. Tillbehören kan varieras efter smak
   och tillgång. Det skadar inte med lite fler inläggningar på bordet, exempelvis
@@ -21,13 +21,16 @@ ingredients:
     - 1 dl majonnäs
     - 1 tsk sriracha
   Bulgogi:
-    - 500g nötfärs
+    - 500 g nötfärs
     - 3 st vitlöksklyftor
     - 1 msk riven ingefära
     - 4 msk japansk soja
     - 1 msk sesamolja
     - 2 msk strösocker
     - 2 krm svartpeppar
+    - amount: 2 msk
+      name: olivolja
+      link: /recipes/barglass
   Ris:
     - 4 dl japanskt ris
     - 5 dl vatten

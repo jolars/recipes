@@ -19,7 +19,7 @@ layout: base
         "recipeIngredient": [
             {%- for part in page.ingredients -%}
                 {% for ingredient in part[1] %}
-                    "{{ ingredient }}"{% unless forloop.last and forloop.parentloop.last %},{% endunless %}
+                "{% if ingredient.name %}{{ ingredient.amount }} {{ ingredient.name }}{% else %}{{ ingredient | replace_regex: '\\[([^\\]]+)\\]\\([^\\)]+\\)', '\\1' }}{% endif %}"{% unless forloop.last and forloop.parentloop.last %},{% endunless %}
                 {%- endfor %}
             {%- endfor %}
         ],
@@ -83,9 +83,19 @@ layout: base
             {%- endif -%}
             <ul class="list-unstyled">
                 {% for ingredient in part[1] %}
-                    <li>
-                        <span class="ingredient" data-ingredient="{{ ingredient }}">{{ ingredient }}</span>
-                    </li>
+                <li>
+                    <span class="ingredient" data-ingredient="{% if ingredient.name %}{{ ingredient.amount }} {{ ingredient.name }}{% else %}{{ ingredient }}{% endif %}">
+                    {% if ingredient.name %}
+                        {% if ingredient.link %}
+                        {{ ingredient.amount }} <a href="{{ ingredient.link }}">{{ ingredient.name }}</a>
+                        {% else %}
+                        {{ ingredient.amount }} {{ ingredient.name }}
+                        {% endif %}
+                    {% else %}
+                        {{ ingredient | markdownify | remove: '<p>' | remove: '</p>' | strip }}
+                    {% endif %}
+                    </span>
+                </li>
                 {% endfor %}
             </ul>
         {% endfor %}

@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: "Pannkakor"
-categories: bak
+categories: bakning
 tags: utemat
 excerpt: Klassiska svenska pannkakor.
 img: assets/img/pannkakor.png

@@ -5,7 +5,7 @@ excerpt: >-
 description: >-
   Garnerningen kan varieras efter säsong. Tårtbotten kan förberedas några dagar
   i förväg. Förvara den i så fall i en lufttät behållare.
-categories: desserter
+categories: dessert
 tags: "maräng, bär, nyazeeland"
 img: assets/img/pavlova.png
 servings: 6 portioner

@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: "Krabbelurer"
-categories: bak
+categories: bakning
 tags: utemat
 excerpt: Den klassiska stormkökspannkakan!
 description: >

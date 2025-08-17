@@ -28,9 +28,6 @@ ingredients:
     - 1 msk sesamolja
     - 2 msk strösocker
     - 2 krm svartpeppar
-    - amount: 2 msk
-      name: olivolja
-      link: /recipes/barglass
   Ris:
     - 4 dl japanskt ris
     - 5 dl vatten

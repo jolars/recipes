@@ -109,11 +109,25 @@ function filterSelection(category) {
   }
 }
 
+let cards = Array.from(document.querySelectorAll(".recipe-card"));
+let cardTexts = cards.map((card) => card.innerText.toLowerCase());
+
+// Set up Fuse.js for fuzzy searching
+const fuse = new Fuse(
+  cardTexts.map((text, i) => ({ text, i })),
+  {
+    includeScore: true,
+    threshold: 0.4, // Adjust for more/less fuzziness
+    keys: ["text"],
+  },
+);
+
 function search() {
-  let cards = document.querySelectorAll(".recipe-card");
-  let search_query = document.getElementById("searchbox").value;
-  for (var i = 0; i < cards.length; i++) {
-    if (cards[i].innerText.toLowerCase().includes(search_query.toLowerCase())) {
+  let search_query = document.getElementById("searchbox").value.toLowerCase();
+  let results = fuse.search(search_query);
+  let matchedIndices = new Set(results.map((r) => r.item.i));
+  for (let i = 0; i < cards.length; i++) {
+    if (matchedIndices.has(i) || search_query === "") {
       cards[i].classList.remove("d-none");
     } else {
       cards[i].classList.add("d-none");

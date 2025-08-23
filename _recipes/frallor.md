@@ -10,14 +10,14 @@ description: >-
 categories: bakning
 tags: frallor
 img: assets/img/frallor.png
-servings: 10 frallor
+servings: 12 frallor
 cook_time: PT15M
 prep_time: PT15M
 ingredients:
   main:
     - 3 g jäst
-    - 300 g vatten
-    - 390 g vetemjöl
+    - 350 g vatten
+    - 450 g vetemjöl
     - 9 g salt
 ---
 

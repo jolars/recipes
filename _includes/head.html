@@ -19,4 +19,13 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     <!-- <link rel="stylesheet" href="/assets/css/styles.css"> -->
     <title>{{ page.title | default: site.title }}</title>
+    <meta property="og:title" content="{{ page.title | escape }}" />
+    <meta property="og:description" content="{{ page.excerpt | escape }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    {%- if page.img -%}
+        {% capture ogimg %}{% picture og "{{ page.img }}" %}{% endcapture %}
+        <meta property="og:image" content="{{ ogimg | absolute_url }}" />
+    {%- endif -%}
+    <meta property="og:site_name" content="{{ site.title | escape }}" />
 </head>

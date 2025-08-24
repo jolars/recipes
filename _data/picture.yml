@@ -25,6 +25,13 @@ presets:
       xl: 20vw
       xxl: 15vw
 
+  og:
+    markup: direct_url
+    fallback_format: png
+    fallback_width: 1024
+    crop: "1.91:1"
+    keep: entropy
+
 media_queries:
   xs: "max-width: 576px"
   sm: "max-width: 768px"

@@ -2,7 +2,7 @@
 layout: recipe
 title: "Saltpicklad gurka"
 excerpt: "Japanska pickles med sesamfrön"
-description: |
+description:
   Enkelt recept på japansk saltpicklad gurka med sesamfrön. Perfekt som
   tillbehör till asiatiska rätter. Man kan med fördel byta ut gurkan mot fyra
   västeråsgurkor.

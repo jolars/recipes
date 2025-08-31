@@ -2,7 +2,6 @@
 layout: recipe
 title: "Kimchi Udon"
 excerpt: "Udon-nudlar med kimchi och brynt smör"
-description:
 categories: vegetariskt
 tags: koreanskt, nudlar
 img: assets/img/kimchi-udon.png

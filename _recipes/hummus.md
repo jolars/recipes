@@ -10,8 +10,8 @@ ingredients:
   main:
     - "500 g kikärtor, kokta"
     - "60 g (4 msk) tahini, ljus"
-    - 1 st vitlöksklyfta
-    - 2 st citron (4 msk citronsaft)
+    - 1 vitlöksklyfta
+    - 2 citron (4 msk citronsaft)
     - 1.5 tsk salt
     - 1 krm spiskummin
     - 0.5 dl vatten

@@ -13,16 +13,16 @@ prep_time: PT20M
 cook_time: PT45M
 ingredients:
   Tillbehör:
-    - 6 st salladslökar
-    - 0.5 st romansallad
-    - 0.5 st gurka
+    - 6 salladslökar
+    - 0.5 romansallad
+    - 0.5 gurka
     - 2 dl kimchi
     - 2 msk rostade sesamfrön
     - 1 dl majonnäs
     - 1 tsk sriracha
   Bulgogi:
     - 500 g nötfärs
-    - 3 st vitlöksklyftor
+    - 3 vitlöksklyftor
     - 1 msk riven ingefära
     - 4 msk japansk soja
     - 1 msk sesamolja

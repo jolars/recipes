@@ -10,7 +10,7 @@ prep_time: PT0M
 servings: 4 portioner
 ingredients:
   tomatsås:
-    - 1 st vitlöksklyftor
+    - 1 vitlöksklyfta
     - 400 g krossade tomater
     - 0.5 dl olivolja
     - 1 msk tomatpuré
@@ -18,8 +18,8 @@ ingredients:
     - 0.5 kruka basilika
   main:
     - 500 g pasta
-    - 3 st (375 g) mozzarella
-    - 30 st oliver
+    - 3 (375 g) mozzarella
+    - 30 oliver
     - 0.5 kruka basilika
     - parmesan
 ---

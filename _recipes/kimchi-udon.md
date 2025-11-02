@@ -16,8 +16,8 @@ ingredients:
     - 3 msk japansk soja
     - 1 msk sesamolja
   Topping:
-    - 4 st äggulor
-    - 2 st salladslökar
+    - 4 äggulor
+    - 2 salladslökar
     - 1 msk svarta sesamfrön
 ---
 

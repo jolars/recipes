@@ -20,7 +20,7 @@ ingredients:
     - 7.5 dl vatten
   Jordnötssås:
     - 1 gul lök
-    - 2 st vitlöksklyfta
+    - 2 vitlöksklyftor
     - 1 msk färsk ingefära
     - 2 tsk sambal oelek
     - 150 g (1.5 dl) slätt jordnötssmör

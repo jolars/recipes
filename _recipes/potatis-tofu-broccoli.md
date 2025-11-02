@@ -13,15 +13,15 @@ prep_time: PT00M
 cook_time: PT60M
 ingredients:
   main:
-    - 8 st potatisar
+    - 8 potatisar
     - 2 st (500 g) broccolistånd
     - 400 g fast tofu
-    - 2 st salladslökar
+    - 2 salladslökar
   Dressing:
     - 60 g tamari
     - 60 g sesamolja
-    - 2 st lime
-    - 2 st vitlöksklyfta
+    - 2 lime
+    - 2 vitlöksklyftor
     - 3 cm ingefära
     - 1 tsk chiliflakes
   Tillbehör:

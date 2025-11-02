@@ -11,7 +11,7 @@ ingredients:
   main:
     - 3 schalottenlökar
     - 2 vitlöksklyftor
-    - 1 st (ca 500 g) blomkålshuvud
+    - 1 (ca 500 g) blomkålshuvud
     - 240 g (1 burk) kronärtskockshjärtan
     - 1 tsk torkad dragon
     - 1 dl vitt vin

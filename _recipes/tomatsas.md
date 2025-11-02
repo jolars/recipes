@@ -14,7 +14,7 @@ ingredients:
   main:
     - 2 msk olivolja
     - 2 msk smör
-    - 1 st gul lök
+    - 1 gul lök
     - 2 klyftor vitlök
     - 0.5 tsk torkad oregano
     - 1 nypa chiliflakes

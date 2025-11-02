@@ -12,7 +12,7 @@ servings: 6 portioner
 cook_time: PT25M
 ingredients:
   Pavlova:
-    - 4 st äggvitor
+    - 4 äggvitor
     - 0.5 krm salt
     - 2.5 dl strösocker
     - 1 tsk vitvinsvinäger

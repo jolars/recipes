@@ -13,7 +13,7 @@ ingredients:
   main:
     - 900 g kycklinglårfilé
     - 1 dl soltorkade tomater
-    - 2 st vitlöksklyftor
+    - 2 vitlöksklyftor
     - 1 tsk chili flakes
     - 2 dl vitt vin
     - 3 dl vispgrädde

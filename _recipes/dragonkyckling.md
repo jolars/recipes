@@ -22,7 +22,7 @@ ingredients:
     - 2 dl vatten
     - 1 msk kycklingfond
     - 1 msk dragon, torkad
-    - 0.5 st citron
+    - 0.5 citron
     - 1 msk majsstärkelse
   Tillbehör:
     - 500 g brysselkål, fryst

@@ -13,7 +13,7 @@ ingredients:
     - 35 g mjölkpulver
     - 75 g socker
     - 40 g glukospulver (DE 40)
-    - 4 st (80 g) äggulor
+    - 4 (80 g) äggulor
 ---
 
 1. Blanda mjölkpulver, socker samt eventuella torra smaksättningar i en bunke.

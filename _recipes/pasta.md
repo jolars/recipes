@@ -9,7 +9,7 @@ servings: 4 portioner
 ingredients:
   main:
     - 500g vetemjöl
-    - 5 st ägg
+    - 5 ägg
     - 1.5 tsk salt
 ---
 

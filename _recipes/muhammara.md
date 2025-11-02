@@ -11,10 +11,10 @@ ingredients:
     - 150 g valnötter
     - 1 dl mild paprikapuré
     - 0.75 dl ströbröd
-    - 1 st vitlöksklyfta
+    - 1 vitlöksklyfta
     - 2 msk citronsaft
     - 2 msk granatäppelsirap
-    - 1 st chili
+    - 1 chili
     - 0.5 tsk spiskummin
     - 2 msk vatten
     - 0.5 dl matolja

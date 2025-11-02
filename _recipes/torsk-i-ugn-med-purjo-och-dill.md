@@ -14,7 +14,7 @@ ingredients:
   main:
     - 1 purjolök
     - 600 g torskfilé, fryst
-    - 1 st broccoli
+    - 1 broccoli
     - 1 msk vitvinsvinäger
     - 1 kruka dill
     - 4 dl vispgrädde
@@ -26,7 +26,7 @@ ingredients:
     - 2 krm salt
   Tillbehör:
     - 2 dl gröna ärter
-    - 1 st citron
+    - 1 citron
 ---
 
 1. Sätt ugnen på 200 grader.

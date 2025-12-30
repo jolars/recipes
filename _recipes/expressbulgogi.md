@@ -21,7 +21,7 @@ ingredients:
     - 1 dl majonnäs
     - 1 tsk sriracha
   Bulgogi:
-    - 500 g nötfärs
+    - 500 g vegofärs
     - 3 vitlöksklyftor
     - 1 msk riven ingefära
     - 4 msk japansk soja
@@ -30,13 +30,13 @@ ingredients:
     - 2 krm svartpeppar
   Ris:
     - 4 dl japanskt ris
-    - 5 dl vatten
+    - 4 dl vatten
 ---
 
 1. Blötlägg riset i kallt vatten i 20 minuter. Häll av vattnet och koka riset i
    riskokare. Låt stå i 10 minuter efter att det är klart innan servering.
 2. Riv vitlöken och ingefäran. Blanda marinadens ingredienser i en skål. Lägg i
-   nötfärsen och blanda väl. Låt marinera
+   nötfärsen och blanda väl. Låt marinera medan du förbereder tillbehören.
 3. Hetta upp en wok med olja tills rykande het. Lägg i nötfärsen och bryn den i
    5-7 minuter. Tillsätt salladslök och stek i ytterligare 2-3 minuter.
 4. Dela romansalladen i bitar och skär gurkan i stavar eller kvartar. Blanda

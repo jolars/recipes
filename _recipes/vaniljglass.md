@@ -8,12 +8,13 @@ img: assets/img/vaniljglass.png
 servings: 1 sats
 ingredients:
   main:
-    - 350 g grädde (36% fett)
-    - 175 g mjölk (3% fett)
-    - 35 g mjölkpulver
+    - 375 g grädde (36% fett)
+    - 150 g mjölk (3% fett)
+    - 35 g skummjölkspulver
     - 75 g socker
     - 40 g glukospulver (DE 40)
     - 4 (80 g) äggulor
+    - 1 vaniljstång
 ---
 
 1. Blanda mjölkpulver, socker samt eventuella torra smaksättningar i en bunke.

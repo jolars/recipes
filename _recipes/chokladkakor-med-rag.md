@@ -21,7 +21,7 @@ ingredients:
     - 340 g rårörsocker
     - 1 tsk (3 g) vaniljsocker
   Topping:
-    - 1 tsk havssaltflingor
+    - 2 tsk havssaltflingor
 ---
 
 #### Dag 1

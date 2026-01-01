@@ -5,22 +5,22 @@ description:
   Ett saftigt och luftigt hamburgerbröd som är perfekt för alla typer av
   hamburgare. Receptet är inspirerat av de populära bröden från Flippin'
   Burgers. Hamburgerbröden ska vara 9 cm i diameter, eller 6-7 cm för sliderbröd
-  och 4-5 cm för miniburgarbröd.
+  och 4-5 cm för miniburgarbröd. Bröden funkar även utmärkt som korvbröd.
 categories: bak
 tags: hamburgerbröd, bröd, bakning, korvbröd
 img: assets/img/hamburgerbrod.png
-servings: 22 bröd
+servings: 11 bröd
 prep_time: PT20M
 cook_time: PT45M
 ingredients:
   main:
-    - 850 g vetemjöl special
-    - 25 g strösocker
-    - 15 g salt
-    - 40 g jäst
-    - 5 dl standardmjölk
-    - 50 g honung
-    - 75 g rapsolja
+    - 425 g vetemjöl special
+    - 12 g strösocker
+    - 7 g salt
+    - 20 g jäst
+    - 2.5 dl standardmjölk
+    - 25 g honung
+    - 40 g rapsolja
   Äggstrykning:
     - 1 ägg
     - 1 tsk vatten
@@ -28,7 +28,7 @@ ingredients:
 ---
 
 1. Lös upp jästen i mjölken i en degblandare. Tillsätt alla andra ingredienser
-   och arbeta degen på medelhastighet i 15 minuter tills den är smidig och
+   och arbeta degen på medelhastighet i ca 10 minuter tills den är smidig och
    elastisk. Låt degen jäsa överträckt i 30-60 minuter eller tills den har
    dubblat sin storlek.
 2. Sätt ugnen på 40° C med en långpanna fylld med vatten längst ner. Dela under

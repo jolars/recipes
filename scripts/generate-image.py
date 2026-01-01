@@ -55,7 +55,7 @@ def main():
     # Generate the image
     print(f"🎨 Generating image for '{args.recipe_name}' recipe...")
     start_time = time.time()
-    result = client.images.generate(model="gpt-image-1", prompt=prompt)
+    result = client.images.generate(model="gpt-image-1.5", prompt=prompt)
     end_time = time.time()
     print(f"✅ Image generation completed in {end_time - start_time:.2f} seconds")
 

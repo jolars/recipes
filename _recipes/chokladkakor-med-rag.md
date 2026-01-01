@@ -24,7 +24,7 @@ ingredients:
     - 1 tsk havssaltflingor
 ---
 
-### Dag 1
+#### Dag 1
 
 1. Hacka chokladen och smält den i en bunke över ett vattenbad. Klicka ner
    smöret i den varma choklad så att det smälter och blanda väl.
@@ -35,7 +35,7 @@ ingredients:
    ihop till en jämn smet.
 4. Täck bunken med plastfolie och låt smeten vila i kylen i minst 12 timmar.
 
-### Dag 2
+#### Dag 2
 
 1. Dela den kalla degen i tre delar. Forma till rullar som är 4-5 cm i diameter
    och frys in dem i minst 2 timmar.

@@ -5,7 +5,7 @@ categories: basrecept
 tags: ägg
 excerpt: American style!
 img: assets/img/helaggsmajo.png
-servings: 1
+servings: 1 sats
 ingredients:
   main:
     - 15 g vitvinsvinäger

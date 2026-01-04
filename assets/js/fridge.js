@@ -198,7 +198,24 @@ function createResultCard(result) {
     link.className = 'stretched-link';
     
     const img = document.createElement('img');
-    img.src = `/${recipe.img}`;
+    
+    // Use the optimized thumbnail HTML from imgThumb (data_picture format)
+    if (recipe.imgThumb) {
+      // Parse the HTML string and extract the img element
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = recipe.imgThumb;
+      const thumbImg = tempDiv.querySelector('img');
+      
+      if (thumbImg && thumbImg.getAttribute('data-src')) {
+        img.src = thumbImg.getAttribute('data-src');
+      } else {
+        img.src = `/${recipe.img}`;
+      }
+    } else {
+      img.src = `/${recipe.img}`;
+    }
+    
+    img.loading = 'lazy';
     img.alt = recipe.title;
     img.className = 'card-img-top';
     img.style.height = '180px';

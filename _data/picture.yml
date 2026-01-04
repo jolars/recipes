@@ -28,8 +28,8 @@ presets:
   thumbnail:
     markup: data_picture
     formats: [webp]
-    widths: [200]
-    fallback_width: 200
+    widths: [400]
+    fallback_width: 400
     fallback_format: webp
 
   og:

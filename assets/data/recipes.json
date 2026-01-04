@@ -11,6 +11,7 @@ permalink: /assets/data/recipes.json
     "url": "{{ recipe.url | relative_url }}",
     "img": "{{ recipe.img }}",
     "servings": "{{ recipe.servings }}",
+    "instructions": {{ recipe.content | markdownify | jsonify }},
     "ingredients": {
       {% for part in recipe.ingredients %}
       {{ part[0] | jsonify }}: [

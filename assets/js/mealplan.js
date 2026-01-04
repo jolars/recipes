@@ -464,5 +464,246 @@ function addAllToBring() {
   });
 }
 
+function printMealPlan() {
+  if (Object.keys(mealPlan).length === 0) {
+    alert('Lägg till recept först!');
+    return;
+  }
+  
+  // Create a new window with printable content
+  const printWindow = window.open('', '_blank');
+  
+  let printContent = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Veckomeny</title>
+      <style>
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          max-width: 900px;
+          margin: 20px auto;
+          padding: 20px;
+        }
+        h1 {
+          border-bottom: 2px solid #333;
+          padding-bottom: 10px;
+          margin-bottom: 30px;
+        }
+        .day {
+          page-break-inside: avoid;
+          margin-bottom: 40px;
+          border: 1px solid #ddd;
+          padding: 20px;
+          border-radius: 8px;
+        }
+        .day-title {
+          font-size: 1.5em;
+          font-weight: bold;
+          margin-bottom: 15px;
+          color: #2c5282;
+          border-bottom: 1px solid #e2e8f0;
+          padding-bottom: 8px;
+        }
+        .recipe-header {
+          display: grid;
+          grid-template-columns: 200px 1fr;
+          gap: 20px;
+          margin-bottom: 20px;
+        }
+        .recipe-image {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px;
+          border: 1px solid #e2e8f0;
+        }
+        .recipe-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .recipe-title {
+          font-size: 1.3em;
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+        .recipe-excerpt {
+          font-style: italic;
+          color: #666;
+          margin-bottom: 10px;
+        }
+        .servings {
+          color: #666;
+          font-weight: 500;
+        }
+        .recipe-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+          margin-top: 20px;
+        }
+        .ingredients, .instructions {
+          min-width: 0;
+        }
+        .ingredients h3, .instructions h3 {
+          font-size: 1.1em;
+          margin-top: 0;
+          margin-bottom: 8px;
+          color: #2d3748;
+        }
+        .ingredients ul {
+          margin: 5px 0;
+          padding-left: 20px;
+        }
+        .ingredients li {
+          margin-bottom: 4px;
+        }
+        .instructions ol {
+          margin: 0;
+          padding-left: 20px;
+        }
+        .instructions li {
+          margin-bottom: 10px;
+          line-height: 1.6;
+        }
+        .instructions p {
+          margin: 0;
+        }
+        .shopping-list {
+          page-break-before: always;
+          margin-top: 40px;
+        }
+        .shopping-list h1 {
+          margin-bottom: 20px;
+        }
+        .shopping-item {
+          margin-bottom: 20px;
+          padding: 15px;
+          border: 1px solid #e2e8f0;
+          border-radius: 6px;
+        }
+        .shopping-item h3 {
+          margin-top: 0;
+          margin-bottom: 10px;
+          color: #2d3748;
+        }
+        .shopping-item ul {
+          margin: 0;
+          padding-left: 20px;
+          column-count: 2;
+          column-gap: 20px;
+        }
+        @media print {
+          body { margin: 0; padding: 10mm; }
+          .day { break-inside: avoid; }
+        }
+      </style>
+    </head>
+    <body>
+  `;
+  
+  // Add each day's recipe
+  DAYS.forEach((dayName, index) => {
+    const dayKey = DAY_KEYS[index];
+    const selectedRecipe = mealPlan[dayKey];
+    
+    if (selectedRecipe) {
+      const recipe = recipes.find(r => r.slug === selectedRecipe.recipe);
+      if (!recipe) return;
+      
+      const servingsType = extractServingsType(recipe.servings);
+      const originalServings = extractServingsSize(recipe.servings);
+      const multiplier = originalServings ? selectedRecipe.servings / originalServings : 1;
+      
+      printContent += `
+        <div class="day">
+          <div class="day-title">${dayName}</div>
+          
+          <div class="recipe-header">
+            ${recipe.img ? `<img src="${window.location.origin}/${recipe.img}" alt="${recipe.title}" class="recipe-image">` : '<div></div>'}
+            <div class="recipe-info">
+              <div class="recipe-title">${recipe.title}</div>
+              ${recipe.excerpt ? `<div class="recipe-excerpt">${recipe.excerpt}</div>` : ''}
+              <div class="servings">🍽️ ${selectedRecipe.servings} ${servingsType}</div>
+            </div>
+          </div>
+          
+          <div class="recipe-content">
+            <div class="ingredients">
+              <h3>Ingredienser</h3>
+      `;
+      
+      // Add ingredients
+      Object.entries(recipe.ingredients).forEach(([section, items]) => {
+        if (section !== 'main') {
+          printContent += `<h3>${section}:</h3>`;
+        }
+        printContent += '<ul>';
+        items.forEach(ingredient => {
+          const adjustedIngredient = updateIngredientAmount(ingredient, multiplier);
+          printContent += `<li>${adjustedIngredient}</li>`;
+        });
+        printContent += '</ul>';
+      });
+      
+      printContent += `
+          </div>
+          <div class="instructions">
+            <h3>Instruktioner</h3>
+            <div>${recipe.instructions}</div>
+          </div>
+        </div>
+        </div>
+      `;
+    }
+  });
+  
+  // Add shopping list
+  printContent += `
+      <div class="shopping-list">
+        <h1>Inköpslista</h1>
+  `;
+  
+  Object.entries(mealPlan).forEach(([dayKey, {recipe: recipeSlug, servings}]) => {
+    const recipe = recipes.find(r => r.slug === recipeSlug);
+    if (!recipe) return;
+    
+    const originalServings = extractServingsSize(recipe.servings);
+    const multiplier = originalServings ? servings / originalServings : 1;
+    
+    printContent += `
+      <div>
+        <h3>${recipe.title} (${servings} ${extractServingsType(recipe.servings)})</h3>
+        <ul class="shopping-ingredients">
+    `;
+    
+    Object.values(recipe.ingredients).forEach(section => {
+      section.forEach(ingredient => {
+        printContent += `<li>${updateIngredientAmount(ingredient, multiplier)}</li>`;
+      });
+    });
+    
+    printContent += `
+        </ul>
+      </div>
+    `;
+  });
+  
+  printContent += `
+      </div>
+    </body>
+    </html>
+  `;
+  
+  printWindow.document.write(printContent);
+  printWindow.document.close();
+  
+  // Wait for content to load, then print
+  printWindow.onload = function() {
+    printWindow.print();
+  };
+}
+
 // Initialize on page load
 window.addEventListener('DOMContentLoaded', loadRecipes);

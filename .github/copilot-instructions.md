@@ -117,12 +117,17 @@ The workflow runs on:
 │   └── navigation.yml         # Site navigation (currently empty)
 ├── assets/
 │   ├── css/styles.scss        # Main stylesheet (imports _sass/main.scss)
-│   ├── js/main.js             # Recipe servings calculator, search, filtering
+│   ├── js/
+│   │   ├── main.js            # Recipe servings calculator, search, filtering
+│   │   └── mealplan.js        # Meal planner functionality
+│   ├── data/
+│   │   └── recipes.json       # Generated JSON API with all recipes data
 │   └── img/                   # Recipe images (PNG source files)
 ├── scripts/
 │   └── generate-image.py      # OpenAI image generation script (optional)
 ├── pages/
-│   └── 404.html               # Error page
+│   ├── 404.html               # Error page
+│   └── mealplan.html          # Meal planner page
 ├── index.html                 # Homepage with recipe grid and search
 ├── Gemfile                    # Ruby dependencies
 ├── flake.nix                  # Nix development environment
@@ -162,12 +167,50 @@ ingredients:
 - Ingredients can be simple strings or structured with amount/name/link
 - Schema.org Recipe markup is automatically generated in `recipe.html` layout
 
-### JavaScript Functionality (assets/js/main.js)
+### JavaScript Functionality
 
-Key features:
+**assets/js/main.js:**
 - **Servings calculator:** Dynamically adjusts ingredient amounts using `data-ingredient` attributes
 - **Fuzzy search:** Uses Fuse.js to search recipes by title and ingredients
 - **Category filtering:** Bootstrap dropdowns filter by recipe categories
+
+**assets/js/mealplan.js:**
+- **Meal planning:** Weekly meal planner with recipe selection and drag-and-drop reordering
+- **Servings adjustment:** Per-recipe servings control with +/- buttons
+- **Shopping list generation:** Aggregates ingredients from selected recipes with adjusted amounts
+- **Shareable links:** URL encoding/decoding via Base64 for sharing meal plans
+- **LocalStorage persistence:** Saves meal plan across page reloads
+- **Bring! integration:** Deeplink API integration to add recipes to Bring! shopping lists
+- **Print function:** Generates printer-friendly view with recipes and shopping list
+
+### Meal Planner Feature
+
+**Location:** `/mealplan/` (pages/mealplan.html)
+
+**Workflow:**
+1. Users browse recipes and click "Lägg till i veckomeny" button on recipe pages
+2. Recipes automatically added to first available day slot (Monday → Sunday)
+3. Meal planner page (`/mealplan/`) displays all selected recipes with:
+   - Recipe images, titles, excerpts
+   - Servings adjustment controls
+   - Drag-and-drop reordering (desktop)
+   - Remove button per recipe
+4. Actions available:
+   - **Generate shareable link:** URL-encoded meal plan for sharing
+   - **Show shopping list:** Aggregated ingredients with adjusted amounts
+   - **Add to Bring!:** Opens Bring! app with recipes via deeplink API
+   - **Print:** Opens printer-friendly formatted view
+
+**Data flow:**
+- Recipe data loaded from `/assets/data/recipes.json` (generated during Jekyll build)
+- JSON includes: slug, title, excerpt, url, img, servings, ingredients, instructions
+- Meal plan state stored in localStorage and optionally in URL query parameter
+
+**Print feature:**
+- Two-column layout: ingredients on left, instructions on right
+- Recipe header with image, title, excerpt, servings
+- Numbered instruction steps preserved from markdown
+- Shopping list on separate page with ingredients grouped by recipe
 
 ### Image Processing (jekyll_picture_tag plugin)
 
@@ -196,12 +239,31 @@ Usage in templates:
 3. Build site: `bundle exec jekyll build` (images will be auto-generated)
 4. Verify locally: `bundle exec jekyll serve`
 
+**Note:** New recipes automatically appear in:
+- Homepage recipe grid with search/filter
+- Meal planner recipe selection dropdown
+- Generated `/assets/data/recipes.json` API endpoint
+
 ### Modifying Layouts or Styles
 
 - HTML templates: `_layouts/*.html`, `_includes/*.html`
 - Styles: `_sass/main.scss` (imported by `assets/css/styles.scss`)
-- JavaScript: `assets/js/main.js`
+- JavaScript: `assets/js/main.js` (homepage), `assets/js/mealplan.js` (meal planner)
 - After changes: `bundle exec jekyll build` and verify with `bundle exec jekyll serve`
+
+### Working with Meal Planner
+
+**Files to modify:**
+- `pages/mealplan.html` - Meal planner page structure
+- `assets/js/mealplan.js` - Meal planner logic
+- `assets/data/recipes.json` - Recipe data API (auto-generated from `_recipes/*.md`)
+- `_layouts/recipe.html` - "Add to meal plan" button on recipe pages
+
+**Important:**
+- Meal plan state uses localStorage for persistence
+- Drag-and-drop uses HTML5 Drag API (desktop only)
+- Mobile users can remove/re-add recipes to rearrange
+- Bring! integration uses `https://api.getbring.com/rest/bringrecipes/deeplink` API
 
 ### Updating Dependencies
 

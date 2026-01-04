@@ -1,0 +1,50 @@
+---
+layout: base
+title: Töm Kylen
+permalink: /fridge/
+---
+
+<div class="card mb-3">
+  <div class="card-body">
+    <label for="ingredient-input" class="form-label fw-bold">Vilka ingredienser har du?</label>
+    <p class="text-muted small mb-2">Skriv en ingrediens och tryck Enter</p>
+    
+    <!-- Ingredient chips container -->
+    <div id="ingredient-chips" class="mb-2"></div>
+    
+    <!-- Input field -->
+    <input 
+      type="text" 
+      id="ingredient-input" 
+      class="form-control" 
+      placeholder="T.ex. tomat, kyckling, pasta..."
+      autocomplete="off">
+  </div>
+</div>
+
+<div class="row pb-3">
+  <div class="col">
+    <div id="results-info" class="d-none">
+      <span class="text-muted">Visar <span id="results-count">0</span> recept</span>
+    </div>
+    <div id="empty-state" class="text-muted">
+      Lägg till ingredienser för att hitta recept
+    </div>
+  </div>
+  <div class="col-auto">
+    <div class="dropdown d-grid dropstart" id="sort-dropdown" style="display: none !important;">
+      <button class="btn btn-secondary dropdown-toggle text-end"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">Sortera</button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <button type="button" onclick="sortResults('best')" class="dropdown-item">Flest matchningar</button>
+        <button type="button" onclick="sortResults('fewest')" class="dropdown-item">Minst att köpa till</button>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="results-container" class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3"></div>
+
+<script src="{{ '/assets/js/fridge.js' | relative_url }}"></script>

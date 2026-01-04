@@ -116,8 +116,35 @@ function createRecipeDisplay(recipe, servings, dayKey) {
   container.addEventListener('dragstart', (e) => handleDragStart(e, dayKey));
   container.addEventListener('dragend', handleDragEnd);
   
+  // Recipe card with image
+  const recipeCard = document.createElement('div');
+  recipeCard.className = 'd-flex gap-3 mb-2';
+  
+  // Recipe image
+  if (recipe.img) {
+    const imgContainer = document.createElement('div');
+    imgContainer.style.minWidth = '80px';
+    imgContainer.style.width = '80px';
+    imgContainer.style.height = '80px';
+    
+    const img = document.createElement('img');
+    img.src = `/${recipe.img}`;
+    img.alt = recipe.title;
+    img.className = 'rounded';
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectFit = 'cover';
+    
+    imgContainer.appendChild(img);
+    recipeCard.appendChild(imgContainer);
+  }
+  
+  // Recipe info
   const recipeInfo = document.createElement('div');
-  recipeInfo.className = 'd-flex justify-content-between align-items-center mb-2';
+  recipeInfo.className = 'flex-grow-1';
+  
+  const titleRow = document.createElement('div');
+  titleRow.className = 'd-flex justify-content-between align-items-start mb-2';
   
   const recipeLink = document.createElement('a');
   recipeLink.href = recipe.url;
@@ -127,37 +154,59 @@ function createRecipeDisplay(recipe, servings, dayKey) {
   const removeBtn = document.createElement('button');
   removeBtn.className = 'btn btn-sm btn-outline-danger';
   removeBtn.innerHTML = '<i class="bi bi-x"></i>';
-  removeBtn.onclick = () => removeRecipe(dayKey);
+  removeBtn.onclick = (e) => {
+    e.stopPropagation();
+    removeRecipe(dayKey);
+  };
   
-  recipeInfo.appendChild(recipeLink);
-  recipeInfo.appendChild(removeBtn);
+  titleRow.appendChild(recipeLink);
+  titleRow.appendChild(removeBtn);
+  recipeInfo.appendChild(titleRow);
   
+  // Add excerpt if available
+  if (recipe.excerpt) {
+    const excerpt = document.createElement('p');
+    excerpt.className = 'text-muted small mb-2';
+    excerpt.textContent = recipe.excerpt;
+    recipeInfo.appendChild(excerpt);
+  }
+  
+  // Servings control
   const servingsControl = document.createElement('div');
-  servingsControl.className = 'input-group input-group-sm mt-2';
+  servingsControl.className = 'input-group input-group-sm';
+  servingsControl.style.maxWidth = '200px';
   
   const decreaseBtn = document.createElement('button');
   decreaseBtn.className = 'btn btn-outline-secondary';
-  decreaseBtn.textContent = '-';
-  decreaseBtn.onclick = () => adjustServings(dayKey, -1);
+  decreaseBtn.innerHTML = '<i class="bi bi-dash"></i>';
+  decreaseBtn.onclick = (e) => {
+    e.stopPropagation();
+    adjustServings(dayKey, -1);
+  };
   
   const servingsDisplay = document.createElement('input');
   servingsDisplay.type = 'text';
   servingsDisplay.className = 'form-control text-center';
-  servingsDisplay.value = servings;
+  const servingsType = extractServingsType(recipe.servings);
+  servingsDisplay.value = `${servings} ${servingsType}`;
   servingsDisplay.readOnly = true;
-  servingsDisplay.style.maxWidth = '100px';
   
   const increaseBtn = document.createElement('button');
   increaseBtn.className = 'btn btn-outline-secondary';
-  increaseBtn.textContent = '+';
-  increaseBtn.onclick = () => adjustServings(dayKey, 1);
+  increaseBtn.innerHTML = '<i class="bi bi-plus"></i>';
+  increaseBtn.onclick = (e) => {
+    e.stopPropagation();
+    adjustServings(dayKey, 1);
+  };
   
   servingsControl.appendChild(decreaseBtn);
   servingsControl.appendChild(servingsDisplay);
   servingsControl.appendChild(increaseBtn);
   
-  container.appendChild(recipeInfo);
-  container.appendChild(servingsControl);
+  recipeInfo.appendChild(servingsControl);
+  recipeCard.appendChild(recipeInfo);
+  
+  container.appendChild(recipeCard);
   
   return container;
 }
@@ -297,6 +346,11 @@ function loadPlanFromLocalStorage() {
 function extractServingsSize(str) {
   const match = str.match(/\d+/);
   return match ? parseFloat(match[0]) : null;
+}
+
+function extractServingsType(str) {
+  const match = str.match(/\d+\s*(.*)/);
+  return match ? match[1].trim() : '';
 }
 
 function updateIngredientAmount(ingredient, multiplier) {

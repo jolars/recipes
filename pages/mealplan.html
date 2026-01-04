@@ -12,32 +12,49 @@ permalink: /mealplan/
     </a>
   </div>
   
-  <div id="meal-plan" class="mb-4">
-    <!-- Days will be added here by JavaScript -->
-  </div>
-
-  <div class="d-grid gap-2 mb-3">
-    <button class="btn btn-primary" onclick="generateLink()">
-      <i class="bi bi-link-45deg"></i> Skapa delbar länk
-    </button>
-    <button class="btn btn-success" onclick="toggleShoppingList()">
-      <i class="bi bi-cart"></i> Visa inköpslista
-    </button>
-    <button class="btn btn-outline-primary" onclick="addAllToBring()">
-      <i class="bi bi-cart4"></i> Lägg till alla i Bring!
-    </button>
-  </div>
-
-  <div id="link-section" class="alert alert-info d-none mb-3">
-    <p class="mb-2">Kopiera denna länk för att dela din veckomeny:</p>
-    <div class="input-group">
-      <input type="text" id="share-link" class="form-control" readonly>
-      <button class="btn btn-outline-secondary" onclick="copyLink()">
-        <i class="bi bi-clipboard"></i> Kopiera
-      </button>
+  <div class="row">
+    <!-- Meal plan column -->
+    <div class="col-lg-8 mb-4">
+      <div id="meal-plan">
+        <!-- Days will be added here by JavaScript -->
+      </div>
+    </div>
+    
+    <!-- Actions column (sticky on desktop) -->
+    <div class="col-lg-4">
+      <div class="sticky-lg-top" style="top: 1rem;">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Åtgärder</h5>
+            
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" onclick="generateLink()">
+                <i class="bi bi-link-45deg"></i> Skapa delbar länk
+              </button>
+              <button class="btn btn-success" onclick="toggleShoppingList()">
+                <i class="bi bi-cart"></i> Visa inköpslista
+              </button>
+              <button class="btn btn-outline-primary" onclick="addAllToBring()">
+                <i class="bi bi-cart4"></i> Lägg till alla i Bring!
+              </button>
+            </div>
+            
+            <div id="link-section" class="mt-3 d-none">
+              <p class="small mb-2">Kopiera denna länk för att dela din veckomeny:</p>
+              <div class="input-group input-group-sm">
+                <input type="text" id="share-link" class="form-control" readonly>
+                <button class="btn btn-outline-secondary" onclick="copyLink()">
+                  <i class="bi bi-clipboard"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
+  
+  <!-- Shopping list (full width below) -->
   <div id="shopping-list-section" class="card d-none mb-4">
     <div class="card-header">
       <h5 class="mb-0">Inköpslista</h5>

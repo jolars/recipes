@@ -25,6 +25,13 @@ presets:
       xl: 20vw
       xxl: 15vw
 
+  thumbnail:
+    markup: data_picture
+    formats: [webp]
+    widths: [200]
+    fallback_width: 200
+    fallback_format: webp
+
   og:
     markup: direct_url
     fallback_format: png

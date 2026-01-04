@@ -4,12 +4,13 @@ permalink: /assets/data/recipes.json
 ---
 [
   {% for recipe in site.recipes %}
-  {
+  {% capture thumb_html %}{% picture thumbnail {{ recipe.img }} 1:1 %}{% endcapture %}{
     "slug": "{{ recipe.slug }}",
     "title": {{ recipe.title | jsonify }},
     "excerpt": {{ recipe.excerpt | jsonify }},
     "url": "{{ recipe.url | relative_url }}",
     "img": "{{ recipe.img }}",
+    "imgThumb": {{ thumb_html | jsonify }},
     "servings": "{{ recipe.servings }}",
     "instructions": {{ recipe.content | markdownify | jsonify }},
     "ingredients": {

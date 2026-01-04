@@ -127,15 +127,41 @@ function createRecipeDisplay(recipe, servings, dayKey) {
     imgContainer.style.width = '80px';
     imgContainer.style.height = '80px';
     
-    const img = document.createElement('img');
-    img.src = `/${recipe.img}`;
-    img.alt = recipe.title;
-    img.className = 'rounded';
-    img.style.width = '100%';
-    img.style.height = '100%';
-    img.style.objectFit = 'cover';
+    // Use the optimized thumbnail HTML from imgThumb (data_picture format)
+    if (recipe.imgThumb) {
+      // Parse the HTML string and extract the img element
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = recipe.imgThumb;
+      const img = tempDiv.querySelector('img');
+      
+      if (img) {
+        img.loading = 'lazy';
+        img.className = 'rounded';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        
+        // Change data-src to src for immediate loading
+        if (img.getAttribute('data-src')) {
+          img.src = img.getAttribute('data-src');
+          img.removeAttribute('data-src');
+        }
+        
+        imgContainer.appendChild(img);
+      }
+    } else {
+      // Fallback to original
+      const img = document.createElement('img');
+      img.src = `/${recipe.img}`;
+      img.loading = 'lazy';
+      img.alt = recipe.title;
+      img.className = 'rounded';
+      img.style.width = '100%';
+      img.style.height = '100%';
+      img.style.objectFit = 'cover';
+      imgContainer.appendChild(img);
+    }
     
-    imgContainer.appendChild(img);
     recipeCard.appendChild(imgContainer);
   }
   

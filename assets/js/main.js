@@ -110,30 +110,80 @@ function filterSelection(category) {
 }
 
 let cards = Array.from(document.querySelectorAll(".recipe-card"));
-let cardData = cards.map((card) => ({
+let cardData = cards.map((card, index) => ({
   text: card.innerText.toLowerCase(),
   ingredients: (card.getAttribute("data-ingredients") || "").toLowerCase(),
-  i: cards.indexOf(card),
+  element: card,
+  col: card, // The .col element itself
+  i: index,
 }));
 
-// Set up Fuse.js for fuzzy searching
+// Set up Fuse.js for fuzzy searching (title/excerpt only)
 const fuse = new Fuse(cardData, {
   includeScore: true,
-  threshold: 0.4, // Adjust for more/less fuzziness
-  keys: ["text", "ingredients"],
+  threshold: 0.4,
+  keys: ["text"],
 });
 
 function search() {
-  let search_query = document.getElementById("searchbox").value.toLowerCase();
-  let results = fuse.search(search_query);
-  let matchedIndices = new Set(results.map((r) => r.item.i));
-  for (let i = 0; i < cards.length; i++) {
-    if (matchedIndices.has(i) || search_query === "") {
-      cards[i].classList.remove("d-none");
-    } else {
-      cards[i].classList.add("d-none");
-    }
+  let search_query = document.getElementById("searchbox").value.toLowerCase().trim();
+  
+  if (search_query === "") {
+    // Show all cards in original order
+    cards.forEach(card => card.classList.remove("d-none"));
+    return;
   }
+  
+  // Collect matches with scores
+  let matches = [];
+  
+  // Use Fuse.js for title/excerpt fuzzy search (lower score = better match)
+  let fuseResults = fuse.search(search_query);
+  fuseResults.forEach((result) => {
+    matches.push({
+      index: result.item.i,
+      score: result.score, // 0.0 (perfect) to 1.0 (worst)
+      type: 'title'
+    });
+  });
+  
+  // Simple substring search on ingredients
+  cardData.forEach((data) => {
+    if (data.ingredients.includes(search_query)) {
+      // Check if already matched by title search
+      const alreadyMatched = matches.find(m => m.index === data.i);
+      if (!alreadyMatched) {
+        // Ingredient matches get score of 0.5 (lower priority than good title matches)
+        matches.push({
+          index: data.i,
+          score: 0.5,
+          type: 'ingredient'
+        });
+      }
+      // If already matched by title, keep the better (lower) score
+    }
+  });
+  
+  // Sort by score (lower is better)
+  matches.sort((a, b) => a.score - b.score);
+  
+  // Create a set of matched indices for quick lookup
+  const matchedIndices = new Set(matches.map(m => m.index));
+  
+  // Hide non-matching cards
+  cards.forEach((card, i) => {
+    if (!matchedIndices.has(i)) {
+      card.classList.add("d-none");
+    } else {
+      card.classList.remove("d-none");
+    }
+  });
+  
+  // Reorder matching cards by score (best matches first)
+  const container = cards[0].parentElement; // Get the .row container
+  matches.forEach((match) => {
+    container.appendChild(cardData[match.index].col);
+  });
 }
 
 let typingTimer;

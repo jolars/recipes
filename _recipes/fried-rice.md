@@ -9,7 +9,7 @@ description:
 categories: vegetariskt
 tags: ris, asiatiskt, wok
 img: assets/img/fried-rice.png
-servings: 1 sats
+servings: 4 portioner
 ingredients:
   main:
     - 2 morötter

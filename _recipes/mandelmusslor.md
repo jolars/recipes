@@ -7,7 +7,7 @@ description:
   förutsätter att man använder klassiska, avlånga formar för mandelmusslor.
 categories: bak
 tags: jul, småkakor, mandelmusslor, bakning
-img: assets/img/mandelmusslor.png
+img: assets/img/mandelmusslor.webp
 servings: 20 st
 prep_time: PT20M
 cook_time: PT45M

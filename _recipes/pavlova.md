@@ -7,7 +7,7 @@ description: >-
   i förväg. Förvara den i så fall i en lufttät behållare.
 categories: dessert
 tags: "maräng, bär, nyazeeland"
-img: assets/img/pavlova.png
+img: assets/img/pavlova.webp
 servings: 6 portioner
 cook_time: PT25M
 ingredients:

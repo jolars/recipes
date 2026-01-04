@@ -7,7 +7,7 @@ description: >-
   smak och gör den saftig.
 categories: fisk
 tags: potatis, lax
-img: assets/img/lax-i-ugn-med-dilltacke.png
+img: assets/img/lax-i-ugn-med-dilltacke.webp
 servings: 6 portioner
 prep_time: PT3H
 cook_time: PT45M

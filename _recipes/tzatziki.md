@@ -3,7 +3,7 @@ title: Tzatziki
 excerpt: Grekisk röra med vitlök och gurka
 categories: röra
 tags: "röra, grekland"
-img: assets/img/tzatziki.png
+img: assets/img/tzatziki.webp
 servings: 4 portioner
 cook_time: PT25M
 ingredients:

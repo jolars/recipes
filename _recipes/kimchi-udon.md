@@ -4,7 +4,7 @@ title: "Kimchi Udon"
 excerpt: "Udon-nudlar med kimchi och brynt smör"
 categories: vegetariskt
 tags: koreanskt, nudlar
-img: assets/img/kimchi-udon.png
+img: assets/img/kimchi-udon.webp
 servings: 4 portioner
 ingredients:
   Nudlar:

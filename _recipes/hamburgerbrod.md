@@ -8,7 +8,7 @@ description:
   och 4-5 cm för miniburgarbröd. Bröden funkar även utmärkt som korvbröd.
 categories: bak
 tags: hamburgerbröd, bröd, bakning, korvbröd
-img: assets/img/hamburgerbrod.png
+img: assets/img/hamburgerbrod.webp
 servings: 11 bröd
 prep_time: PT20M
 cook_time: PT45M

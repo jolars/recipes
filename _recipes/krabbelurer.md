@@ -6,7 +6,7 @@ tags: utemat
 excerpt: Den klassiska stormkökspannkakan!
 description: >
   Ett vanligt recept på krabbelurer, som liknar de amerikanska pannkakorna.
-img: assets/img/krabbelurer.png
+img: assets/img/krabbelurer.webp
 cook_time: PT10M
 prep_time: PT5M
 servings: 10 st

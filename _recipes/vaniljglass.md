@@ -4,7 +4,7 @@ title: "Vaniljglass"
 excerpt: "Gräddglass med vaniljsmak"
 categories: sött
 tags: glass, efterrätt, vanilj
-img: assets/img/vaniljglass.png
+img: assets/img/vaniljglass.webp
 servings: 1 sats
 ingredients:
   main:

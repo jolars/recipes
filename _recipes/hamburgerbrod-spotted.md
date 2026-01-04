@@ -6,7 +6,7 @@ description:
   hamburgare. Receptet är inspirerat av de populära bröden från Spotted Pig.
 categories: bak
 tags: hamburgerbröd, bröd, bakning, korvbröd
-img: assets/img/hamburgerbrod-spotted.png
+img: assets/img/hamburgerbrod-spotted.webp
 servings: 8 bröd
 prep_time: PT180M
 cook_time: PT25M

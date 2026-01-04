@@ -9,7 +9,7 @@ description:
   genom att utesluta prosciutton.
 categories: kött
 tags: pasta, italienstk
-img: assets/img/pasta-alfredo.png
+img: assets/img/pasta-alfredo.webp
 servings: 4 portioner
 prep_time: PT20M
 cook_time: PT45M

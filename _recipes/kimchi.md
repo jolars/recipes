@@ -7,7 +7,7 @@ description: >-
   i kylen men håller i flera månader.
 categories: tillbehör
 tags: tillbehör, kimhci, koreanskt
-img: assets/img/kimchi.png
+img: assets/img/kimchi.webp
 servings: 1 sats
 prep_time: PT01H30M
 cook_time: PT30M

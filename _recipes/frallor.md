@@ -9,7 +9,7 @@ description: >-
   annan mjölsort, exempelvis ett fullkornsmjöl.
 categories: bakning
 tags: frallor
-img: assets/img/frallor.png
+img: assets/img/frallor.webp
 servings: 12 frallor
 cook_time: PT15M
 prep_time: PT15M

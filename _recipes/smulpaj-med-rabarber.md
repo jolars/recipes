@@ -8,7 +8,7 @@ description: >-
   Rabarbern kan alternativt också kryddas med kanel, kardemumma eller ingefära.
 categories: bakning
 tags: bak, smulpaj, rabarber
-img: assets/img/smulpaj-med-rabarber.png
+img: assets/img/smulpaj-med-rabarber.webp
 servings: 1 paj
 prep_time: PT00M
 cook_time: PT45M

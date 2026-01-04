@@ -7,7 +7,7 @@ description:
   också bra att servera såsen vid sidan av.
 categories: vegetariskt
 tags: pasta, italienstk
-img: assets/img/pasta-alla-norma.png
+img: assets/img/pasta-alla-norma.webp
 servings: 4 portioner
 prep_time: PT00M
 cook_time: PT45M

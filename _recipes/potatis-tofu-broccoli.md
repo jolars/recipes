@@ -7,7 +7,7 @@ description: >-
   vanlig sojasås.
 categories: vegetariskt
 tags: asiatiskt, tofu, potatis
-img: assets/img/potatis-tofu-broccoli.png
+img: assets/img/potatis-tofu-broccoli.webp
 servings: 4 portioner
 prep_time: PT00M
 cook_time: PT60M

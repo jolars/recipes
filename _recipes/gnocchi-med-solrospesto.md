@@ -8,7 +8,7 @@ description: >-
   grönkålsblad och citron. Själva peston kan varieras med andra nötter och
   grönt, expempelvis valnötter, rostade hasselnötter, spenat, eller morotsblast.
 categories: vegetariskt
-img: assets/img/gnocchi-med-solrospesto.png
+img: assets/img/gnocchi-med-solrospesto.webp
 servings: 4 portioner
 ingredients:
   main:

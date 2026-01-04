@@ -8,7 +8,7 @@ description:
   västeråsgurkor.
 categories: tillbehör
 tags: inlagt, japanskt, gurka
-img: assets/img/saltpicklad-gurka.png
+img: assets/img/saltpicklad-gurka.webp
 servings: 1 sats
 cook_time: PT30M
 ingredients:

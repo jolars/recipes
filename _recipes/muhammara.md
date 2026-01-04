@@ -3,7 +3,7 @@ title: Muhammara
 excerpt: Pepprig röra från Syrien
 categories: röra
 tags: "röra, syrien"
-img: assets/img/muhammara.png
+img: assets/img/muhammara.webp
 servings: 4 portioner
 cook_time: PT45M
 ingredients:

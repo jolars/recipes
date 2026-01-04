@@ -23,6 +23,7 @@
             vips
             rubyPackages.ruby-vips
             libwebp
+            pngquant
             (pkgs.python3.withPackages (ps: [
               ps.requests
               ps.openai

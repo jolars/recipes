@@ -7,7 +7,7 @@ description: >-
   finnas i välsorterade delis eller bagerier.
 categories: bakning
 tags: bröd, jul
-img: assets/img/vortbrod.png
+img: assets/img/vortbrod.webp
 servings: 2 limpor
 cook_time: PT30M
 prep_time: PT45M

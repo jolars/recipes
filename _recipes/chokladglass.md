@@ -4,7 +4,7 @@ title: "Chokladglass"
 excerpt: "Klassisk chokladglass"
 categories: sött
 tags: glass, efterrätt, choklad
-img: assets/img/chokladglass.png
+img: assets/img/chokladglass.webp
 servings: 1 sats
 ingredients:
   main:

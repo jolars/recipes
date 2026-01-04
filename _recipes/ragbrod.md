@@ -7,7 +7,7 @@ description: >-
   vill. Det är också trevligt att rulla bröden i frön innan de läggs i formarna.
 categories: bakning
 tags: bröd
-img: assets/img/ragbrod.png
+img: assets/img/ragbrod.webp
 servings: 2 formbröd
 prep_time: PT15M
 cook_time: PT60M

@@ -7,7 +7,7 @@ description:
   glass. Kanelen kan bytas ut mot kardemumma eller ingefära för en annan smak.
 categories: sött
 tags: bakning, paj
-img: assets/img/smuldegspaj.png
+img: assets/img/smuldegspaj.webp
 servings: 6 portioner
 cook_time: PT25M
 prep_time: PT15M

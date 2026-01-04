@@ -5,7 +5,7 @@ description:
   En snabb och smakrik pickling av kålrot inspirerad av Rutabaga i Stockholm.
 categories: tillbehör
 tags: kålrot, picklad, inlagd, tillbehör
-img: assets/img/picklad-kalrot.png
+img: assets/img/picklad-kalrot.webp
 servings: 1 sats
 prep_time: PT180M
 cook_time: PT25M

@@ -4,7 +4,7 @@ title: "Chiliolja"
 excerpt: "Kinesisk-koreansk chiliolja"
 categories: basrecept
 tags: chili, olja, kinesiskt
-img: assets/img/chiliolja.png
+img: assets/img/chiliolja.webp
 servings: 1 sats
 cook_time: PT10M
 ingredients:

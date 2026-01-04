@@ -6,7 +6,7 @@ descriptions: >-
   Grundrecept på tomatsås, baserat på Kenji López-Alts recept.
 tags: sås
 excerpt: Grundrecept på tomatsås
-img: assets/img/tomatsas.png
+img: assets/img/tomatsas.webp
 cook_time: PT45M
 prep_time: PT0M
 servings: 1 sats

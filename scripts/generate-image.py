@@ -19,7 +19,7 @@ def main():
     # Set up file paths
     recipe_file = Path(f"_recipes/{args.recipe_name}.md")
     output_dir = Path("assets/img")
-    output_file = output_dir / f"{args.recipe_name}.png"
+    output_file = output_dir / f"{args.recipe_name}.webp"
 
     # Ensure output directory exists
     print(f"📁 Checking output directory: {output_dir}")
@@ -55,7 +55,11 @@ def main():
     # Generate the image
     print(f"🎨 Generating image for '{args.recipe_name}' recipe...")
     start_time = time.time()
-    result = client.images.generate(model="gpt-image-1.5", prompt=prompt)
+    result = client.images.generate(
+        model="gpt-image-1.5",
+        prompt=prompt,
+        output_format="webp"
+    )
     end_time = time.time()
     print(f"✅ Image generation completed in {end_time - start_time:.2f} seconds")
 
@@ -65,7 +69,7 @@ def main():
         image_base64 = result.data[0].b64_json
         image_bytes = base64.b64decode(image_base64)
 
-        # Save the image to a file
+        # Save the WebP image
         print(f"💾 Saving image to {output_file}")
         with open(output_file, "wb") as f:
             f.write(image_bytes)

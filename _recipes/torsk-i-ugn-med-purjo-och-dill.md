@@ -7,7 +7,7 @@ description: >-
   servera med kokt potatis istället för ris, eller något annat gryn.
 categories: fisk
 tags: ugnsmat
-img: assets/img/torsk-i-ugn-med-purjo-och-dill.png
+img: assets/img/torsk-i-ugn-med-purjo-och-dill.webp
 servings: 4 portioner
 cook_time: PT45
 ingredients:

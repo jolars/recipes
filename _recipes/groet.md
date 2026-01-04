@@ -4,7 +4,7 @@ title: "Gröt"
 excerpt: "Standardrecept på gröt."
 categories: vegetariskt
 tags: frukost
-img: assets/img/groet.png
+img: assets/img/groet.webp
 servings: 1 portion
 ingredients:
   Gröten:

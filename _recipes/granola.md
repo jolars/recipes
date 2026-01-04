@@ -9,7 +9,7 @@ description:
   sesamfrön eller chiafrön.
 categories: frukost
 tags: frukost, granola, müsli, nötter, frön
-img: assets/img/granola.png
+img: assets/img/granola.webp
 servings: 1 sats
 ingredients:
   main:

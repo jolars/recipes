@@ -8,7 +8,7 @@ description:
 
 categories: vegetariskt
 tags: ris, asiatiskt, wok
-img: assets/img/fried-rice.png
+img: assets/img/fried-rice.webp
 servings: 4 portioner
 ingredients:
   main:

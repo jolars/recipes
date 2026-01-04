@@ -6,7 +6,7 @@ description:
   den söta chokladen.
 categories: bak
 tags: småkakor, choklad, bakning
-img: assets/img/chokladkakor-med-rag.png
+img: assets/img/chokladkakor-med-rag.webp
 servings: 75 st
 prep_time: PT20M
 cook_time: PT45M

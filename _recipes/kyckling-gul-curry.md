@@ -9,7 +9,7 @@ description: >-
   Servera med jasminris, lime och färsk koriander.
 categories: kyckling
 tags: kyckling, ris, curry, lättlagat
-img: assets/img/kyckling-gul-curry.png
+img: assets/img/kyckling-gul-curry.webp
 servings: 4 portioner
 cook_time: PT30M
 ingredients:

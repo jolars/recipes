@@ -4,7 +4,7 @@ title: "Pasta"
 excerpt: "Basrecept för pasta"
 categories: basrecept
 tags: pasta
-img: assets/img/pasta.png
+img: assets/img/pasta.webp
 servings: 4 portioner
 ingredients:
   main:

@@ -8,7 +8,7 @@ description: >-
   och passar bra för barn att hjälpa till med.
 categories: bakning
 tags: bröd, majs, vegetariskt, barn
-img: assets/img/majsbrod.png
+img: assets/img/majsbrod.webp
 servings: 4 portioner
 prep_time: PT15M
 cook_time: PT30M

@@ -7,7 +7,7 @@ descriptions: >-
   gräddning.
 categories: bakning
 tags: bröd, surdeg
-img: assets/img/vitt-surdegsbrod.png
+img: assets/img/vitt-surdegsbrod.webp
 servings: 1 bröd
 prep_time: PT01H
 cook_time: PT45M

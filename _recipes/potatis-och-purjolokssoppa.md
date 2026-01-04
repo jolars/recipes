@@ -9,7 +9,7 @@ description: >-
   slutet.
 categories: kött
 tags: soppa, potatis
-img: assets/img/potatis-och-purjolokssoppa.png
+img: assets/img/potatis-och-purjolokssoppa.webp
 servings: 4 portioner
 prep_time: PT0M
 cook_time: PT30M

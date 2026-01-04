@@ -2,7 +2,7 @@
 title: "Paj"
 categories: vegetariskt
 excerpt: Recept på paj med pajdeg av smör.
-img: assets/img/paj.png
+img: assets/img/paj.webp
 servings: 1 paj
 ingredients:
   main:

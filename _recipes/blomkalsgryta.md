@@ -4,7 +4,7 @@ title: "Blomkålsgryta med dragon och citron"
 excerpt: "Gräddig gryta med blomkål, citron och kronärtskocka"
 categories: vegetariskt
 tags: gryta, vegetariskt
-img: assets/img/blomkalsgryta.png
+img: assets/img/blomkalsgryta.webp
 servings: 4 portioner
 cook_time: PT30M
 ingredients:

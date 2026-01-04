@@ -6,7 +6,7 @@ description: >-
   Buljongen kan ersättas med kycklingbuljong från tärning.
 categories: vegetariskt
 tags: soppa
-img: assets/img/blomkalssoppa.png
+img: assets/img/blomkalssoppa.webp
 servings: 4 portioner
 prep_time: PT2H
 cook_time: PT1H

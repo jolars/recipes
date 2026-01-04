@@ -4,7 +4,7 @@ title: "Pannkakor"
 categories: bakning
 tags: utemat
 excerpt: Klassiska svenska pannkakor.
-img: assets/img/pannkakor.png
+img: assets/img/pannkakor.webp
 cook_time: PT10M
 prep_time: PT5M
 servings: 8 st

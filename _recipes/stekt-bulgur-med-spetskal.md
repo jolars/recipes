@@ -10,7 +10,7 @@ description: >-
   är också gott till. Ät med pinnar!
 categories: vegetariskt
 tags: asiatiskt, bulgur, wok
-img: assets/img/stekt-bulgur-med-spetskal.png
+img: assets/img/stekt-bulgur-med-spetskal.webp
 servings: 4 portioner
 cook_time: PT30M
 ingredients:

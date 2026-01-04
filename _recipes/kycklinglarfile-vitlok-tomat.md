@@ -6,7 +6,7 @@ excerpt: >-
   ugnen.
 categories: kyckling
 tags: kycklinglårfilé, ugnsmat, enkelt
-img: assets/img/kycklinglarfile-vitlok-tomat.png
+img: assets/img/kycklinglarfile-vitlok-tomat.webp
 servings: 4 portioner
 cook_time: PT50M
 ingredients:

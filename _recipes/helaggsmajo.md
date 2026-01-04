@@ -4,7 +4,7 @@ title: "Majonnäs på hela ägg"
 categories: basrecept
 tags: ägg
 excerpt: American style!
-img: assets/img/helaggsmajo.png
+img: assets/img/helaggsmajo.webp
 servings: 1 sats
 ingredients:
   main:

@@ -4,7 +4,7 @@ title: "Gratinerad Pasta med Tomatsås"
 categories: vegetariskt
 tags: pasta, enkelt, tomatsås
 excerpt: Enkel vardagsrätt.
-img: assets/img/gratinerad-penne.png
+img: assets/img/gratinerad-penne.webp
 cook_time: PT30M
 prep_time: PT0M
 servings: 4 portioner

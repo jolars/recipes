@@ -106,7 +106,66 @@ layout: base
                 <i class="bi bi-cart4"></i>
                 Lägg till i Bring!
             </a>
+            <button class="btn btn-sm btn-outline-secondary mb-3" id="addToMealPlanBtn" onclick="addRecipeToMealPlan()">
+                <i class="bi bi-calendar-plus"></i>
+                Lägg till i veckomeny
+            </button>
         </div>
+        
+        <script>
+        function addRecipeToMealPlan() {
+            const recipeSlug = "{{ page.slug }}";
+            const servingsElement = document.getElementById('servings');
+            const servings = servingsElement ? parseInt(servingsElement.textContent.match(/\d+/)[0]) : {{ servings_size }};
+            
+            // Load existing meal plan from localStorage
+            let mealPlan = {};
+            const saved = localStorage.getItem('mealPlan');
+            if (saved) {
+                try {
+                    mealPlan = JSON.parse(saved);
+                } catch (e) {
+                    console.error('Failed to parse meal plan:', e);
+                }
+            }
+            
+            // Find the first available day slot
+            const dayKeys = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+            let targetDay = null;
+            for (let dayKey of dayKeys) {
+                if (!mealPlan[dayKey]) {
+                    targetDay = dayKey;
+                    break;
+                }
+            }
+            
+            if (!targetDay) {
+                alert('Veckomeny är full! Gå till veckomenyn för att redigera.');
+                return;
+            }
+            
+            // Add this recipe to the first available day
+            mealPlan[targetDay] = {
+                recipe: recipeSlug,
+                servings: servings
+            };
+            
+            // Save back to localStorage
+            localStorage.setItem('mealPlan', JSON.stringify(mealPlan));
+            
+            // Visual feedback
+            const btn = document.getElementById('addToMealPlanBtn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="bi bi-check"></i> Tillagd!';
+            btn.classList.add('btn-success');
+            btn.classList.remove('btn-outline-secondary');
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('btn-success');
+                btn.classList.add('btn-outline-secondary');
+            }, 2000);
+        }
+        </script>
     </div>
     <div class="directions col-sm-8 col-lg-7 col-xl-6">
         <h3>Instruktioner</h3>

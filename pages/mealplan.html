@@ -1,0 +1,51 @@
+---
+layout: base
+title: Veckomeny
+permalink: /mealplan/
+---
+
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="mb-0">Veckomeny</h1>
+    <a href="{{ '/' | relative_url }}" class="btn btn-outline-secondary">
+      <i class="bi bi-arrow-left"></i> Tillbaka till recept
+    </a>
+  </div>
+  
+  <div id="meal-plan" class="mb-4">
+    <!-- Days will be added here by JavaScript -->
+  </div>
+
+  <div class="d-grid gap-2 mb-3">
+    <button class="btn btn-primary" onclick="generateLink()">
+      <i class="bi bi-link-45deg"></i> Skapa delbar länk
+    </button>
+    <button class="btn btn-success" onclick="toggleShoppingList()">
+      <i class="bi bi-cart"></i> Visa inköpslista
+    </button>
+    <button class="btn btn-outline-primary" onclick="addAllToBring()">
+      <i class="bi bi-cart4"></i> Lägg till alla i Bring!
+    </button>
+  </div>
+
+  <div id="link-section" class="alert alert-info d-none mb-3">
+    <p class="mb-2">Kopiera denna länk för att dela din veckomeny:</p>
+    <div class="input-group">
+      <input type="text" id="share-link" class="form-control" readonly>
+      <button class="btn btn-outline-secondary" onclick="copyLink()">
+        <i class="bi bi-clipboard"></i> Kopiera
+      </button>
+    </div>
+  </div>
+
+  <div id="shopping-list-section" class="card d-none mb-4">
+    <div class="card-header">
+      <h5 class="mb-0">Inköpslista</h5>
+    </div>
+    <div class="card-body">
+      <div id="shopping-list-content"></div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/mealplan.js' | relative_url }}"></script>

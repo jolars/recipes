@@ -5,6 +5,9 @@
         {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
         <div class="container">
             <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="{{ '/mealplan/' | relative_url }}">Veckomeny</a>
+            </div>
             <button class="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"

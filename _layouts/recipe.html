@@ -95,11 +95,10 @@ layout: base
         {% endfor %}
         <div class="d-grid d-sm-block">
             <!-- TODO: Add requestedQuantity and update using javascript -->
-            <a class="btn btn-sm btn-outline-primary mb-2"
-               href="https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ servings_size }}">
+            <button class="btn btn-sm btn-outline-primary mb-2" onclick="openBringDeeplink()">
                 <i class="bi bi-cart4"></i>
                 Lägg till i Bring!
-            </a>
+            </button>
             <button class="btn btn-sm btn-outline-secondary mb-2" id="addToMealPlanBtn" onclick="addRecipeToMealPlan()">
                 <i class="bi bi-calendar-plus"></i>
                 Lägg till i veckomeny
@@ -112,6 +111,12 @@ layout: base
 
         <script>
         let wakeLock = null;
+
+        function openBringDeeplink() {
+            const bringUrl = 'https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ servings_size }}';
+            // Use location.replace to avoid adding to browser history
+            location.replace(bringUrl);
+        }
 
         async function toggleScreenWakeLock() {
             const checkbox = document.getElementById('keepScreenOnSwitch');

@@ -95,7 +95,7 @@ layout: base
         {% endfor %}
         <div class="d-grid d-sm-block">
             <!-- TODO: Add requestedQuantity and update using javascript -->
-            <button class="btn btn-sm btn-outline-primary mb-2" onclick="openBringDeeplink()">
+            <button class="btn btn-sm btn-outline-primary mb-2" id="bringBtn" onclick="openBringDeeplink()" style="display: none;">
                 <i class="bi bi-cart4"></i>
                 Lägg till i Bring!
             </button>
@@ -111,6 +111,11 @@ layout: base
 
         <script>
         let wakeLock = null;
+
+        // Show Bring button only on mobile/tablet devices
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.getElementById('bringBtn').style.display = '';
+        }
 
         function openBringDeeplink() {
             const bringUrl = 'https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ servings_size }}';

@@ -7,7 +7,7 @@ description: >-
   Jag vill gärna inte att soppan ska bli för tjock, så mängden potatis är ganska
   liten här. Om det blir för vattnigt kan soppan med fördel  redas något på
   slutet.
-categories: kött
+categories: vegetariskt
 tags: soppa, potatis
 img: assets/img/potatis-och-purjolokssoppa.webp
 servings: 4 portioner
@@ -23,13 +23,13 @@ ingredients:
     - 2 tsk vitvinäger
     - 3 krm salt
     - peppar
-    - 1 chorizo
     - 1 knippe persilja
+    - 1 dl rostade frön (t.ex. solros- eller pumpafrön)
 ---
 
 1. Skala och skär potatisen i mindre bitar. Skölj och skiva purjolöken. Lägg
    sedan purjolök och potatis i en kastrull och koka in vinet. Häll på buljong
    och vinäger och koka till potatisen är mjuk, ca 15 minuter.
 2. Tärna och stek under tiden korven knaprig i en stekpanna. Hacka persilja.
-3. Tilsätt grädde och mixa soppan slät med en stavmixer. Servera med bröd,
-   tärnad chorizo och persilja.
+3. Tilsätt grädde och mixa soppan slät med en stavmixer. Servera med bröd, frön
+   och persilja.

@@ -39,7 +39,7 @@ ingredients:
    enligt anvisningarna på förpackningen.
 2. Hetta upp en wok och rosta jordnötterna till de får lite färg. Lägg åt sidan.
 3. Dela svampen i 2 cm stora tärningar. Häll generöst med olja i woken och woka
-   svampen till den fått en gyllenbrun yta.
+   svampen till den fått en gyllenbrun yta. Ställ åt sidan.
 4. Finhacka vitlök och ingefära. Morta sichuanpeppar. Skär paprika och det vita
    på salladslökarna i 2 cm stora bitar. Hacka det gröna på salladslöken och
    ställ åt sidan.

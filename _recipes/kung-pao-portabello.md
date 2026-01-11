@@ -7,7 +7,7 @@ description:
   hemma kan du använda dem istället för chiliflakes för en mer autentisk smak.
   Använd då 2-4 stycken beroende på hur stark du vill ha rätten.
 categories: vegetariskt
-tags: kung pao, portabello, vegetariskt, asiatiskt
+tags: kung pao, portabello, vegetariskt, kinesiskt, wok
 img: assets/img/kung-pao-portabello.webp
 servings: 4 portioner
 prep_time: PT00M

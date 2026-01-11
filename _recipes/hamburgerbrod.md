@@ -35,8 +35,8 @@ ingredients:
    tiden degen i 70/35/23 g stora bitar för respektive hamburgerbröd, sliderbröd
    eller miniburgarbröd, och rundriv dem till släta bullar. Placera bollarna på
    en plåt och platta till dem med handflatan. Låt jäsa i 45-60 minuter.
-3. Ta ut bröden en kvart innan de jäst färdigt. Nu går det bra att frysa in dem
-   om så önskas.
+3. Ta ut bröden 15 min innan de jäst färdigt. Nu går det bra att frysa in dem om
+   så önskas.
 4. Sätt ugnen på 230° C. Vispa ihop ägg, vatten och salt till äggstrykningen.
-   Pensla bröden med äggstrykningen, sänk värmen till 215 gradee och grädda dem
-   i mitten av ugnen i ca 10 minuter tills de är gyllenbruna.
+   Pensla bröden med äggstrykningen, sänk värmen till 215° och grädda dem i
+   mitten av ugnen i 9-10 minuter tills de är gyllenbruna.

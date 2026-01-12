@@ -48,5 +48,5 @@ ingredients:
    svampsåsen. Späd med lite av pastavattnet om såsen känns för tjock.
 5. Blanda ingredienserna till vinägretten i en skål. Skala och skiva avokadon.
    Blanda bladspenat och avokado och ringla över lite av vinägretten.
-6. Servera pastan med riven parmesanost, hackad persilja och rostade mandlar
-   tillsammans med salladen.
+6. Servera pastan med riven parmesanost, hackad persilja och hackade rostade
+   mandlar tillsammans med salladen.

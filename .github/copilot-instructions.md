@@ -122,7 +122,7 @@ The workflow runs on:
 │   │   └── mealplan.js        # Meal planner functionality
 │   ├── data/
 │   │   └── recipes.json       # Generated JSON API with all recipes data
-│   └── img/                   # Recipe images (PNG source files)
+│   └── img/                   # Recipe images (PNG or WebP source files)
 ├── scripts/
 │   └── generate-image.py      # OpenAI image generation script (optional)
 ├── pages/
@@ -145,7 +145,7 @@ title: "Recipe Title"
 excerpt: "Short description"
 categories: vegetariskt  # Or: basrecept, etc.
 tags: gryta, vegetariskt
-img: assets/img/recipe-name.png  # Required for display
+img: assets/img/recipe-name.png  # Required for display (can be .png or .webp)
 servings: 4 portioner
 cook_time: PT30M  # ISO 8601 duration format
 prep_time: PT15M  # Optional
@@ -235,8 +235,8 @@ Usage in templates:
 ### Adding a New Recipe
 
 1. Create `_recipes/recipe-name.md` with YAML frontmatter (see format above)
-2. Add recipe image to `assets/img/recipe-name.png` (PNG format, square aspect ratio recommended)
-3. Build site: `bundle exec jekyll build` (images will be auto-generated)
+2. Add recipe image to `assets/img/recipe-name.png` or `.webp` (square aspect ratio recommended)
+3. Build site: `bundle exec jekyll build` (responsive images will be auto-generated)
 4. Verify locally: `bundle exec jekyll serve`
 
 **Note:** New recipes automatically appear in:
@@ -312,7 +312,7 @@ bundle exec jekyll serve --incremental
 3. **Test builds locally** before pushing - CI build is slower and costs Actions minutes
 4. **Use incremental builds** during development for faster iteration
 5. **Recipe content is in Swedish** - respect language conventions in all content changes
-6. **Image files should be PNG format** in `assets/img/` - WebP variants are auto-generated
+6. **Image files can be PNG or WebP format** in `assets/img/` - responsive variants are auto-generated
 
 ## Trust These Instructions
 

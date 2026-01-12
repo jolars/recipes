@@ -5,7 +5,7 @@ description: |
   En krämig och smakrik pasta med belugalinser och skogschampinjoner. Serveras
   med en sallad på bladspenat och avokado.
 categories: vegetariskt
-tags: "vegetariskt, pasta, spaghetti, svamp"
+tags: vegetariskt, pasta, spaghetti, svamp
 img: assets/img/pasta-med-linser-och-svamp.webp
 servings: 4 portioner
 cook_time: PT45M

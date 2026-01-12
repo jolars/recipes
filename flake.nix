@@ -24,10 +24,12 @@
             rubyPackages.ruby-vips
             libwebp
             pngquant
+            imagemagick
             (pkgs.python3.withPackages (ps: [
               ps.requests
               ps.openai
             ]))
+            (pkgs.writeShellScriptBin "new-recipe" (builtins.readFile ./scripts/new-recipe.sh))
           ];
         };
       }

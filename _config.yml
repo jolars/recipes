@@ -16,6 +16,7 @@ picture:
 exclude:
   - .sass-cache/
   - .jekyll-cache/
+  - scripts/
   - gemfiles/
   - Gemfile
   - Gemfile.lock
@@ -24,6 +25,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - devenv.nix
+  - devenv.yaml
+  - devenv.lock
 
 collections:
   recipes:

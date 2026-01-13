@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  serve:
+    desc: Serve the Jekyll site locally
+    cmds:
+      - bundle exec jekyll serve

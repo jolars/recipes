@@ -16,6 +16,7 @@
     pkgs.libwebp
     pkgs.rubyPackages.ruby-vips
     pkgs.pngquant
+    pkgs.go-task
     pkgs.imagemagick
     (pkgs.python3.withPackages (ps: [
       ps.requests
@@ -35,6 +36,18 @@
   scripts.new-recipe.exec = ''
     ${pkgs.bash}/bin/bash ${./scripts/new-recipe.sh}
   '';
+
+  processes = {
+    serve = {
+      exec = ''bundle exec jekyll serve'';
+    };
+  };
+
+  tasks = {
+    "recept:serve" = {
+      exec = ''bundle exec jekyll serve'';
+    };
+  };
 
   # https://devenv.sh/git-hooks/
   # git-hooks.hooks.shellcheck.enable = true;

@@ -81,7 +81,18 @@ layout: base
                     <span class="ingredient" data-ingredient="{% if ingredient.name %}{{ ingredient.amount }} {{ ingredient.name }}{% else %}{{ ingredient }}{% endif %}">
                     {% if ingredient.name %}
                         {% if ingredient.link %}
-                        {{ ingredient.amount }} <a href="{{ ingredient.link }}">{{ ingredient.name }}</a>
+                        {%- assign ingredient_url = ingredient.link -%}
+                        {%- unless ingredient.link contains '/' -%}
+                            {%- assign ingredient_url = '/recipes/' | append: ingredient.link | append: '/' -%}
+                        {%- endunless -%}
+                        {%- if ingredient.servings -%}
+                            {%- if ingredient_url contains '?' -%}
+                                {%- assign ingredient_url = ingredient_url | append: '&servings=' | append: ingredient.servings -%}
+                            {%- else -%}
+                                {%- assign ingredient_url = ingredient_url | append: '?servings=' | append: ingredient.servings -%}
+                            {%- endif -%}
+                        {%- endif -%}
+                        {{ ingredient.amount }} <a href="{{ ingredient_url }}">{{ ingredient.name }}</a>
                         {% else %}
                         {{ ingredient.amount }} {{ ingredient.name }}
                         {% endif %}
@@ -118,7 +129,11 @@ layout: base
         }
 
         function openBringDeeplink() {
-            const bringUrl = 'https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity={{ servings_size }}';
+            // Get current servings from the page (may be adjusted via URL parameter or +/- buttons)
+            const servingsElement = document.getElementById('servings');
+            const currentServings = servingsElement ? parseInt(servingsElement.textContent.match(/\d+/)[0]) : {{ servings_size }};
+
+            const bringUrl = 'https://api.getbring.com/rest/bringrecipes/deeplink?url={{ page.url | absolute_url }}&source=web&baseQuantity=' + currentServings;
             // Use location.replace to avoid adding to browser history
             location.replace(bringUrl);
         }
@@ -220,6 +235,37 @@ layout: base
                 btn.classList.add('btn-outline-secondary');
             }, 2000);
         }
+
+        // Check for servings URL parameter and adjust servings automatically
+        function applyServingsFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const servingsParam = urlParams.get('servings');
+
+            if (servingsParam) {
+                const targetServings = parseInt(servingsParam);
+                const servingsElement = document.getElementById('servings');
+
+                if (servingsElement && targetServings > 0) {
+                    const originalServings = parseInt(servingsElement.getAttribute('data-servings'));
+                    const currentServingsText = servingsElement.innerHTML;
+                    const servingsType = currentServingsText.match(/\d+\s*(.*)/)[1].trim();
+
+                    // Directly set the servings and calculate ingredient amounts
+                    const multiplier = targetServings / originalServings;
+                    servingsElement.innerHTML = targetServings + " " + servingsType;
+
+                    // Update all ingredients
+                    const ingredients = document.getElementsByClassName("ingredient");
+                    for (let i = 0; i < ingredients.length; i++) {
+                        const originalAmount = ingredients[i].getAttribute("data-ingredient");
+                        ingredients[i].innerHTML = updateIngredientAmount(originalAmount, multiplier);
+                    }
+                }
+            }
+        }
+
+        // Apply servings from URL on page load
+        window.addEventListener('DOMContentLoaded', applyServingsFromURL);
         </script>
     </div>
     <div class="directions col-sm-8 col-lg-7 col-xl-6">

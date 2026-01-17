@@ -10,7 +10,10 @@ ingredients:
   Nudlar:
     - 700 g färska udon-nudlar
     - 100 g smör
-    - 4 dl kimchi
+    - amount: 4 dl
+      name: kimchi
+      link: kimchi
+      servings: 1
     - 1 dl vatten
     - 1.5 msk gochujang
     - 3 msk japansk soja

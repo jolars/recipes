@@ -282,6 +282,286 @@ layout: base
                 </div>
             </div>
         </div>
+        <div id="recipe-instructions">
         {{ content }}
+        </div>
+        <script>
+        // Timer management
+        const activeTimers = new Map();
+
+        function createTimer(minutes, stepIndex) {
+            const timerKey = `timer-${stepIndex}-${minutes}`;
+            const totalSeconds = minutes * 60;
+
+            const timerEl = document.createElement('span');
+            timerEl.className = 'recipe-timer';
+            timerEl.setAttribute('data-timer-key', timerKey);
+
+            const display = document.createElement('span');
+            display.className = 'timer-display';
+            display.textContent = formatTime(totalSeconds);
+
+            const startBtn = document.createElement('button');
+            startBtn.className = 'timer-btn timer-start';
+            startBtn.innerHTML = '▶';
+            startBtn.title = 'Start';
+
+            const pauseBtn = document.createElement('button');
+            pauseBtn.className = 'timer-btn timer-pause';
+            pauseBtn.innerHTML = '⏸';
+            pauseBtn.title = 'Paus';
+            pauseBtn.style.display = 'none';
+
+            const resetBtn = document.createElement('button');
+            resetBtn.className = 'timer-btn timer-reset';
+            resetBtn.innerHTML = '↻';
+            resetBtn.title = 'Återställ';
+
+            timerEl.appendChild(display);
+            timerEl.appendChild(startBtn);
+            timerEl.appendChild(pauseBtn);
+            timerEl.appendChild(resetBtn);
+
+            // Timer state
+            let remainingSeconds = totalSeconds;
+            let intervalId = null;
+            let isRunning = false;
+
+            function formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = seconds % 60;
+                return `${mins}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            function updateDisplay() {
+                display.textContent = formatTime(remainingSeconds);
+                if (remainingSeconds === 0) {
+                    display.classList.add('timer-finished');
+                    display.classList.remove('timer-running');
+                    playTimerSound();
+                    stop();
+                } else if (isRunning) {
+                    display.classList.add('timer-running');
+                    display.classList.remove('timer-finished');
+                } else {
+                    display.classList.remove('timer-running', 'timer-finished');
+                }
+            }
+
+            function start() {
+                if (isRunning) return;
+                isRunning = true;
+                startBtn.style.display = 'none';
+                pauseBtn.style.display = 'inline-block';
+
+                intervalId = setInterval(() => {
+                    remainingSeconds--;
+                    updateDisplay();
+
+                    if (remainingSeconds <= 0) {
+                        stop();
+                    }
+                }, 1000);
+
+                updateDisplay();
+            }
+
+            function pause() {
+                if (!isRunning) return;
+                isRunning = false;
+                clearInterval(intervalId);
+                startBtn.style.display = 'inline-block';
+                pauseBtn.style.display = 'none';
+                updateDisplay();
+            }
+
+            function stop() {
+                isRunning = false;
+                clearInterval(intervalId);
+                startBtn.style.display = 'inline-block';
+                pauseBtn.style.display = 'none';
+            }
+
+            function reset() {
+                stop();
+                remainingSeconds = totalSeconds;
+                updateDisplay();
+            }
+
+            function playTimerSound() {
+                // Create a simple beep using Web Audio API
+                try {
+                    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    const oscillator = audioContext.createOscillator();
+                    const gainNode = audioContext.createGain();
+
+                    oscillator.connect(gainNode);
+                    gainNode.connect(audioContext.destination);
+
+                    oscillator.frequency.value = 800;
+                    oscillator.type = 'sine';
+
+                    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+
+                    oscillator.start(audioContext.currentTime);
+                    oscillator.stop(audioContext.currentTime + 0.5);
+                } catch (e) {
+                    console.log('Could not play timer sound:', e);
+                }
+            }
+
+            startBtn.addEventListener('click', start);
+            pauseBtn.addEventListener('click', pause);
+            resetBtn.addEventListener('click', reset);
+
+            // Store in active timers
+            activeTimers.set(timerKey, { start, pause, reset, stop });
+
+            return timerEl;
+        }
+
+        function initializeTimers() {
+            const instructions = document.querySelector('#recipe-instructions ol');
+            if (!instructions) return;
+
+            const steps = instructions.querySelectorAll('li');
+            steps.forEach((step, index) => {
+                // Get the step content wrapper (created by checkbox init)
+                const stepContent = step.querySelector('.step-content');
+                if (!stepContent) return;
+
+                // Look for [timer:X] pattern where X is minutes
+                const timerPattern = /\[timer:(\d+)\]/g;
+                const textContent = stepContent.textContent;
+
+                if (!timerPattern.test(textContent)) return;
+
+                // Reset regex
+                timerPattern.lastIndex = 0;
+
+                // Walk through text nodes and replace [timer:X] with actual timer elements
+                const walker = document.createTreeWalker(
+                    stepContent,
+                    NodeFilter.SHOW_TEXT,
+                    null
+                );
+
+                const nodesToReplace = [];
+                let node;
+
+                while (node = walker.nextNode()) {
+                    const matches = [...node.textContent.matchAll(/\[timer:(\d+)\]/g)];
+                    if (matches.length > 0) {
+                        nodesToReplace.push({ node, matches });
+                    }
+                }
+
+                // Replace text nodes with timer elements
+                nodesToReplace.forEach(({ node, matches }) => {
+                    const parent = node.parentNode;
+                    let lastIndex = 0;
+                    const fragment = document.createDocumentFragment();
+
+                    matches.forEach(match => {
+                        const matchIndex = match.index;
+                        const minutes = parseInt(match[1]);
+
+                        // Add text before the timer
+                        if (matchIndex > lastIndex) {
+                            fragment.appendChild(
+                                document.createTextNode(node.textContent.substring(lastIndex, matchIndex))
+                            );
+                        }
+
+                        // Add the timer element
+                        fragment.appendChild(createTimer(minutes, index));
+
+                        lastIndex = matchIndex + match[0].length;
+                    });
+
+                    // Add remaining text after the last timer
+                    if (lastIndex < node.textContent.length) {
+                        fragment.appendChild(
+                            document.createTextNode(node.textContent.substring(lastIndex))
+                        );
+                    }
+
+                    parent.replaceChild(fragment, node);
+                });
+            });
+        }
+
+        // Add checkboxes to recipe steps for completion tracking
+        function initializeStepCheckboxes() {
+            const instructions = document.querySelector('#recipe-instructions ol');
+            if (!instructions) return;
+
+            const steps = instructions.querySelectorAll('li');
+            const recipeSlug = "{{ page.slug }}";
+            const storageKey = `recipe-progress-${recipeSlug}`;
+
+            // Load saved progress from localStorage
+            let savedProgress = {};
+            try {
+                const saved = localStorage.getItem(storageKey);
+                if (saved) savedProgress = JSON.parse(saved);
+            } catch (e) {
+                console.error('Failed to load recipe progress:', e);
+            }
+
+            steps.forEach((step, index) => {
+                // Wrap existing content
+                const content = step.innerHTML;
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'form-check-input';
+                checkbox.setAttribute('data-step', index);
+
+                // Check if this step was previously completed
+                if (savedProgress[index]) {
+                    checkbox.checked = true;
+                    step.classList.add('completed');
+                }
+
+                const contentWrapper = document.createElement('span');
+                contentWrapper.className = 'step-content';
+                contentWrapper.innerHTML = content;
+
+                step.innerHTML = '';
+                step.appendChild(checkbox);
+                step.appendChild(contentWrapper);
+
+                // Handle checkbox changes
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        step.classList.add('completed');
+                        savedProgress[index] = true;
+                    } else {
+                        step.classList.remove('completed');
+                        delete savedProgress[index];
+                    }
+
+                    // Save progress to localStorage
+                    try {
+                        localStorage.setItem(storageKey, JSON.stringify(savedProgress));
+                    } catch (e) {
+                        console.error('Failed to save recipe progress:', e);
+                    }
+                });
+            });
+        }
+
+        // Initialize checkboxes and timers when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                initializeStepCheckboxes();
+                initializeTimers();
+            });
+        } else {
+            initializeStepCheckboxes();
+            initializeTimers();
+        }
+        </script>
     </div>
 </div>

@@ -1,6 +1,6 @@
 ---
-title: "Hamburgerbröd (Flippin' Burgers)"
-excerpt: Hamburgerbröd från Flippin' Burgers
+title: "Hamburgerbröd"
+excerpt: Hamburgerbröd inspirerade av Flippin' Burgers
 description:
   Ett saftigt och luftigt hamburgerbröd som är perfekt för alla typer av
   hamburgare. Receptet är inspirerat av de populära bröden från Flippin'

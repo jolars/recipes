@@ -4,7 +4,7 @@ excerpt:
   Enkel pastarätt med långstekt spetskål, persilja och generöst med parmesan
 categories: middag
 tags: vegetariskt, pasta
-img: assets/img/tortellini-med-spetskal-och-parmesan.png
+img: assets/img/tortellini-med-spetskal-och-parmesan.webp
 servings: 4
 cook_time: PT60M
 ingredients:

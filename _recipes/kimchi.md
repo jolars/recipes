@@ -1,6 +1,6 @@
 ---
 title: "Kimchi"
-excerpt: "Umami, syra och hetta!"
+excerpt: Klassisk koreansk kimchi på salladskål och andra grönsaker
 description: >-
   Om man vill kan man tillsätta 3 msk saltade miniräkor till chiliblandningen
   och minska fisksåsen med en tredjedel. Kimichin är godast efter ett par veckor
@@ -20,7 +20,7 @@ ingredients:
     - 2 msk (10 g) rismjöl
     - 1 msk socker
     - 2 msk ingefära
-    - 2 msk (10 st) vitlök
+    - 8 st vitlökslyftor
     - 1 gul lök
     - 1.25 dl fisksås
     - 1 dl gochugaru

@@ -49,7 +49,7 @@ title: ${title}
 excerpt: ${excerpt}
 categories: ${category:-basrecept}
 tags: "${tags}"
-img: assets/img/${slug}.png
+img: assets/img/${slug}.webp
 servings: ${servings:-4 portioner}
 cook_time: ${cook_time:-PT30M}
 EOF
@@ -62,13 +62,9 @@ cat >> "$recipe_file" << 'EOF'
 ingredients:
   main:
     - ingredient 1
-    - ingredient 2
-    - ingredient 3
 ---
 
 1. Steg 1 i instruktionerna
-2. Steg 2 i instruktionerna
-3. Steg 3 i instruktionerna
 EOF
 
 echo -e "${GREEN}✓ Receptfil skapad: ${recipe_file}${NC}"

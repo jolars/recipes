@@ -1,6 +1,9 @@
 ---
 title: Morotssoppa med linser
 excerpt: Morotssoppa med linser och dragon
+description: |
+  En ganska snabb och enkel morotssoppa med tärnade morötter, röda
+  linser och färsk dragon. Soppen ska vara ganska lätt i konsistensen.
 categories: middag
 tags: "soppa, vegetariskt"
 img: assets/img/morotssoppa-med-linser.webp
@@ -28,7 +31,7 @@ ingredients:
     - 1 nypa flingsalt
 ---
 
-1. Skär morötterna i små tärningar. Hacka dragon, lök och vitlök fint.
+1. Skär morötterna i tärningar. Hacka dragon, lök och vitlök fint.
 2. Fräs lök och vitlök i lite rapsolja i en kastrull i några minuter tills de
    mjuknat.
 3. Lägg i morötterna och häll på vatten, crème fraîche och buljongtärningar och

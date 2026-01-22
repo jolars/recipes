@@ -73,7 +73,7 @@ echo -e "${GREEN}✓ Receptfil skapad: ${recipe_file}${NC}"
 echo ""
 read -p "Vill du skapa en platshållarbild? (j/N): " create_img
 if [[ "$create_img" =~ ^[jJ]$ ]]; then
-    img_file="assets/img/${slug}.png"
+    img_file="assets/img/${slug}.webp"
     if command -v convert &> /dev/null; then
         # Create a simple placeholder with ImageMagick
         convert -size 800x800 xc:lightgray -gravity center -pointsize 48 \
@@ -90,11 +90,11 @@ fi
 # Summary
 echo -e "\n${BLUE}=== Sammanfattning ===${NC}"
 echo "Receptfil: ${recipe_file}"
-echo "Bild: assets/img/${slug}.png"
+echo "Bild: assets/img/${slug}.webp"
 echo ""
 echo "Nästa steg:"
 echo "  1. Redigera ${recipe_file} och fyll i ingredienser och instruktioner"
-echo "  2. Lägg till en riktig bild i assets/img/${slug}.png"
+echo "  2. Lägg till en riktig bild i assets/img/${slug}.webp"
 echo "  3. Kör 'bundle exec jekyll serve' för att förhandsgranska"
 echo "  4. Kör 'bundle exec jekyll build' för att generera responsiva bilder"
 echo ""

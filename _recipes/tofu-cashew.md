@@ -2,9 +2,8 @@
 title: Tofu Cashew
 excerpt: Krispig tofu med cashewnötter och ris
 description:
-  En smakrik vegetarisk rätt med krispig tofu och rostade cashewnötter i en
-  läcker sås. Det går bra att byta ut koriandern mot thaibasilika för en annan
-  smakprofil.
+  Krispig tofu och rostade cashewnötter. Det går bra att byta ut koriandern mot
+  thaibasilika för en annorlunda smak.
 categories: vegetariskt
 tags: tofu, cashew, vegetariskt, wok
 img: assets/img/tofu-cashew.webp
@@ -13,6 +12,7 @@ prep_time: PT00M
 cook_time: PT60M
 ingredients:
   main:
+    - 4 dl jasminris
     - 130 g (2 dl) cashewnötter, naturella
     - 400 g tofu, fast
     - 1 dl majsstärkelse
@@ -30,16 +30,17 @@ ingredients:
     - 2 tsk srirachasås
 ---
 
-1. Riv vitlök och ingefära. Blanda alla ingredienser till såsen i en skål och
+1. Koka riset enligt anvisningarna på förpackningen.
+2. Riv vitlök och ingefära. Blanda alla ingredienser till såsen i en skål och
    ställ åt sidan.
-2. Häll 1 dl olja i woken. Lägg i cashewnötterna och rosta dem tills de får lite
+3. Häll 1 dl olja i woken. Lägg i cashewnötterna och rosta dem tills de får lite
    färg. Ta upp och lägg åt sidan.
-3. Skär tofun i 2 cm stora tärningar. Vänd dem i majsstärkelse så att alla sidor
+4. Skär tofun i 2 cm stora tärningar. Vänd dem i majsstärkelse så att alla sidor
    täcks. Fritera tofun i woken i omgångar tills den är gyllenbruna och krispig.
    Ta upp och lägg på hushållspapper för att rinna av.
-4. Skiva gul lök, strimla paprika och skär salladslökarna i 2 cm stora bitar.
+5. Skiva gul lök, strimla paprika och skär salladslökarna i 2 cm stora bitar.
    Höj värmen i woken och tillsätt lite mer olja om den blivit torr. Woka
    salladslök, gul lök och paprika i några minuter tills de mjuknat något. Häll
    på såsen och rör om. Låt koka upp och tjockna. Lägg tillbaka tofun och 3/4 av
    cashewnötterna och vänd runt försiktigt så allt blandas.
-5. Servera med ris och toppa med resten av cashewnötterna och färsk koriander.
+6. Servera med ris och toppa med resten av cashewnötterna och färsk koriander.

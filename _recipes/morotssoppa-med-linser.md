@@ -22,7 +22,7 @@ ingredients:
     - 2 dl crème fraîche
     - 1 tsk dijonsenap
     - 2 tsk vitvinsvinäger
-  Krutonger
+  Krutonger:
     - 1 msk rapsolja
     - 2 skivor surdegsbröd
   Mandelströssel:

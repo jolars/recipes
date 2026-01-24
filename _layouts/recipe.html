@@ -298,23 +298,22 @@ layout: base
             timerEl.setAttribute('data-timer-key', timerKey);
 
             const display = document.createElement('span');
-            display.className = 'timer-display';
+            display.className = 'timer-display me-2';
             display.textContent = formatTime(totalSeconds);
 
-            const startBtn = document.createElement('button');
+            const startBtn = document.createElement('a');
             startBtn.className = 'timer-btn timer-start';
-            startBtn.innerHTML = '▶';
+            startBtn.innerHTML = '<i class="bi bi-play-circle-fill"></i>';
             startBtn.title = 'Start';
 
-            const pauseBtn = document.createElement('button');
-            pauseBtn.className = 'timer-btn timer-pause';
-            pauseBtn.innerHTML = '⏸';
+            const pauseBtn = document.createElement('a');
+            pauseBtn.className = 'timer-btn timer-pause d-none';
+            pauseBtn.innerHTML = '<i class="bi bi-pause-circle-fill"></i>';
             pauseBtn.title = 'Paus';
-            pauseBtn.style.display = 'none';
 
-            const resetBtn = document.createElement('button');
+            const resetBtn = document.createElement('a');
             resetBtn.className = 'timer-btn timer-reset';
-            resetBtn.innerHTML = '↻';
+            resetBtn.innerHTML = '<i class="bi bi-arrow-clockwise"></i>';
             resetBtn.title = 'Återställ';
 
             timerEl.appendChild(display);
@@ -351,8 +350,13 @@ layout: base
             function start() {
                 if (isRunning) return;
                 isRunning = true;
-                startBtn.style.display = 'none';
-                pauseBtn.style.display = 'inline-block';
+                startBtn.classList.add('d-none');
+                pauseBtn.classList.remove('d-none');
+                
+                // Request notification permission on first timer start
+                if ('Notification' in window && Notification.permission === 'default') {
+                    Notification.requestPermission();
+                }
 
                 intervalId = setInterval(() => {
                     remainingSeconds--;
@@ -370,16 +374,16 @@ layout: base
                 if (!isRunning) return;
                 isRunning = false;
                 clearInterval(intervalId);
-                startBtn.style.display = 'inline-block';
-                pauseBtn.style.display = 'none';
+                startBtn.classList.remove('d-none');
+                pauseBtn.classList.add('d-none');
                 updateDisplay();
             }
 
             function stop() {
                 isRunning = false;
                 clearInterval(intervalId);
-                startBtn.style.display = 'inline-block';
-                pauseBtn.style.display = 'none';
+                startBtn.classList.remove('d-none');
+                pauseBtn.classList.add('d-none');
             }
 
             function reset() {
@@ -389,23 +393,39 @@ layout: base
             }
 
             function playTimerSound() {
-                // Create a simple beep using Web Audio API
+                // Send browser notification
+                if ('Notification' in window && Notification.permission === 'granted') {
+                    new Notification('Timer klar!', {
+                        body: `${minutes} minuter har gått`,
+                        icon: '/favicon-32x32.png',
+                        badge: '/favicon-32x32.png',
+                        tag: timerKey,
+                        requireInteraction: true
+                    });
+                }
+                
+                // Create a more noticeable beep sequence using Web Audio API
                 try {
                     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    const oscillator = audioContext.createOscillator();
-                    const gainNode = audioContext.createGain();
+                    
+                    // Play 3 beeps in sequence
+                    for (let i = 0; i < 3; i++) {
+                        const oscillator = audioContext.createOscillator();
+                        const gainNode = audioContext.createGain();
 
-                    oscillator.connect(gainNode);
-                    gainNode.connect(audioContext.destination);
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioContext.destination);
 
-                    oscillator.frequency.value = 800;
-                    oscillator.type = 'sine';
+                        oscillator.frequency.value = 1000; // Higher frequency = more noticeable
+                        oscillator.type = 'sine';
 
-                    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                        const startTime = audioContext.currentTime + (i * 0.4);
+                        gainNode.gain.setValueAtTime(0.5, startTime); // Louder volume
+                        gainNode.gain.exponentialRampToValueAtTime(0.01, startTime + 0.3);
 
-                    oscillator.start(audioContext.currentTime);
-                    oscillator.stop(audioContext.currentTime + 0.5);
+                        oscillator.start(startTime);
+                        oscillator.stop(startTime + 0.3);
+                    }
                 } catch (e) {
                     console.log('Could not play timer sound:', e);
                 }

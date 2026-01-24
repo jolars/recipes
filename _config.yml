@@ -28,6 +28,9 @@ exclude:
   - devenv.nix
   - devenv.yaml
   - devenv.lock
+  - .devenv/
+  - flake.nix
+  - flake.lock
 
 collections:
   recipes:

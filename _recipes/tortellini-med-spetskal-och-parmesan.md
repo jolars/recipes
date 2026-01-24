@@ -21,8 +21,11 @@ ingredients:
 
 1. Skölj kålen, dela den i fyra klyftor och skär bort stocken. Kär kålen i 1 cm
    stora bitar. Värm olivolja i en traktörpanna eller stor stekpanna och stek
-   kålen på medelvärme i 30-40 minuter [timer:35] tills den är mjuk. Den ska
+   kålen på medelvärme i 30-40 minuter tills den är mjuk. Den ska
    inte brynas. Smaka av med chili flakes, oregano, salt och peppar.
+
+   [timer:30] 
+
 2. Riv parmesanen och hacka persiljan fint.
 3. Koka tortellinin enligt anvisningarna på förpackningen. Spara lite av
    pastavattnet innan du häller av tortellinin. Lägg tillbaka tortellinin i

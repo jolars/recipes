@@ -19,7 +19,7 @@ ingredients:
     - 1.5 dl vatten
     - 2 msk (10 g) rismjöl
     - 1 msk socker
-    - 2 msk ingefära
+    - 2 msk (8 cm) ingefära
     - 8 st vitlökslyftor
     - 1 gul lök
     - 1.25 dl fisksås

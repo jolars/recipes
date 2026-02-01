@@ -352,7 +352,7 @@ layout: base
                 isRunning = true;
                 startBtn.classList.add('d-none');
                 pauseBtn.classList.remove('d-none');
-                
+
                 // Request notification permission on first timer start
                 if ('Notification' in window && Notification.permission === 'default') {
                     Notification.requestPermission();
@@ -403,11 +403,11 @@ layout: base
                         requireInteraction: true
                     });
                 }
-                
+
                 // Create a more noticeable beep sequence using Web Audio API
                 try {
                     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                    
+
                     // Play 3 beeps in sequence
                     for (let i = 0; i < 3; i++) {
                         const oscillator = audioContext.createOscillator();
@@ -442,11 +442,14 @@ layout: base
         }
 
         function initializeTimers() {
-            const instructions = document.querySelector('#recipe-instructions ol');
-            if (!instructions) return;
+            const instructionLists = document.querySelectorAll('#recipe-instructions ol');
+            if (!instructionLists.length) return;
 
-            const steps = instructions.querySelectorAll('li');
-            steps.forEach((step, index) => {
+            let globalStepIndex = 0;
+            instructionLists.forEach(list => {
+                const steps = list.querySelectorAll('li');
+                steps.forEach((step) => {
+                    const index = globalStepIndex++;
                 // Get the step content wrapper (created by checkbox init)
                 const stepContent = step.querySelector('.step-content');
                 if (!stepContent) return;
@@ -510,14 +513,14 @@ layout: base
                     parent.replaceChild(fragment, node);
                 });
             });
+        });
         }
 
         // Add checkboxes to recipe steps for completion tracking
         function initializeStepCheckboxes() {
-            const instructions = document.querySelector('#recipe-instructions ol');
-            if (!instructions) return;
+            const instructionLists = document.querySelectorAll('#recipe-instructions ol');
+            if (!instructionLists.length) return;
 
-            const steps = instructions.querySelectorAll('li');
             const recipeSlug = "{{ page.slug }}";
             const storageKey = `recipe-progress-${recipeSlug}`;
 
@@ -530,44 +533,49 @@ layout: base
                 console.error('Failed to load recipe progress:', e);
             }
 
-            steps.forEach((step, index) => {
-                // Wrap existing content
-                const content = step.innerHTML;
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.className = 'form-check-input';
-                checkbox.setAttribute('data-step', index);
+            let globalStepIndex = 0;
+            instructionLists.forEach(list => {
+                const steps = list.querySelectorAll('li');
+                steps.forEach((step) => {
+                    const index = globalStepIndex++;
+                    // Wrap existing content
+                    const content = step.innerHTML;
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.className = 'form-check-input';
+                    checkbox.setAttribute('data-step', index);
 
-                // Check if this step was previously completed
-                if (savedProgress[index]) {
-                    checkbox.checked = true;
-                    step.classList.add('completed');
-                }
-
-                const contentWrapper = document.createElement('span');
-                contentWrapper.className = 'step-content';
-                contentWrapper.innerHTML = content;
-
-                step.innerHTML = '';
-                step.appendChild(checkbox);
-                step.appendChild(contentWrapper);
-
-                // Handle checkbox changes
-                checkbox.addEventListener('change', function() {
-                    if (this.checked) {
+                    // Check if this step was previously completed
+                    if (savedProgress[index]) {
+                        checkbox.checked = true;
                         step.classList.add('completed');
-                        savedProgress[index] = true;
-                    } else {
-                        step.classList.remove('completed');
-                        delete savedProgress[index];
                     }
 
-                    // Save progress to localStorage
-                    try {
-                        localStorage.setItem(storageKey, JSON.stringify(savedProgress));
-                    } catch (e) {
-                        console.error('Failed to save recipe progress:', e);
-                    }
+                    const contentWrapper = document.createElement('span');
+                    contentWrapper.className = 'step-content';
+                    contentWrapper.innerHTML = content;
+
+                    step.innerHTML = '';
+                    step.appendChild(checkbox);
+                    step.appendChild(contentWrapper);
+
+                    // Handle checkbox changes
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            step.classList.add('completed');
+                            savedProgress[index] = true;
+                        } else {
+                            step.classList.remove('completed');
+                            delete savedProgress[index];
+                        }
+
+                        // Save progress to localStorage
+                        try {
+                            localStorage.setItem(storageKey, JSON.stringify(savedProgress));
+                        } catch (e) {
+                            console.error('Failed to save recipe progress:', e);
+                        }
+                    });
                 });
             });
         }

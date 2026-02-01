@@ -19,13 +19,28 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     <!-- <link rel="stylesheet" href="/assets/css/styles.css"> -->
     <title>{{ page.title | default: site.title }}</title>
+
+    <!-- OpenGraph meta tags -->
     <meta property="og:title" content="{{ page.title | escape }}" />
     <meta property="og:description" content="{{ page.excerpt | escape }}" />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="{% if page.layout == 'recipe' %}article{% else %}website{% endif %}" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     {%- if page.img -%}
         {% capture ogimg %}{% picture og "{{ page.img }}" %}{% endcapture %}
         <meta property="og:image" content="{{ ogimg | absolute_url }}" />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="536" />
+        <meta property="og:image:alt" content="{{ page.title | escape }}" />
     {%- endif -%}
     <meta property="og:site_name" content="{{ site.title | escape }}" />
+    <meta property="og:locale" content="sv_SE" />
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ page.title | escape }}" />
+    <meta name="twitter:description" content="{{ page.excerpt | escape }}" />
+    {%- if page.img -%}
+        <meta name="twitter:image" content="{{ ogimg | absolute_url }}" />
+        <meta name="twitter:image:alt" content="{{ page.title | escape }}" />
+    {%- endif -%}
 </head>

@@ -34,10 +34,12 @@ presets:
 
   og:
     markup: direct_url
-    fallback_format: png
+    fallback_format: jpg
     fallback_width: 1024
+    fallback_height: 536
     crop: "1.91:1"
     keep: attention
+    quality: 85
 
 media_queries:
   xs: "max-width: 576px"

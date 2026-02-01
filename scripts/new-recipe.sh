@@ -76,7 +76,7 @@ if [[ "$create_img" =~ ^[jJ]$ ]]; then
     img_file="assets/img/${slug}.webp"
     if command -v convert &> /dev/null; then
         # Create a simple placeholder with ImageMagick
-        convert -size 800x800 xc:lightgray -gravity center -pointsize 48 \
+        convert -size 1024x1024 xc:lightgray -gravity center -pointsize 48 \
             -annotate +0+0 "${title}" "$img_file" 2>/dev/null || {
             echo -e "${YELLOW}ImageMagick inte tillgänglig, hoppar över bildgenerering${NC}"
         }

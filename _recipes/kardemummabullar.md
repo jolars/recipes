@@ -22,11 +22,16 @@ ingredients:
     - 1 ägg
     - 1 tsk vatten
     - 1 nypa salt
+  Topping:
+    - 3 msk strösocker
+    - 1 msk kardemumma, mortlad
 ---
 
 1. Ta ut smöret ur kylen och hyvla det i en bunke. Sätt på ugnen på 40 grader
    och ställ en plåt med vatten i botten på nedersta falsen. Blanda
    äggstrykningen av ägg, vatten och salt i en liten skål och ställ åt sidan.
+   Blanda strösocker och kardemumma till toppingen i en annan skål och ställ
+   också åt sidan.
 2. Ta ut degen ur kylen och kavla ut den till en cirka 25 x 50 cm stor
    rektangel. Lyft då och då så att spänningen släpper och degen inte fastnar i
    bordet.
@@ -43,8 +48,9 @@ ingredients:
    tills bullarna har jäst upp ordentligt.
 7. Ta ut bullarna ur ugnen och höj temperaturen till 220 grader varmluft när det
    är 15 minuter kvar på jäsningen.
-8. Pensla bullarna med äggstrykningen. Ställ in i ugnen och sänk värmen till 190
-   grader och baka bullarna i i 8-10 minuter, tills de har fått fin färg. Låt
-   svalna på galler innan servering. Baka helst av en plåt i taget.
+8. Pensla bullarna med äggstrykningen och toppa med strösocker och kardemumma.
+   Ställ in i ugnen och sänk värmen till 190 grader och baka bullarna i i 8-10
+   minuter, tills de har fått fin färg. Låt svalna på galler innan servering.
+   Baka helst av en plåt i taget.
 
    [timer:8]

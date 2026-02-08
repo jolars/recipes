@@ -90,9 +90,28 @@ function modifyServings(direction) {
     document.getElementById("servings").innerHTML =
       new_servings + " " + servings_type;
 
-    for (var i = 0; i <= ingredients.length; ++i) {
+    for (var i = 0; i < ingredients.length; ++i) {
       var original_amount = ingredients[i].getAttribute("data-ingredient");
-      ingredients[i].innerHTML = updateIngredientAmount(original_amount, mod);
+      var link = ingredients[i].querySelector("a");
+      
+      if (link) {
+        // Preserve link, only update the amount before it
+        var updatedText = updateIngredientAmount(original_amount, mod);
+        var textParts = updatedText.split(" ");
+        var amount = textParts.shift();
+        link.textContent = textParts.join(" ");
+        
+        // Update link href with scaled servings
+        var baseUrl = link.href.split('?')[0];
+        var scaledServings = Math.round(parseFloat(amount));
+        link.href = baseUrl + '?servings=' + scaledServings;
+        
+        ingredients[i].innerHTML = amount + " ";
+        ingredients[i].appendChild(link);
+      } else {
+        // No link, update normally
+        ingredients[i].innerHTML = updateIngredientAmount(original_amount, mod);
+      }
     }
   }
 }

@@ -40,4 +40,4 @@ ingredients:
    ytterligare 2-3 minuter.
 4. Tillsätt vitlök, chili, sesamolja, soja och salt. Rör om och låt vätskan koka
    in i riset. Rör ner majonnäsen och blanda väl.
-5. Servera med kim-chi, cashewnötter och limeklyftor.
+5. Servera med kimchi, cashewnötter och limeklyftor.

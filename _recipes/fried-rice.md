@@ -1,11 +1,10 @@
 ---
 layout: recipe
 title: "Fried Rice"
-excerpt: "Pytti-pannans asiatiska motsvarighet"
+excerpt: "Pytt-i-pannans asiatiska motsvarighet"
 description:
   En enkel och snabb rätt som kan varieras med olika grönsaker och
   proteinkällor. Perfekt för att använda upp rester från kylskåpet.
-
 categories: vegetariskt
 tags: ris, asiatiskt, wok
 img: assets/img/fried-rice.webp
@@ -13,7 +12,7 @@ servings: 4 portioner
 ingredients:
   main:
     - 2 morötter
-    - 2 salladskökar
+    - 2 salladslökar
     - 200 g haricots verts
     - 1 msk matolja
     - 3 ägg
@@ -27,8 +26,8 @@ ingredients:
     - 1 tsk salt
     - 3 msk majonnäs
   Tillbehör:
-    - 200 g kim-chi
-    - 1 dl cashenötter
+    - 200 g kimchi
+    - 1 dl cashewnötter
     - 1 lime
 ---
 

@@ -5,7 +5,7 @@ excerpt:
   tillsammans med bröd.
 description: >-
   Jag vill gärna inte att soppan ska bli för tjock, så mängden potatis är ganska
-  liten här. Om det blir för vattnigt kan soppan med fördel  redas något på
+  liten här. Om det blir för vattnigt kan soppan redas något på
   slutet.
 categories: vegetariskt
 tags: soppa, potatis
@@ -20,16 +20,21 @@ ingredients:
     - 10 dl grönsaksbuljong
     - 3 dl vispgrädde
     - 1 dl vitt vin
-    - 2 tsk vitvinäger
-    - 3 krm salt
+    - 1 msk vitvinsäger
+    - 1 tsk salt
     - peppar
+  Topping:
     - 1 knippe persilja
-    - 1 dl rostade frön (t.ex. solros- eller pumpafrön)
+    - 1 dl pumpakärnor
+    - 4 skivor bröd
 ---
 
 1. Skala och skär potatisen i mindre bitar. Skölj och skiva purjolöken. Lägg
    sedan purjolök och potatis i en kastrull och koka in vinet. Häll på buljong
    och vinäger och koka till potatisen är mjuk, ca 15 minuter.
-2. Tärna och stek under tiden korven knaprig i en stekpanna. Hacka persilja.
+
+2. Rosta pumpakärnorna i en torr stekpanna på medelvärme tills de har fått fin
+   färg. Rör om då och då så att de inte bränns.
+
 3. Tilsätt grädde och mixa soppan slät med en stavmixer. Servera med bröd, frön
    och persilja.

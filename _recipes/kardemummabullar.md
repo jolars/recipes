@@ -27,14 +27,14 @@ ingredients:
     - 1 msk kardemumma, mortlad
 ---
 
-1. Ta ut smöret ur kylen och hyvla det i en bunke. Sätt på ugnen på 40 grader
-   och ställ en plåt med vatten i botten på nedersta falsen. Blanda
+1. Ta ut smöret ur kylen och hyvla det i en bunke. Sätt på ugnen på 40
+   grader och ställ en plåt med vatten i botten på nedersta falsen. Blanda
    äggstrykningen av ägg, vatten och salt i en liten skål och ställ åt sidan.
    Blanda strösocker och kardemumma till toppingen i en annan skål och ställ
    också åt sidan.
 2. Ta ut degen ur kylen och kavla ut den till en cirka 25 x 50 cm stor
-   rektangel. Lyft då och då så att spänningen släpper och degen inte fastnar i
-   bordet.
+   rektangel. Lyft då och då så att spänningen släpper och degen inte fastnar
+   i bordet.
 3. Bred ut smöret över 2/3 av degen. Strö över kardemumma, strösocker och
    florsocker.
 4. Gör ett treslag av degen genom att först vika delen utan fyllning över den

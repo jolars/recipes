@@ -5,7 +5,7 @@ description:
   En snabbversion av den populära bulgogin. Tillbehören kan varieras efter smak
   och tillgång. Det skadar inte med lite fler inläggningar på bordet, exempelvis
   picklad ingefära eller inlagd gurka.
-categories: kött
+categories: middag
 tags: bulgogi, asiatisk, snabbt, vardag
 img: assets/img/bulgogi.webp
 servings: 4 portioner

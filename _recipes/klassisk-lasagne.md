@@ -1,20 +1,20 @@
 ---
 layout: recipe
 title: "Klassisk lasagne"
-excerpt: "Klassisk lasagne med köttfärssås och bechamelsås"
-categories: kött
+excerpt: "Klassisk lasagne med bolognese och bechamelsås"
+categories: middag
 tags: färs, pasta, lasagne, italienskt
 img: assets/img/klassisk-lasagne.webp
 servings: 6 portioner
 ingredients:
   main:
-    - 800 g nötfärs
+    - 800 g vegofärs
     - 2 gul lök
     - 3 klyfor vitlök
     - 2 burkar krossade tomater
     - 1 dl vatten
     - 3 msk tomatpuré
-    - 2 köttbuljongtärningar
+    - 2 buljongtärningar
     - 1.5 tsk oregano, torkad
     - 1.5 tsk rosmarin, torkad
     - 1.5 tsk timjan, torkad
@@ -36,6 +36,6 @@ ingredients:
 2. Smält smöret i en kastrull. Tillsätt majsmjölet och rör om. Tillsätt mjölken
    lite i taget under omrörning. Låt såsen koka upp och tjockna. Tillsätt osten
    och rör om tills den smält.
-3. Sätt ugnen på 200 °C. Varva köttfärssås, lasagneplattor och bechamelsås i en
+3. Sätt ugnen på 200 °C. Varva bolognese, lasagneplattor och bechamelsås i en
    ugnsfast form. Avsluta med bechamelsås och strö över riven parmesanost.
    Servera med en god sallad.

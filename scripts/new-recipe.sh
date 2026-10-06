@@ -69,22 +69,21 @@ EOF
 
 echo -e "${GREEN}✓ Receptfil skapad: ${recipe_file}${NC}"
 
-# Ask about image
-echo ""
-read -p "Vill du skapa en platshållarbild? (j/N): " create_img
-if [[ "$create_img" =~ ^[jJ]$ ]]; then
-    img_file="assets/img/${slug}.webp"
-    if command -v convert &> /dev/null; then
-        # Create a simple placeholder with ImageMagick
-        convert -size 1024x1024 xc:lightgray -gravity center -pointsize 48 \
-            -annotate +0+0 "${title}" "$img_file" 2>/dev/null || {
-            echo -e "${YELLOW}ImageMagick inte tillgänglig, hoppar över bildgenerering${NC}"
-        }
-        [[ -f "$img_file" ]] && echo -e "${GREEN}✓ Platshållarbild skapad: ${img_file}${NC}"
+# Create a placeholder image for every new recipe.
+img_file="assets/img/${slug}.webp"
+if [[ ! -f "$img_file" ]]; then
+    if command -v magick &> /dev/null; then
+        image_command=magick
+    elif command -v convert &> /dev/null; then
+        image_command=convert
     else
-        echo -e "${YELLOW}ImageMagick (convert) inte installerat, hoppar över bildgenerering${NC}"
-        echo "   Du kan använda: scripts/generate-image.py för AI-genererad bild"
+        echo "ImageMagick krävs för att skapa ${img_file}." >&2
+        exit 1
     fi
+
+    "$image_command" -size 1024x1024 xc:lightgray -gravity center -pointsize 48 \
+        -annotate +0+0 "$title" "$img_file"
+    echo -e "${GREEN}✓ Platshållarbild skapad: ${img_file}${NC}"
 fi
 
 # Summary

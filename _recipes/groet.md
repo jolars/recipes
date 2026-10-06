@@ -8,7 +8,7 @@ img: assets/img/groet.webp
 servings: 1 portion
 ingredients:
   Gröten:
-    - 50 g klippt havre
+    - 50 g grovvalsade havregryn
     - 125 g mjölk
     - 125 g vatten
   Äppelkompott:

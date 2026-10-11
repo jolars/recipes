@@ -20,7 +20,7 @@ ingredients:
     - 10 dl grönsaksbuljong
     - 3 dl vispgrädde
     - 1 dl vitt vin
-    - 1 msk vitvinsäger
+    - 2 tsk vitvinsäger
     - 1 tsk salt
     - peppar
   Topping:
